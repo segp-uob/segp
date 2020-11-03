@@ -5,9 +5,9 @@
 
 During development, you typically use the ng serve command to build, watch, and serve the application from local memory (covered in the last worksheet), using webpack-dev-server. When you are ready to deploy, however, you must use the ng build command to build the app and deploy the build artifacts elsewhere.
 
-Both ng build and ng serve clear the output folder before they build the project, but only the ng build command writes the generated build artifacts to the output folder.
+Both *ng build* and *ng serve* clear the output folder before they build the project, but only the *ng build* command writes the generated build artifacts to the output folder (/dist).
 
-When it comes to hosting these files remotely, everything required to render your application, is contained within the /dist folder (after build). First we need to make sure our project is added to a remote git repository. Use git status to check whether there is an upstream repository:
+When it comes to hosting these files remotely, everything required to render your application, is contained within this /dist folder (after build). When you create a project using AngularCLI your folder will already be initialised as a git repo. However, this will only exist on your local machine. So the first step is to make sure our project is added to a remote git repository. Use git status to check whether there is an upstream repository already:
 '''
 git status
 '''
@@ -16,9 +16,16 @@ git status
 '''
 git remote add origin https://github.com/<username>/<repositoryname>.git
 '''
- 
+Check git status again to make sure this is setup. 
+
 ## Deployment
 
+Once we have a remote repository setup we need to add a tool we are going to use to easily move build outputs into a publically visible location. From here they can be served to your users. First add angular-cli-ghpages package to your project:
+
+'''
+ng add angular-cli-ghpages
+'''
+Once 
 You can either manually enter your username and password for git each time (but this is not advised):
 '''
 ng deploy --repo=https://github.com/<username>/<repositoryname>.git --name="Your Git Username" --email=your.mail@example.org
@@ -28,6 +35,12 @@ The ghpages package doesn't have access to your RSA authentication key as it is 
 '''
 export GH_TOKEN=<TOKEN>
 # to list all environmental variables just call 'set'
+'''
+Because you don't want to export the variable every time you open a new bash terminal (you can if you want) it would make sense to add this variable to your environment so it is added everytime you start:
+'''
+sudo -H gedit /etc/environment
+## add the following line to this file and restart
+GH_TOKEN="<TOKEN>"
 '''
 Now we are ready. Just issue the ng deploy command to see the site live at https://<username>.github.io/<repo>/:
 '''
