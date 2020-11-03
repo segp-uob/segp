@@ -1,4 +1,12 @@
 # Continious integration
+continuous integration (CI) is the practice of merging all developers' working copies to a shared branch regularly. Ideally building, testing and deployment is automated. 
+
+
+1.Implement version control of your choice (Git, Bitbucket, SVN, etc).
+2.Write tests for the critical components in your code base (and treat your tests as production code).
+3.Get a suitable continuous integration and delivery service that will enable you to run those precious tests on every push to the repository and also deploy your builds where you need them.
+
+The benefits are fast feedback, no surprises, detect issues early & improve testability. 
 
 
 ## Setting upstream repository
@@ -30,6 +38,7 @@ You can either manually enter your username and password for git each time (but 
 '''
 ng deploy --repo=https://github.com/<username>/<repositoryname>.git --name="Your Git Username" --email=your.mail@example.org
 '''
+## Granting ghpages permissions
 The ghpages package doesn't have access to your RSA authentication key as it is a read only package. The best, and most secure way, to give the package access to your git repo is by granting a specific token and setting this as an environmental variable. Tokens can always be revoked so this is the *correct* way to do this. Therefore you should take a look at "personal access tokens" To enable the ghpages tool to upload to your git repository you will need to create a token first in your git acccount - and set it as a variable in your CLI. You only need to do this once:
 
 '''
@@ -46,9 +55,11 @@ Now we are ready. Just issue the ng deploy command to see the site live at https
 '''
 ng deploy
 '''
-Initially you won't see anything load at https://<username>.github.io/<repo>/. Open up the inspector/console in your browser can you see why? ...
+Initially you won't see anything load at https://<username>.github.io/<repo>/. Open up the inspector/console in your browser **can you see why? ...**
 
 You will find that the paths for the scripts are incorrect so can't be loaded - there's a missing directory path. This occurs because of the way Angularcli builds projects and Github routes traffic. Don't worry it's an easy fix. Head back into your build and try again but this time specify a location for your assets:
+
+### Deploying with specific production url
 
 '''
 ng build --deploy-url /<repo>/ --prod
