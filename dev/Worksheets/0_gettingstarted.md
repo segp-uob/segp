@@ -4,7 +4,7 @@ This worksheet is focused on making sure your development environment is setup e
 
 We will be developing Angular applications using the AngularCLI. AngularCLI is basically a really useful tool for quickly prototyping with bolierplate code; it saves a great deal of manual work (but you could use Angular directly if you want!!). We are also going to use a package called LoopBack to scaffold our API and speed up development here. We won't be using Loopback at first - but we need to make sure it's installed.
 
-Once this is in place we will setup our Heroku hosting and make sure we can continiously integrate from our Master Git branch and our live environment. This process will ensure we have a fully working 
+Once this is in place we will setup our Heroku hosting and make sure we can continiously integrate from our Master Git branch and our live environment. This process will ensure we have a fully working application at all times! 
 
 ## Basics
 npm (originally short for Node Package Manager) helps us manage JS packages and dependancies. We need it to install AngularCLI. We will install npm via the master NodeJS package. The key steps in this session are to: 
@@ -64,6 +64,7 @@ We can now make sure we have MongoDB correctly installed with 'mongod --version'
 Finally we want to ensure that Express & Loopback are working to allow us to serve our API in production. Loopback is a great framework for automatically setting up routes based around your chosen data model. 
 
 ## Launch your site publically 
+Now lets try and get your site hosted on Heroku.
 
 ### Going further
 Launch the AngularCLI default site above and follow the links to more detailed and comprehensive tutorials
