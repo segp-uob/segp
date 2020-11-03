@@ -56,16 +56,9 @@ Now if you run 'sudo apt-get update' the MongoDB repo is added to your apt confi
 sudo apt-get install mongodb git build-essential openssl libssl-dev pkg-config
 '''
 We can now make sure we have MongoDB correctly installed with 'mongod --version'. If everything worked - this should return a version number. 
-## Hosting
-
-## Continious Integration (CI)
 
 ## Loopback API scaffolding
 Finally we want to ensure that Express & Loopback are working to allow us to serve our API in production. Loopback is a great framework for automatically setting up routes based around your chosen data model. 
 
-## Launch your site publically 
-Now lets try and get your site hosted on Heroku.
-
 ### Going further
 Launch the AngularCLI default site above and follow the links to more detailed and comprehensive tutorials
-Now might be a good time to integrate some automated tests into your CI cycle. 
