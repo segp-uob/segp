@@ -1,8 +1,13 @@
-During development, you typically use the ng serve command to build, watch, and serve the application from local memory, using webpack-dev-server. When you are ready to deploy, however, you must use the ng build command to build the app and deploy the build artifacts elsewhere.
+# Continious integration
+
+
+## Setting upstream repository
+
+During development, you typically use the ng serve command to build, watch, and serve the application from local memory (covered in the last worksheet), using webpack-dev-server. When you are ready to deploy, however, you must use the ng build command to build the app and deploy the build artifacts elsewhere.
 
 Both ng build and ng serve clear the output folder before they build the project, but only the ng build command writes the generated build artifacts to the output folder.
 
-First we need to make sure our project is added to a remote git repository. Use git status to check whether there is an upstream repository:
+When it comes to hosting these files remotely, everything required to render your application, is contained within the /dist folder (after build). First we need to make sure our project is added to a remote git repository. Use git status to check whether there is an upstream repository:
 '''
 git status
 '''
@@ -11,6 +16,8 @@ git status
 '''
 git remote add origin https://github.com/<username>/<repositoryname>.git
 '''
+ 
+## Deployment
 
 You can either manually enter your username and password for git each time (but this is not advised):
 '''
