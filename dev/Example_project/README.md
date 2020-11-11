@@ -20,6 +20,12 @@ We use Docker Compose to coordinate the deployment and connection of the two con
 
 ## Getting started
 
+### Environmental variables
+
+It's important that sensitive information such as usernames and passwords are not stored in git repos. We therefore create a .env file locally and save our credentials there:
+
+### Starting the services
+
 To start the service run: docker-compose up -d
 Visit the local site at: https://0.0.0.0/
 Stop the containers: docker-compose down
