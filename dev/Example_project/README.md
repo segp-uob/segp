@@ -20,10 +20,28 @@ We use Docker Compose to coordinate the deployment and connection of the two con
 
 ## Getting started
 
+Clone this repository and cd into the root:
+```
+git clone git@github.com:segp-uob/segp.git
+cd segp/dev/Example_project/
+```
 ### Environmental variables
 
 It's important that sensitive information such as usernames and passwords are not stored in git repos. We therefore create a .env file locally and save our credentials there:
 
+Create a new file in the repo
+```
+nano .env
+```
+
+Add the following to the .env file and save:
+
+```
+MONGO_USERNAME=sammy
+MONGO_PASSWORD=your_password
+MONGO_PORT=27017
+MONGO_DB=sharkinfo
+```
 ### Starting the services
 
 To start the service run: 
