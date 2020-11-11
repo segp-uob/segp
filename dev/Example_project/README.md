@@ -5,9 +5,9 @@ Here we have a Docker based implimentation of the MEAN stack using Docker-compos
 
 ## Requirements
 
-Docker
-Docker compose
-Sudo rights
+1.Docker
+2.Docker compose
+3.Sudo rights
 
 ## Containers
 
@@ -21,15 +21,15 @@ We use Docker Compose to coordinate the deployment and connection of the two con
 ## Getting started
 
 To start the service run: 
-'docker-compose up -d'
+```docker-compose up -d```
 Visit the local site at: https://0.0.0.0/
 Stop the containers: 
-'docker-compose down'
+```docker-compose down```
 List running containers: 
-'Docker ps'
+```Docker ps```
 
 ## Docker Exec
 
 To interact with containers that are actively running headless once started with Docker-compose:
 
-docker exec -it CONTAINER COMMAND
+```docker exec -it CONTAINER COMMAND```
