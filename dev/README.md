@@ -5,9 +5,9 @@ Here we have an example MEAN stack project. The mean stack allows developers to 
 A SPA serves a single index.html which includes script imports which dynamically re-renders what the user sees - without re-requesting a page. Angular is used to dynamically update (fetch/post) the DOM and makes this process very simple. The result is a highly interactive application following the M-V-C design paradim. 
 
 # Architecture overview
-The client side is the web page which runs in the browser. On the client we use Angular to render the content in JS. The client side runs on the server and we use Express, MongoDB and Node for the logic. We are using a Node backend, however, the Angular client could be served by any storage serving. The logic (dynamic endpoints) are all managed on the server - it's obviously important that things like authentication can't be edited directly by the client! 
+The client side is the web page which runs in the browser. On the client we will be using Angular to render the content in JS. The client side runs on the server and we use Express, MongoDB and Node for the business logic & storage. We are using a Node backend, however, the Angular client could be served by any storage serving. Indeed we could use any frontend framework or pure JS. The logic (dynamic endpoints) are all managed on the server - it's obviously important that things like authentication can't be edited directly by the client! 
 
-We make AJAX requests and pass data in JSON format between the client and server. We make these requests over a RESTful API
+We make AJAX requests and pass data in JSON format between the client and server. We make these requests over a RESTful API... as demonstrated in the example you will build.
 
 # Worksheet overview
 These worksheets set out the steps to build a fully functioning single page application (SPA) from scratch using the MEAN stack. The key to building a great app (from a developer persepctive) is to create reusable services to manage all the data calls to your API. The worksheets make use of the following essential tools:
@@ -17,12 +17,13 @@ These worksheets set out the steps to build a fully functioning single page appl
 - NodeJS
 - Express
 - MogoDB
-- Loopback
 
-Our sample project will be hosted using a free Heroku (File server) account and MLab (Database). All the examples were developed and tested on Ubuntu 18.04. There are, of course, many different ways to achieve the same results as described here; it is simply a guide for those looking for a rough roadmap of how to proceed. 
+We will be making use of containers to run services we require. Docker is the most common containerisation software used today. It enables developers to easily package apps along with their environments, which allows for quicker iteration cycles and better resource efficiency, while providing the same desired environment on each run.
+
+All the examples were developed and tested on Ubuntu 18.04. There are, of course, many different ways to achieve the same results as described here; it is simply a guide for those looking for a rough roadmap of how to proceed. 
 
 ## 0.Getting started
-It's a MEAN stack so... we are building frontend with Angular and for backend we will be using MongoDB, NodeJS and ExpressJS. NodeJS and Express are included in a package called Loopback - which is great tool for quickly building Restful APIs - so we are going to us that. 
+It's a MEAN stack so... we are building frontend with Angular and for backend we will be using MongoDB, NodeJS and ExpressJS.
 
 ## 1.DevOps & Continious Integration (CI)
 CI is the practice of merging all developers' working code to a staged 'Master' branch, testing, then deploying to production. Ideally CI is achieved with integrated and automated testing to ensure that bugs are never introduced on a staging or live environment. Good practices around CI begin at the start of a project before anyone has typed a line of code! Weekly goal is to have every group with working CI & live site!
