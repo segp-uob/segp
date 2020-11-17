@@ -11,11 +11,11 @@ The benefits are fast feedback, no surprises, detect issues early & improve test
 
 ## Setting upstream repository
 
-During development, you typically use the ng serve command to build, watch, and serve the application from local memory (covered in the last worksheet), using webpack-dev-server. When you are ready to deploy, however, you must use the ng build command to build the app and deploy the build artifacts elsewhere.
+During development, you typically use the ng serve command to build, watch, and serve the application from local memory (covered in the last worksheet), using webpack-dev-server. When you are ready to deploy, however, you must use the ng build command to build the app and deploy the build artifacts elsewhere. By deafult this will locally create the static build files in your /dist folder...
 
 Both *ng build* and *ng serve* clear the output folder before they build the project, but only the *ng build* command writes the generated build artifacts to the output folder (/dist).
 
-When it comes to hosting these files remotely, everything required to render your application, is contained within this /dist folder (after build). When you create a project using AngularCLI your folder will already be initialised as a git repo. However, this will only exist on your local machine. So the first step is to make sure our project is added to a remote git repository. Use git status to check whether there is an upstream repository already:
+When it comes to hosting these files remotely, everything required to render your application, is now contained within this /dist folder (after build). When you create a project using AngularCLI your folder will already be initialised as a git repo. However, this will only exist on your local machine. So the first step is to make sure our project is added to a remote git repository. Use git status to check whether there is an upstream repository already:
 '''
 git status
 '''

@@ -1,8 +1,12 @@
-## Angular concepts
+## Welcome to Angular! 
 
-We are going to be using Angular for our client side rendering. Angular is a fantastically flexible and scalable framework for building web applications. 
+We are going to be using Angular for our client side development. Angular is a fantastically flexible and scalable framework for building web applications. It's also very powerful, potentially complex, and does take some time to learn. Learning Angular properly would take a lot longer than the time we have! Therefore, the focus for this workshop is giving you a structure for your learning and pointers towards what might be useful. It by no means will teach you all you need to know about Angular! 
 
-## Angular CLI main files
+We will use Angular locally to develop your site. When you are ready to deploy to production/live we build a set of static files which can then be served to your users. Usually you would build locally and deploy to a remote environment following sucessful completion of tests. 
+
+## Angular structure and files
+
+you will see several files which were created when you created a new angular project in the last worksheet. We are going to take a closer look at the file stucture (from https://angular.io/guide/file-structure).
 
 ### package.json
 A configuration file that contains the metadata for your application. When there is a package.json file in the root directory of the project. In the example we will be building, our hosting provider (Heroku) will use the Node.js buildpack to deploy your application. 
@@ -11,23 +15,17 @@ A configuration file that contains the metadata for your application. When there
 A manifest format for describing web apps. It declares environment variables, add-ons, and other information required to run an app on Heroku. It is required to create a “Deploy to Heroku” button.
 
 ### server.js
-
 This file contains all the server-side code used to implement the REST API. The API is written in Node.js, using the Express framework and the MongoDB Node.js driver.
 
 ### /src directory
 This folder contains all of the Angular client code for the project.
 
+## Getting started with Angular
+
+If you are responsible for frontend development in your team follow this tutorial to learn the basics of Angular: https://angular.io/start 
 
 ## Modules, components, events
 
-Components are the main building block for Angular applications. Each component consists of: An HTML template that declares what renders on the page, A Typescript class that defines behavior, A CSS selector that defines how the component is used in a template, and optionally, CSS styles applied to the template.
+Components are the main building block for Angular applications. Each component consists of: An HTML template that declares what renders on the page, A Typescript class that defines behavior, A CSS selector that defines how the component is used in a template, and optionally, CSS styles applied to the template. This of components as defining areas of responsibility in the user interface.
 
 
-### Posts
-### Forms
-
-## Getting started!
-
-Try adding navigation, data and creating a form using 
-
-## Stackblitz to your local machine
