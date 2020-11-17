@@ -5,17 +5,17 @@ A RESTful API is an Application Programming Interface (API) that uses HTTP verbs
 # Express
 
 We are building with the MEAN stack - so we will be using the Express framework for our API. There are of course many other ways to build an API. First we need to install express and axios as a deps to our project:
-'''
+```
 npm install --save express body-parser
 npm install --save axios
-'''
+```
 Read about axois here if you want: https://github.com/axios/axios 
  
 
 ## server.js
 
 Then create a file server.js and a folder server in the root of our angular project. The server.js file will have the server code, that will point to the server folder, where the rest of the server implementation is.
-'''
+```
 // Get dependencies
 const express = require('express');
 const path = require('path');
@@ -71,12 +71,12 @@ router.get('/', (req, res) => {
 });
 
 module.exports = router;
-'''
+```
 ## see how it works... 
-'''
+```
 http://localhost:3000/ -> should load your site
 http://localhost:3000/api -> should load the api
-'''
+```
 ### Notes
 
 Based on the following example: https://scotch.io/tutorials/mean-app-with-angular-2-and-the-angular-cli
