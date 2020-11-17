@@ -14,12 +14,19 @@ npm (originally short for Node Package Manager) helps us manage JS packages and 
 - Ensure you have a current install of Angular CLI
 - Setup the new site as an upstream Git repo
 
-To make sure you have both node and npm installed: 
+In the next workshops we are going to be using Docker and Docker-compose for running production containers. So now is also a good time to make sure you have these installed:
+
+- Docker
+- Docker-compose
+
+It will not be possible to install these without Sudo rights; so if you're using a lab machine this will need to be completed inside a Vagrant VM. If it's your own machine search online for specific instructions. You might also need some specific native packages depending on your operating system (like build-essential on Ubuntu). Try installing these packages first but bear in mind you might need to fault find until it works! 
+
+So when you're ready to go, make sure you have both node and npm installed with the following commands: 
 '''
 node --version
 npm --version
 '''
-These commands should both return a version number. If you don't have either/both installed. You need to add node to your congig and install through apt: 
+These commands should both return a version number. Please make sure npm version is >=5. Next you need to add node to your config and install through apt: 
 ''
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 sudo apt install nodejs
@@ -41,7 +48,7 @@ ng serve
 If you've run the command ng serve (above): visit http://localhost:4200/ and see the site rendering. This also provides some links to much more comprehensive AngularCLI tutorials.
 
 ## MongoDB locally
-When in production we will host MongoDB remotely (because the remote user won't be able to access the DB on your machine!), however, it's really useful to have a local version for development and testing. In this step we will locally install Mongo and make sure it's working.
+When in production we will host MongoDB remotely (or in a container) because the remote user won't be able to access the DB on your machine! It's really useful to have a local version for development and testing. In this step we will locally install Mongo and make sure it's working.
 
 The first step is to add the MogoDB repo as a trusted source:
 '''
