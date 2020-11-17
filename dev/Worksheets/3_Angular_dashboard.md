@@ -50,10 +50,10 @@ ng g c bar-chart
 ```
 This adds:
 
-1. src/app/my-bar-chart/bar-chart.component.html
-2. src/app/my-bar-chart/bar-chart.component.ts
-3. src/app/my-bar-chart/bar-chart.component.css
-4. src/app/my-bar-chart/bar-chart.component.spec.ts
+1. src/app/bar-chart/bar-chart.component.html
+2. src/app/bar-chart/bar-chart.component.ts
+3. src/app/bar-chart/bar-chart.component.css
+4. src/app/bar-chart/bar-chart.component.spec.ts
 
 Open bar-chart.component.html and replace the boilerplate <p>bar-chart works!</p>content with:
 ```
