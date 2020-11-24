@@ -4,26 +4,26 @@ A common usecase for the Angular framework, and indeed web applications in gener
 
 ## Create a template project
 We are going to start with the boilerplate project previously created and add components. This should serve as a demonstration of how to get up and running with a fully responsive application. We are going to make use of the Bootstrap styling framework: The Bootstrap grid system uses containers that hold rows and column. Rows and columns are percentage based. It is the container that changes responsively.
-'''
+```
 ng new dashboard --routing
 
 cd dashboard
 npm install ng2-charts
 npm install chart.js
 npm install bootstrap
-'''
+```
 To make use of the charting framework we need to add the following script to the 'build' in the angular.jsonfile. This will ensure scripts are added where required to the HTML body. You can see in build: { } object; you just need to add this script:
-'''
+```
 "scripts": ["node_modules/chart.js/dist/Chart.js"]
-'''
+```
 We are making use of Bootstrap, so add the following line to styles.css:
-'''
+```
 @import '~bootstrap/dist/css/bootstrap.min.css';
-'''
+```
 ## Create a menu component
 
 Edit the boilerplate HTML in app.component.html
-'''
+```
 <div class="container">
   <ul class="nav nav-tabs">
     <li class="nav-item">
@@ -43,20 +43,20 @@ Edit the boilerplate HTML in app.component.html
       <router-outlet></router-outlet>
   </div>
 </div>
-'''
+```
 ## Creata a Bar Chart
-'''
+```
 ng g c bar-chart
-'''
+```
 This adds:
 
-1. src/app/my-bar-chart/bar-chart.component.html
-2. src/app/my-bar-chart/bar-chart.component.ts
-3. src/app/my-bar-chart/bar-chart.component.css
-4. src/app/my-bar-chart/bar-chart.component.spec.ts
+1. src/app/bar-chart/bar-chart.component.html
+2. src/app/bar-chart/bar-chart.component.ts
+3. src/app/bar-chart/bar-chart.component.css
+4. src/app/bar-chart/bar-chart.component.spec.ts
 
 Open bar-chart.component.html and replace the boilerplate <p>bar-chart works!</p>content with:
-'''
+```
 <div>
   <div style="display: block">
     <canvas baseChart
@@ -68,9 +68,9 @@ Open bar-chart.component.html and replace the boilerplate <p>bar-chart works!</p
     </canvas>
   </div>
 </div>
-'''
+```
 Here we’re using the baseChart directive which is added to a canvas element. Furthermore the attributes datasets, labels, options, legend and chartType are bound to class members which are added to the implementation of class MyBarChartComponent in my-bar-chart-component.ts:
-'''
+```
 import { Component, OnInit } from '@angular/core';@Component({
   selector: 'app-bar-chart',
   templateUrl: './bar-chart.component.html',
@@ -86,22 +86,22 @@ export class BarChartComponent implements OnInit {  constructor() { }  public ba
     {data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B'}
   ];  ngOnInit() {
   }}
-'''
+```
 ## Create a Doghnut
-'''
+```
 ng g c doughnut-chart
-'''
+```
 Again update doughnut-chart.component.html:
-'''
+```
 <div style="display: block">
   <canvas baseChart
               [data]="doughnutChartData"
               [labels]="doughnutChartLabels"
               [chartType]="doughnutChartType"></canvas>
 </div>
-'''
+```
 And insert the following TS into doughnut-chart.component.ts
-'''
+```
 import { Component, OnInit } from '@angular/core';@Component({
   selector: 'app-doughnut-chart',
   templateUrl: './doughnut-chart.component.html',
@@ -111,24 +111,24 @@ export class MyDoughnutChartComponent implements OnInit {  public doughnutChartL
   public doughnutChartData = [120, 150, 180, 90];
   public doughnutChartType = 'doughnut';  constructor() { }  ngOnInit() {
   }}
-'''
+```
 ## Create a Radar chart
 
 Again we’re starting by creating a new component:
-'''
+```
 ng g c radar-chart
-'''
+```
 Here is the HTML code which needs to be inserted in my-radar-chart.component.html:
-'''
+```
 <div style="display: block">
   <canvas baseChart
           [datasets]="radarChartData"
           [labels]="radarChartLabels"
           [chartType]="radarChartType"></canvas>
 </div>
-'''
+```
 And in my-radar-chart.component.ts:
-'''
+```
 import { Component, OnInit } from '@angular/core';@Component({
   selector: 'app-radar-chart',
   templateUrl: './radar-chart.component.html',
@@ -141,15 +141,15 @@ export class RadarChartComponent implements OnInit {  public radarChartLabels = 
   ];
   public radarChartType = 'radar';  constructor() { }  ngOnInit() {
   }}
-'''
+```
 ## Pie Chart Example
 
 The final component is used to add a pie chart example to our application:
-'''
+```
 ng g c pie-chart
-'''
+```
 HTML code in my-pie-chart.component.html:
-'''
+```
 <div style="display: block">
   <canvas baseChart
           [data]="pieChartData"
@@ -168,7 +168,7 @@ export class PieChartComponent implements OnInit {  public pieChartLabels = ['Sa
   public pieChartData = [120, 150, 180, 90];
   public pieChartType = 'pie';  constructor() { }  ngOnInit() {
   }}
-'''
+```
 # Router Configuration
 
 Finally we need to make sure that the router configuration is in place. This ensures that when components are called our service knows where to render the data from. We will be coming back to the topic of routing a lot of the coming weeks - for now a basic example: 
@@ -176,7 +176,7 @@ Finally we need to make sure that the router configuration is in place. This ens
 ## Update app.module
 First we need to make sure the main imports are present to reflect our additions: 
 
-'''
+```
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -206,11 +206,11 @@ import { PieChartComponent } from './pie-chart/pie-chart.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-'''
+```
 ## Update app.routing-module.ts
 Next we make sure the routing is in place:
 
-'''
+```
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { BarChartComponent } from './bar-chart/bar-chart.component';
@@ -231,10 +231,10 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-'''
+```
 ## Running the example! 
-'''
+```
 ng serve
-'''
+```
 As a result you should now be able to see the basic application. Crucially the data is served by the components themselves (TS) at the moment. Obviously the next step is to connect up to a fully functioning API via Express and Node. 
 
