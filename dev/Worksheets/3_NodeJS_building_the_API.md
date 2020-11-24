@@ -78,7 +78,6 @@ router.get('/', (req, res) => {
 module.exports = router;
 ```
 ## see how it works... 
-<<<<<<< HEAD
 Now is a good point to test that your API works. 
 Run '''node server.js''' to start express and take a look:
 '''
@@ -86,7 +85,7 @@ http://localhost:3000/ -> should load your site as before but this time served b
 http://localhost:3000/api -> should load the api and give you an 'API works' message
 '''
 If you've got this far you have a working API. The next steps are to render the content from the API and to call your MongoDB instance!
-=======
+
 ```
 http://localhost:3000/ -> should load your site
 http://localhost:3000/api -> should load the api
