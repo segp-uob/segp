@@ -45,7 +45,7 @@ export class AppModule { }
 We now need to make sure the service makes the right call: edit src/app/data.service.ts
 
 '''
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
@@ -58,7 +58,7 @@ export class DataService {
 
   // Get all data from the API
   getAllData() {
-    return this.http.get('/api/data')
+    return this.http.get('/api')
       .pipe(map((response: any) => response.json()));
   }
 }
@@ -101,6 +101,8 @@ export abstract class DataComponent implements OnInit {
   }
 }
 '''
+
+We can then make use of this service inside our components. Lets add it to the Radar
 
 ## Displaying the new data
 
