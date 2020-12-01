@@ -154,7 +154,7 @@ export class RadarChartComponent implements OnInit {
 
 ```
 
-## Displaying the new data in the HTML
+## Displaying the API data in the HTML
 
 Now lets look at the HTML and see how this pulls through from the component. We are reusing the existing variable names we set before so there is little we need to do here now: 
 
