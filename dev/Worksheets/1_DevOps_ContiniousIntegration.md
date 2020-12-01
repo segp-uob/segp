@@ -1,17 +1,17 @@
 # Continious integration
-continuous integration (CI) is the practice of merging all developers' working copies to a shared branch regularly. Ideally building, testing and deployment is automated. 
+Continuous integration (CI) is the practice of merging all developers' working copies to a shared branch regularly. Ideally building, testing and deployment is automated. We will be doing a lot of testing as we build our SPA right from simple complications and serving right through to automated unit testing. 
 
+In your teams you will need to:
 
 1.Implement version control of your choice (Git, Bitbucket, SVN, etc).
 2.Write tests for the critical components in your code base (and treat your tests as production code).
 3.Get a suitable continuous integration and delivery service that will enable you to run those precious tests on every push to the repository and also deploy your builds where you need them.
 
-The benefits are fast feedback, no surprises, detect issues early & improve testability. 
-
+The benefits are fast feedback, no surprises, detect issues early & improve testability. We will be covering 1,2 and some elements of 3, however, it's important that as a team you agree how best testing should work on your system. 
 
 ## Setting upstream repository
 
-During development, you typically use the ng serve command to build, watch, and serve the application from local memory (covered in the last worksheet), using webpack-dev-server. When you are ready to deploy, however, you must use the ng build command to build the app and deploy the build artifacts elsewhere. By deafult this will locally create the static build files in your /dist folder...
+During development of a Typescript based site (such as those built with Angular) you typically use the ng serve command to build, watch, and serve the application from local memory (covered in these worksheets), using webpack-dev-server. When you are ready to deploy, however, you must use the ng build command to build the app and deploy the build artifacts elsewhere. By deafult this will locally create the static build files in your /dist folder...
 
 Both *ng build* and *ng serve* clear the output folder before they build the project, but only the *ng build* command writes the generated build artifacts to the output folder (/dist).
 
