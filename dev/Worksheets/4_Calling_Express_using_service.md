@@ -1,4 +1,4 @@
-#Connecting Component to Express API
+# Connecting Component to Express API
 
 Currently we are just using dummy data rendered from within the component (not recommended!). Of course we want to connect everything to our newly created API!
 
@@ -9,13 +9,13 @@ Of course a service could go and get data from basically anywhere - a web servic
 
 ## Create a service
 
-'''
+```
 ng generate service data
-'''
+```
 
 This creates a data.service.ts in the src/app directory. We then need to add it in the providers section of our module declaration. 
 
-'''
+```
 // Imports commented out 
 import { DataService } from './data.service'; // Add the data service here
 
@@ -38,13 +38,13 @@ import { DataService } from './data.service'; // Add the data service here
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-'''
+```
 
 ## Update the data service
 
 We now need to make sure the service makes the right call: edit src/app/data.service.ts
 
-'''
+```
 import { Injectable, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
@@ -64,13 +64,13 @@ export class DataService {
     return this.httpClient.get(this.REST_API_SERVER)
   }
 }
-'''
+```
 
 ## Import the new service
 
 We return to our app-Component and make sure to import the new servce: 
 
-'''
+```
 import { Component, OnInit } from '@angular/core'; // need to make sure we import oninit
 import { DataService } from './data.service';
 
@@ -102,12 +102,12 @@ export abstract class DataComponent implements OnInit {
     });
   }
 }
-'''
+```
 ## Editing the Radar chart
 
 We can then make use of this service inside our components. Remember the component calls the service: which in turn exposes the data to the HTML in the form of a structure. Ideally valiation occurs on the server side. 
 
-'''
+```
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 
@@ -152,20 +152,20 @@ export class RadarChartComponent implements OnInit {
 
 }
 
-'''
+```
 
 ## Displaying the new data in the HTML
 
 Now lets look at the HTML and see how this pulls through from the component. We are reusing the existing variable names we set before so there is little we need to do here now: 
 
-'''
+```
 <div style="display: block">
   <canvas baseChart
           [datasets]="radarChartData"
           [labels]="radarChartLabels"
           [chartType]="radarChartType"></canvas>
 </div>
-'''
+```
 
 Build and serve the site using your express server to make sure it works! And congratulations you've created your first Restul API!
 
