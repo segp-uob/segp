@@ -1,0 +1,4 @@
+{
+	"radarChartLabels":["Q4","Q3","Q2","Q1"],
+	"radarChartData":[{"data": [120, 130, 180, 70], "label": "1917"}, {"data": [90, 150, 200, 45], "label": "1918"}]
+}
