@@ -84,6 +84,12 @@ Run '''node server.js''' to start express and take a look:
 http://localhost:3000/ -> should load your site as before but this time served by Express
 http://localhost:3000/api -> should load the api and give you an 'API works' message
 '''
+Now try making a curl request from your termina;
+'''
+curl http://localhost:3000/api
+curl -I http://localhost:3000/api // get the headers
+'''
+
 If you've got this far you have a working API. The next steps are to render the content from the API and to call your MongoDB instance!
 
 ```

@@ -51,15 +51,17 @@ import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 import { map, filter, switchMap } from 'rxjs/operators';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class DataService {
 
-  constructor(private http: HttpClient) { }
+  private REST_API_SERVER = "http://localhost:3000/api";
 
-  // Get all data from the API
-  getAllData() {
-    return this.http.get('/api')
-      .pipe(map((response: any) => response.json()));
+  constructor(private httpClient: HttpClient) { }
+
+  public getAll(){
+    return this.httpClient.get(this.REST_API_SERVER)
   }
 }
 '''
@@ -101,10 +103,69 @@ export abstract class DataComponent implements OnInit {
   }
 }
 '''
+## Editing the Radar chart
 
-We can then make use of this service inside our components. Lets add it to the Radar
+We can then make use of this service inside our components. Remember the component calls the service: which in turn exposes the data to the HTML in the form of a structure. Ideally valiation occurs on the server side. 
 
-## Displaying the new data
+'''
+import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 
-And finally, we'll just display the posts in the view.
+@Component({
+  selector: 'app-radar-chart',
+  templateUrl: './radar-chart.component.html',
+  styleUrls: ['./radar-chart.component.css']
+})
+export class RadarChartComponent implements OnInit {  
+// This is what gets initialised by default
+  public radarChartLabels = ['Q1', 'Q2', 'Q3', 'Q4'];
+  public radarChartData = [
+    {data: [120, 130, 180, 70], label: '2017'},
+    {data: [90, 150, 200, 45], label: '2018'}
+  ];
+
+  stats: any = [];
+  currentdata = null;
+  currentIndex = -1;
+  title = '';
+
+  public radarChartType = 'radar';
+
+  constructor(private dataService: DataService) { }
+
+  ngOnInit() {
+    this.retrieveData();
+  }
+
+  retrieveData() {
+    this.dataService.getAll().subscribe(
+        data => {
+          this.stats = data;
+          // now lets update the fields
+          this.radarChartLabels = this.stats.radarChartLabels;
+          this.radarChartData = this.stats.radarChartData;
+        },
+        error => {
+          console.log(error);
+        });
+  }
+
+}
+
+'''
+
+## Displaying the new data in the HTML
+
+Now lets look at the HTML and see how this pulls through from the component. We are reusing the existing variable names we set before so there is little we need to do here now: 
+
+'''
+<div style="display: block">
+  <canvas baseChart
+          [datasets]="radarChartData"
+          [labels]="radarChartLabels"
+          [chartType]="radarChartType"></canvas>
+</div>
+'''
+
+Build and serve the site using your express server to make sure it works! And congratulations you've created your first Restul API!
 
