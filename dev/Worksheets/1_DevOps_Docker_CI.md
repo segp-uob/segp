@@ -1,13 +1,42 @@
 # Continious integration
+
 Continuous integration (CI) is the practice of merging all developers' working copies to a shared branch regularly. Ideally building, testing and deployment is automated. We will be doing a lot of testing as we build our SPA right from simple complications and serving right through to automated unit testing. 
 
-In your teams you will need to:
+Watch CI Explained (20 minutes): https://www.youtube.com/watch?v=XusC2o-Y_fU
 
-1.Implement version control of your choice (Git, Bitbucket, SVN, etc).
-2.Write tests for the critical components in your code base (and treat your tests as production code).
-3.Get a suitable continuous integration and delivery service that will enable you to run those precious tests on every push to the repository and also deploy your builds where you need them.
+To note: you're not expected to build everything in the introduction video, or in a way that is fully automated, however, it's important that your team has some coverage at all of the stages:
 
-The benefits are fast feedback, no surprises, detect issues early & improve testability. We will be covering 1,2 and some elements of 3, however, it's important that as a team you agree how best testing should work on your system. 
+src(Dev) -> build -> release(Staging) -> production(Live)
+
+In your teams as a minimum you will need to:
+
+1.Implement version control of your choice (Git, Bitbucket, SVN, etc) and setup Dev, Staging and Live branches.
+2.Setup Staging and Live environments aligned to Staging and Live branches.
+3.Write tests for the critical components in your code base (and treat your tests as production code). These tests should cover UAT (User Acceptance) and functional/unit tests. 
+4.Get a suitable continuous integration and delivery service that will enable you to run those tests on every push to the repository and also deploy your builds where you need them.
+
+There are tools such as Jenkins and Gitlab which can be used to automate the CI pipeline, however, this is not necessary and isn't covered in detail in this set of workshops. You might want to explore these tools as a team. The benefits of doing it this way are fast feedback, no surprises, detect issues early & improve testability. We will be covering 1,2 and some elements of 3, however, it's important that as a team you agree how best testing should work on your system. 
+
+
+# Version control
+
+## Branches and stages
+
+Your git repo will allow you to create branches. As a minimum your team will need a master branch which is setup by default. It's probably easiest if this master is used as your development branch and it should be the most current version of the code shared by all developers. You will also need to have Live and Staging branches to allow a CI process. Live and Staging should also have corresponding 'environments' which we are configuring using Docker. Environments (eg served files/running systems) allow the code produced to be tested. So 'branches' should match up with 'environments' as follows:
+
+### Live (live branch)
+
+Your Live branch should be a version of your code which is production ready. The contents of your Express API, Angular dist and Mongo scripts should be fully tested and ready to serve 'customers' in this state. Your docker compose and dockerfiles should create instances which will serve exactly the features required to your customers. 
+
+### Staging (staging branch)
+
+Your Staging or sometimes called 'release' version should be where you complete a significant set of user tests and unit tests. Staging is your first opportunity to make sure that there are no issues with the feature you're deploying from your dev branch - but before pushing code to Live! Once fully tested staging features are merged with Live by the RO or PO.
+
+### Dev (master branch)
+
+Your dev branch is where the work happens! Usually the 'environment' for this stage is on developer's local machines serving locally (or via a Docker container). As developers we spend most of our time in development. When in development, you create a feature branch (off of development), complete the feature, and then merge back into development. This can then be added to the final version by merging into Staging. Therefore in reality a developer might also have lots of 'local' sub branches of the main dev branch -> but they should only merge and commit code they are happy with and is finalised. 
+
+Beacause this 'dev' branch should be updated by all your developers and will be a working, moving copy of the latest shared version of your code. Perhaps using the 'Master' branch as your 'dev' is a good idea as when commits are accepted onto your dev (master) branch they should then be merged onto your staging environment for proper testing. 
 
 ## Setting upstream repository
 
@@ -26,49 +55,150 @@ git remote add origin https://github.com/<username>/<repositoryname>.git
 ```
 Check git status again to make sure this is setup. 
 
-## Deployment
+# Docker
 
-Once we have a remote repository setup we need to add a tool we are going to use to easily move build outputs into a publically visible location. From here they can be served to your users. One free way of doing this is to use github pages. This hosts your source files on github then serves via a static link. This is not suitable for hosting endpoints (APIs), however, it does perfectly well for hosting a static site (with client side rendering!!). To give this a try first add angular-cli-ghpages package to your project:
+We are using containers to ensure consistency in environments and to ease deployment. You don't need to know everything about Docker to use the templates we've setup for you in this workshop (and your own projects). Everyone should probably read the overview below, however, if you're interested and want to go further in your use of containerisation watch the full introduction below. 
+
+Quick overview (10 minutes): https://docs.docker.com/get-started/overview/
+Full introduction (120 minutes): https://www.youtube.com/watch?v=fqMOX6JJhGo 
+
+## Dockerfile
+
+### Requirements
+
+1.Docker
+2.Docker compose
+3.Sudo rights
+
+### Containers
+
+We use two standard Docker containers maintianed by the Docker team directly (secure). To find out more about the containers and how they are setup visit the following links:
+
+1. https://hub.docker.com/_/node
+2. https://hub.docker.com/_/mongo
+
+We use *Docker Compose* to coordinate the deployment and connection of the two containers on the system.  We use *Docker Files* as the method by which we configure our exact instance. Follow the steps set out in this worksheet and you should have a working environment you can replicate and reuse. 
+
+## Create Docker Compose File
+
+## Create Docker File
+
+# Using the Docker template
+
+## Environmental variables
+
+It's important that sensitive information such as usernames and passwords are not stored in git repos. We therefore create a .env file locally and save our credentials there:
+
+Create a new file in the repo
+```
+nano .env
+```
+
+Add the following to the .env file and save:
 
 ```
-ng add angular-cli-ghpages
+MONGO_USERNAME=sammy
+MONGO_PASSWORD=your_password
+MONGO_PORT=27017
+MONGO_DB=sharkinfo
 ```
-Once 
-You can either manually enter your username and password for git each time (but this is not advised):
-```
-ng deploy --repo=https://github.com/<username>/<repositoryname>.git --name="Your Git Username" --email=your.mail@example.org
-```
-## Granting ghpages permissions
-The ghpages package doesn't have access to your RSA authentication key as it is a read only package. The best, and most secure way, to give the package access to your git repo is by granting a specific token and setting this as an environmental variable. Tokens can always be revoked so this is the *correct* way to do this. Therefore you should take a look at "personal access tokens" To enable the ghpages tool to upload to your git repository you will need to create a token first in your git acccount - and set it as a variable in your CLI. You only need to do this once:
+## Wait script
+
+To ensure that the MongoDB instance is running before we connect Node we need to add a wait script: 
+
+'wait-for.sh'
 
 ```
-export GH_TOKEN=<TOKEN>
-# to list all environmental variables just call 'set'
-```
-Because you don't want to export the variable every time you open a new bash terminal (you can if you want) it would make sense to add this variable to your environment so it is added everytime you start:
-```
-sudo -H gedit /etc/environment
-## add the following line to this file and restart
-GH_TOKEN="<TOKEN>"
-```
-Now we are ready. Just issue the ng deploy command to see the site live at https://<username>.github.io/<repo>/:
-```
-ng deploy
-```
-Initially you won't see anything load at https://<username>.github.io/<repo>/. Open up the inspector/console in your browser **can you see why? ...**
 
-You will find that the paths for the scripts are incorrect so can't be loaded - there's a missing directory path. This occurs because of the way Angularcli builds projects and Github routes traffic. Don't worry it's an easy fix. Head back into your build and try again but this time specify a location for your assets:
+#!/bin/sh
 
-### Deploying with specific production url
+# original script: https://github.com/eficode/wait-for/blob/master/wait-for
 
+TIMEOUT=15
+QUIET=0
+
+echoerr() {
+  if [ "$QUIET" -ne 1 ]; then printf "%s\n" "$*" 1>&2; fi
+}
+
+usage() {
+  exitcode="$1"
+  cat << USAGE >&2
+Usage:
+  $cmdname host:port [-t timeout] [-- command args]
+  -q | --quiet                        Do not output any status messages
+  -t TIMEOUT | --timeout=timeout      Timeout in seconds, zero for no timeout
+  -- COMMAND ARGS                     Execute command with args after the test finishes
+USAGE
+  exit "$exitcode"
+}
+
+wait_for() {
+  for i in `seq $TIMEOUT` ; do
+    nc -z "$HOST" "$PORT" > /dev/null 2>&1
+
+    result=$?
+    if [ $result -eq 0 ] ; then
+      if [ $# -gt 0 ] ; then
+        exec "$@"
+      fi
+      exit 0
+    fi
+    sleep 1
+  done
+  echo "Operation timed out" >&2
+  exit 1
+}
+
+while [ $# -gt 0 ]
+do
+  case "$1" in
+    *:* )
+    HOST=$(printf "%s\n" "$1"| cut -d : -f 1)
+    PORT=$(printf "%s\n" "$1"| cut -d : -f 2)
+    shift 1
+    ;;
+    -q | --quiet)
+    QUIET=1
+    shift 1
+    ;;
+    -t)
+    TIMEOUT="$2"
+    if [ "$TIMEOUT" = "" ]; then break; fi
+    shift 2
+    ;;
+    --timeout=*)
+    TIMEOUT="${1#*=}"
+    shift 1
+    ;;
+    --)
+    shift
+    break
+    ;;
+    --help)
+    usage 0
+    ;;
+    *)
+    echoerr "Unknown argument: $1"
+    usage 1
+    ;;
+  esac
+done
+
+if [ "$HOST" = "" -o "$PORT" = "" ]; then
+  echoerr "Error: you need to provide a host and port to test."
+  usage 2
+fi
 ```
-ng build --deploy-url /<repo>/ --prod
-ng deploy --no-build
-```
+## Starting the services
 
-We specify 'no-build' because we know that the build in the /dist folder has the corrected deploy urls. We skip the build process during deployment: this is useful because we are sure that we haven't changed anything and want to deploy with the latest artifact (with corrected script paths!).
-
-Now visit https://<username>.github.io/<repo>/ again!
+To start the service run: 
+```docker-compose up -d```
+Visit the local site at: http://0.0.0.0/
+Stop the containers: 
+```docker-compose down```
+List running containers: 
+```Docker ps```
 
 ## Going further
 
