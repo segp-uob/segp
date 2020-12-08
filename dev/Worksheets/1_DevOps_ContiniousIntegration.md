@@ -28,7 +28,7 @@ Check git status again to make sure this is setup.
 
 ## Deployment
 
-Once we have a remote repository setup we need to add a tool we are going to use to easily move build outputs into a publically visible location. From here they can be served to your users. First add angular-cli-ghpages package to your project:
+Once we have a remote repository setup we need to add a tool we are going to use to easily move build outputs into a publically visible location. From here they can be served to your users. One free way of doing this is to use github pages. This hosts your source files on github then serves via a static link. This is not suitable for hosting endpoints (APIs), however, it does perfectly well for hosting a static site (with client side rendering!!). To give this a try first add angular-cli-ghpages package to your project:
 
 ```
 ng add angular-cli-ghpages
@@ -72,4 +72,4 @@ Now visit https://<username>.github.io/<repo>/ again!
 
 ## Going further
 
-Follow the 'learn angular' tutorials you've just loaded!
+Follow the 'learn angular' tutorials you've just loaded! Congratulations you've just published a site! 
