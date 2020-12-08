@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
+import record from 'rrweb/lib/rrweb.js'
 
 @Component({
   selector: 'app-radar-chart',
@@ -23,8 +24,11 @@ export class RadarChartComponent implements OnInit {
 
   constructor(private dataService: DataService) { }
 
+
+
   ngOnInit() {
     this.retrieveData();
+
   }
 
   retrieveData() {
@@ -38,6 +42,9 @@ export class RadarChartComponent implements OnInit {
         error => {
           console.log(error);
         });
+
   }
+
+
 
 }

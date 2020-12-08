@@ -20,6 +20,7 @@
     "mongoose": "^5.4.10"
   },
   "devDependencies": {
-    "nodemon": "^1.18.10"
+    "nodemon": "^1.18.10",
+    "video.js": "^7.10.2"
   }
 }
