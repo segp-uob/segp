@@ -4,6 +4,8 @@ This worksheet is focused on making sure your development environment is setup e
 
 We will be developing Angular applications using the AngularCLI. AngularCLI is basically a really useful tool for quickly prototyping with bolierplate code; it saves a great deal of manual work (but you could use Angular directly if you want!!).
 
+Angular is built in Typescript; which is basically JS with classes. TypeScript is designed for development of large applications and transcompiles to JavaScript.
+
 ## Basics
 npm (originally short for Node Package Manager) helps us manage JS packages and dependancies. We need it to install AngularCLI. We will install npm via the master NodeJS package. The key steps in this session are to: 
 
