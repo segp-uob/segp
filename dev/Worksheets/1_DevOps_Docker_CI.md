@@ -1,22 +1,21 @@
 # Continious integration
 
-Continuous integration (CI) is the practice of merging all developers' working copies to a shared branch regularly. Ideally building, testing and deployment is automated. We will be doing a lot of testing as we build our SPA right from simple complications and serving right through to automated unit testing. 
+Continuous integration (CI) is the practice of merging all developers' working copies to a shared branch regularly. Ideally building, testing and deployment is automated. We will be doing a lot of testing as we build our SPA right from simple complications and serving right through to automated unit testing. Your CI pipeline (or process) will need to be agreed and shared with your team so this workshop is focused more on describing the principles that we will be looking for and how to develop a pipeline.
 
 Watch CI Explained (20 minutes): https://www.youtube.com/watch?v=XusC2o-Y_fU
 
-To note: you're not expected to build everything in the introduction video, or in a way that is fully automated, however, it's important that your team has some coverage at all of the stages:
-
+To note: you're not expected to build *everything* in the introduction video, or in a way that is fully automated, however, it's important that your team has some coverage at all of the stages:
+```
 src(Dev) -> build -> release(Staging) -> production(Live)
-
+```
 In your teams as a minimum you will need to:
 
-1.Implement version control of your choice (Git, Bitbucket, SVN, etc) and setup Dev, Staging and Live branches.
-2.Setup Staging and Live environments aligned to Staging and Live branches.
+1.Implement version control of your choice (Git, Bitbucket, SVN, etc) and setup Dev, Staging and Live branches. You can use the template repository <here>
+2.Setup Staging and Live environments aligned to Staging and Live branches as in the template above.
 3.Write tests for the critical components in your code base (and treat your tests as production code). These tests should cover UAT (User Acceptance) and functional/unit tests. 
-4.Get a suitable continuous integration and delivery service that will enable you to run those tests on every push to the repository and also deploy your builds where you need them.
+4.Get a suitable continuous integration and delivery service that will enable you to run those tests on every push to the repository and also deploy your builds where you need them. This might be as simple as adding a script into your Dockerfile.
 
 There are tools such as Jenkins and Gitlab which can be used to automate the CI pipeline, however, this is not necessary and isn't covered in detail in this set of workshops. You might want to explore these tools as a team. The benefits of doing it this way are fast feedback, no surprises, detect issues early & improve testability. We will be covering 1,2 and some elements of 3, however, it's important that as a team you agree how best testing should work on your system. 
-
 
 # Version control
 
@@ -57,149 +56,41 @@ Check git status again to make sure this is setup.
 
 # Docker
 
-We are using containers to ensure consistency in environments and to ease deployment. You don't need to know everything about Docker to use the templates we've setup for you in this workshop (and your own projects). Everyone should probably read the overview below, however, if you're interested and want to go further in your use of containerisation watch the full introduction below. 
+We are using containers to ensure consistency in environments and to ease deployment. Because all project teams are required to use Docker images it makes sense for everyone to understand what they are, how they are used, and be able to deploy a containerised image on their own machine (minimum!!). 
+
+Containers are relevant for CI given we are looking to test our system in a reproducable way and want to be able to migrate across systems, hosting providers and machines with easy whilst knowing that conditions remain constant. Docker is language agnostic; think of it like a tool for buiding environments using a script which allows anyone anywhere to reproduce not just your source code but all your dependancies and system conditions. Steps for your project: 
+
+* Make sure to add docker builds (Dockerfile/Docker-compose.yml) into your CI pipeline, so that everyone can use Docker at the stage of CI. All team members should be able to easily deploy your product using only the docker-compose yml.
+* Dockerfiles/compose scripts should be visible in your repositories.
+* If you're feeling fancy you could explore how to use a Github commit trigger and build the repos according to the Dockerfile in that repo.
+
+ You don't need to know everything about Docker to use the templates we've setup for you in this workshop (and your own projects). Everyone should probably read the overview below, however, if you're interested and want to go further in your use of containerisation watch the full introduction below. 
 
 Quick overview (10 minutes): https://docs.docker.com/get-started/overview/
 Full introduction (120 minutes): https://www.youtube.com/watch?v=fqMOX6JJhGo 
 
 ## Dockerfile
 
+"A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image. Using docker build users can create an automated build that executes several command-line instructions in succession." 
+
 ### Requirements
+
+To use Docker in your build process you need to make sure you have the following: 
 
 1.Docker
 2.Docker compose
 3.Sudo rights
 
-### Containers
+### Required base Docker Containers
 
-We use two standard Docker containers maintianed by the Docker team directly (secure). To find out more about the containers and how they are setup visit the following links:
+If you follow our suggestion to use MEAN: We provide two standard Docker containers maintianed by the Docker team directly (secure). To find out more about the containers and how they are setup visit the following links:
 
 1. https://hub.docker.com/_/node
 2. https://hub.docker.com/_/mongo
 
-We use *Docker Compose* to coordinate the deployment and connection of the two containers on the system.  We use *Docker Files* as the method by which we configure our exact instance. Follow the steps set out in this worksheet and you should have a working environment you can replicate and reuse. 
+We then use *Docker Compose* to coordinate the deployment and connection of the two containers on the system (front and back). Think of Docker-compose as a chef - Dockerfiles are the receipes.  We use *Docker Files* as the method by which we configure our exact instance. Follow the steps set out in this worksheet and you should have a working environment you can replicate and reuse. 
 
-## Create Docker Compose File
+## Understanding containers
 
-## Create Docker File
-
-# Using the Docker template
-
-## Environmental variables
-
-It's important that sensitive information such as usernames and passwords are not stored in git repos. We therefore create a .env file locally and save our credentials there:
-
-Create a new file in the repo
-```
-nano .env
-```
-
-Add the following to the .env file and save:
-
-```
-MONGO_USERNAME=sammy
-MONGO_PASSWORD=your_password
-MONGO_PORT=27017
-MONGO_DB=sharkinfo
-```
-## Wait script
-
-To ensure that the MongoDB instance is running before we connect Node we need to add a wait script: 
-
-'wait-for.sh'
-
-```
-
-#!/bin/sh
-
-# original script: https://github.com/eficode/wait-for/blob/master/wait-for
-
-TIMEOUT=15
-QUIET=0
-
-echoerr() {
-  if [ "$QUIET" -ne 1 ]; then printf "%s\n" "$*" 1>&2; fi
-}
-
-usage() {
-  exitcode="$1"
-  cat << USAGE >&2
-Usage:
-  $cmdname host:port [-t timeout] [-- command args]
-  -q | --quiet                        Do not output any status messages
-  -t TIMEOUT | --timeout=timeout      Timeout in seconds, zero for no timeout
-  -- COMMAND ARGS                     Execute command with args after the test finishes
-USAGE
-  exit "$exitcode"
-}
-
-wait_for() {
-  for i in `seq $TIMEOUT` ; do
-    nc -z "$HOST" "$PORT" > /dev/null 2>&1
-
-    result=$?
-    if [ $result -eq 0 ] ; then
-      if [ $# -gt 0 ] ; then
-        exec "$@"
-      fi
-      exit 0
-    fi
-    sleep 1
-  done
-  echo "Operation timed out" >&2
-  exit 1
-}
-
-while [ $# -gt 0 ]
-do
-  case "$1" in
-    *:* )
-    HOST=$(printf "%s\n" "$1"| cut -d : -f 1)
-    PORT=$(printf "%s\n" "$1"| cut -d : -f 2)
-    shift 1
-    ;;
-    -q | --quiet)
-    QUIET=1
-    shift 1
-    ;;
-    -t)
-    TIMEOUT="$2"
-    if [ "$TIMEOUT" = "" ]; then break; fi
-    shift 2
-    ;;
-    --timeout=*)
-    TIMEOUT="${1#*=}"
-    shift 1
-    ;;
-    --)
-    shift
-    break
-    ;;
-    --help)
-    usage 0
-    ;;
-    *)
-    echoerr "Unknown argument: $1"
-    usage 1
-    ;;
-  esac
-done
-
-if [ "$HOST" = "" -o "$PORT" = "" ]; then
-  echoerr "Error: you need to provide a host and port to test."
-  usage 2
-fi
-```
-## Starting the services
-
-To start the service run: 
-```docker-compose up -d```
-Visit the local site at: http://0.0.0.0/
-Stop the containers: 
-```docker-compose down```
-List running containers: 
-```Docker ps```
-
-## Going further
-
-Follow the 'learn angular' tutorials you've just loaded! Congratulations you've just published a site! 
+Docker practical tutorial (60 minutes): https://github.com/docker/labs/tree/master/beginner
+If you have a particular interest in Devops continue further in the Docker tutorials. 

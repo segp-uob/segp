@@ -84,7 +84,7 @@ Run '''node server.js''' to start express and take a look:
 http://localhost:3000/ -> should load your site as before but this time served by Express
 http://localhost:3000/api -> should load the api and give you an 'API works' message
 '''
-Now try making a curl request from your termina;
+Now try making a curl request from your terminal;
 '''
 curl http://localhost:3000/api
 curl -I http://localhost:3000/api // get the headers
