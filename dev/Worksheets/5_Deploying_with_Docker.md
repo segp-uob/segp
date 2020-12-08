@@ -8,7 +8,7 @@ Read more about images and containers (15 minutes) https://stackify.com/docker-i
 
 ## Create and test a Docker File
 
-First we create a Docker file and test the individual Dockerfile. Create the Dockerfile: ```nano Dockerfile``` and add the template below:
+First we create a Dockerfile and first test the building of an individual image. Create the Dockerfile: ```nano Dockerfile``` and add the template below:
 
 ```
 FROM node:10-alpine
