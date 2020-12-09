@@ -1,6 +1,8 @@
 # Full stack Dashboard
 
-This set of worksheets (and accompanying videos) is based around building an example Dashboard application based around the MEAN stack. We build the dashboard from the 'ground up' and demonstrate how to integrate charts in the front end and call data (via a RESTful API) from a database. To improve portability and ease deployment we use Docker to manage the environment and ensure that others can easily recreate our system. Your final project must be submitted in a way which can be replicated easily; and Docker is the suggested tool deploying as it makes setting up instances of Node and Mongo very easy. 
+This set of worksheets (and accompanying videos) is based around building an example Dashboard application on the MEAN stack. We build the Dashboard from the 'ground up' and demonstrate how to integrate charts in the front end and call data (via a RESTful API) from a database. To improve portability and ease deployment we use Docker to manage the Node/Mongo environment and ensure that others can easily recreate our production system. Your final project must be submitted in a way which can be replicated easily; Docker is the suggested tool deploying as it makes setting up instances of Node and Mongo very easy. We will cover each element over the Unit.
+***
+# Getting started
 
 > ### Key milestones
 > - Essential: Workshop walkthrough
@@ -10,21 +12,17 @@ This set of worksheets (and accompanying videos) is based around building an exa
 > - Recommended: Install MongoDB
 > - Recommended: Explore Angular tutorials linked in your new site
 
-# Getting started
+This first worksheet is focused on making sure your system is setup exactly how you need. Time spent checking the basics will make sure you aren't stressing later on. Each member of the group should ensure they have the development tools setup following all essential steps. Of course each team should have only one git repository so you'll need to decide who will make the first push (then everyone else clones). Your repository should probably contain both the source and distribution files as well as any docker compose scripts and docker files (but not any environmental variables such as passwords!). 
 
-This first worksheet is focused on making sure your development environment is setup exactly how you need. Time spent checking the basics will make sure you aren't stressing later on. Each member of the group should ensure they have the development tools setup; but of course each team should have only one git repository so you'll need to decide who will make the first push (then everyone else clones). Your repository should probably contain both the source and distribution files as well as any docker compose scripts and docker files (but not any environmental variables such as passwords!). 
+We will be developing Angular applications using  AngularCLI. AngularCLI is basically tool for quickly prototyping with bolierplate code then for managing and growing your project. It saves a great deal of manual work (but you could use Angular directly if you want!!). The AngularCLI example will be the basis for these worksheets and your own projects. 
 
-We will be developing Angular applications using the AngularCLI. AngularCLI is basically a really useful tool for quickly prototyping with bolierplate code; it saves a great deal of manual work (but you could use Angular directly if you want!!). The AngularCLI example will be the basis for these worksheets and your own projects. 
-
-Angular is built in Typescript; which is basically JS with classes. TypeScript is designed for development of large applications and transcompiles to JavaScript.
-
-Follow each of the steps in these worksheets and you will learn the basics of Angular, Express, Node, Mongo and Docker - enough to get your own project out of the ground. 
+Angular is built in Typescript; which is basically JS with classes. TypeScript is designed for development of large applications and transcompiles to JavaScript. Follow each of the steps in these worksheets and you will learn the basics of Angular, Express, Node, Mongo and Docker - enough to get your own project out of the ground. 
 
 # How these workshops work
 
 By following the workshops you will gradually learn each stage of building the 'full stack' in a simple and not-very-featured way. We aim to give you the tools to build your own far-more-featured product. If you already have experience of a particular tool or language you might want to skip or just get started with your own project. You can refer to the 'final' working version of the application we will build gradually through these workshops and this is a useful debugging resource if you are struggling to get things working. 
 
-# Install the basics
+# Install requirements
 
 Get your system ready to start working with the MEAN stack...
 All instructions are based on Ubuntu OS, however, many will work exactly the same on MacOS. You might need to do some searching to find different commands under other operating systems, however, the principles and packages are always the same. 
@@ -78,12 +76,12 @@ ng new "name_of_site"
 cd
 ng serve
 ```
-
-## Launch a site locally
+***
+## Launch your first Angular project
 
 If you've run the command ng serve (above): visit http://localhost:4200/ and see the site rendering. This also provides some links to much more comprehensive AngularCLI tutorials. The 'ng serve' command is not suitable for production! We will be building an express based production server in the following workshops. However, the built in server is suitable for quick testing. In the next workshops we will be developing our own server & this should become your default for testing and production as your site becomes more complex. 
 
-## MongoDB locally
+## MongoDB 
 
 When in production we will host MongoDB remotely (or in a container on the same server) because the remote user won't be able to access the DB on your machine! It's really useful to have a local version for development and testing. In this step we will locally install Mongo and make sure it's working.
 
