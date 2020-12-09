@@ -8,6 +8,7 @@ Continuous integration (CI) is the practice of merging all developers' working c
 > - Essential: Clone the template repository
 > - Essential: Setup Docker
 > - Essential: Make sure your whole team has cloned & can commit!
+> - Recommended: Schedule 15 minute team standups
 ***
 
 # Expectations
@@ -34,13 +35,13 @@ There are tools such as Jenkins, Github workflow and Gitlab which can be used to
 
 ## Standups
 
-The most productive and easy way to achieve iterative and continious integration is to hold regular 15 minute (Max) standup meetings with your whole team. This would ideally be daily when you are focusing on delivering key features; but flex to suit. Everyone must attend.
+The most productive and easy way to achieve iterative and continious integration is to hold regular 15 minute(max) standup meetings with your whole team. This would ideally be daily when you are focusing on delivering key features; but flex to suit. Standups keeps your team together and focused on progress. These meetings are not where work gets done they are for managing the process overall. Even if members aren't working on tasks that day - *everyone* must attend.
 >### Agenda
-> - Start: time—Set a start time based best fit for everyone. Keep it the same.
+> - Start: time—Set a start time based best fit for everyone. Keep it the same. Early is best.
 > - Begin: Get in your huddle and select the first person. This can be the person who entered the (virtual) meeting room last.
-> - Answer: the 3 questions—With a time limit of 60 seconds:
->>1. What did you do yesterday?
->>2. What will you do today?
+> - Answer: the 3 questions with a strict time limit of 60 seconds:
+>>1. What did you do yesterday/last week?
+>>2. What will you do today/this week?
 >>3. What blockers stand in your way?
 > - End: Close out the meeting with a team clap, cheer, or reminder of progress you've made so far.
 
