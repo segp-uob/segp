@@ -20,6 +20,7 @@ In your teams as a minimum you will need to:
 There are tools such as Jenkins and Gitlab which can be used to automate the CI pipeline, however, this is not necessary and isn't covered in detail in this set of workshops. You might want to explore these tools as a team. The benefits of doing it this way are fast feedback, no surprises, detect issues early & improve testability. We will be covering 1,2 and some elements of 3, however, it's important that as a team you agree how best testing should work on your system. 
 
 # Version control
+The best way to learn how to use Github is to start building an awesome project with your team! It's very straightforward once you get used to it. Good version control is critical for well managed software development which is why using Github properly is essential for passing this unit.
 
 ## Branches and stages
 
