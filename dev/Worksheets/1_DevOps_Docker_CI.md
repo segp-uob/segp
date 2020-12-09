@@ -3,6 +3,7 @@
 Continuous integration (CI) is the practice of merging all developers' working copies to a shared branch regularly. Ideally building, testing and deployment is automated. We will be doing a lot of testing as we build our SPA right from simple complications and serving right through to automated unit testing. Your CI pipeline (or process) will need to be agreed and shared with your team so this workshop is focused more on describing the principles that we will be looking for and how to develop a pipeline.
 
 > Watch CI Explained (20 minutes): https://www.youtube.com/watch?v=XusC2o-Y_fU
+> Clone the template repository
 
 To note: you're not expected to build *everything* in the introduction video, or in a way that is fully automated, however, it's important that your team has some coverage at all of the stages:
 ```
@@ -10,8 +11,7 @@ src(Dev) -> build -> release(Staging) -> production(Live)
 ```
 In your teams as a minimum you will need to:
 
-- Implement version control using a public Github repo and setup Dev(master), Staging and Live branches. You can use the template repository <here>
-- Setup Staging and Live environments aligned to Staging and Live branches as in the template above.
+- Implement version control using a public Github repo and setup Dev(master), Staging and Live branches.
 - Write tests for the critical components in your code base (and treat your tests as production code). These tests should cover UAT (User Acceptance) and functional/unit tests. 
 - Get a suitable continuous integration and delivery service that will enable you to run those tests on every push to the repository and also deploy your builds where you need them. This might be as simple as adding a script into your Dockerfile.
 
