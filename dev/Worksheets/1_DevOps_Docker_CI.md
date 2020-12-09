@@ -8,7 +8,7 @@ Continuous integration (CI) is the practice of merging all developers' working c
 > - Essential: Clone the template repository
 > - Essential: Setup Docker
 > - Essential: Make sure your whole team has cloned & can commit!
-> - Recommended: Schedule 15 minute team standups
+> - Recommended: Schedule 15 minute team standups. [Guide to standups](https://www.range.co/blog/complete-guide-daily-standup-meeting-agenda)
 ***
 
 # Expectations
