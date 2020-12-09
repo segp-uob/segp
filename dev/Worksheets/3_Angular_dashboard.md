@@ -4,6 +4,7 @@ A common usecase for the Angular framework, and indeed web applications in gener
 
 > ### Milestone checklist
 > - Essential: Workshop walkthrough
+> - Recommended: [Intro to Chart.js (3 minutes)](https://www.youtube.com/watch?v=2UVHI9UaONw)
 > - Essential: Add charts.js to your project
 > - Essential: Import bootstrap
 > - Essential: Create some charts!
