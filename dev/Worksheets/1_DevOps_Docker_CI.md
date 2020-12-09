@@ -7,7 +7,6 @@ Continuous integration (CI) is the practice of merging all developers' working c
 > - Recommended: [Watch CI Explained (20 minutes)](https://www.youtube.com/watch?v=XusC2o-Y_fU)
 > - Essential: Clone the template repository & setup team
 > - Essential: Setup Docker
-
 To note: you're not expected to build *everything* in the introduction video, or in a way that is fully automated, however, it's important that your team has some coverage at all of the stages:
 ```
 src(Dev) -> build -> release(Staging) -> production(Live)
@@ -19,7 +18,7 @@ In your teams as a minimum you will need to:
 - Get a suitable continuous integration and delivery service that will enable you to run those tests on every push to the repository and also deploy your builds where you need them. This might be as simple as adding a script into your Dockerfile.
 
 There are tools such as Jenkins and Gitlab which can be used to automate the CI pipeline, however, this is not necessary and isn't covered in detail in this set of workshops. You might want to explore these tools as a team. The benefits of doing it this way are fast feedback, no surprises, detect issues early & improve testability. We will be covering 1,2 and some elements of 3, however, it's important that as a team you agree how best testing should work on your system. 
-
+* * *
 # Version control
 The best way to learn how to use Github is to start building an awesome project with your team! It's very straightforward once you get used to it. Good version control is critical for well managed software development which is why using Github properly is essential for passing this unit.
 
