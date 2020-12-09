@@ -10,7 +10,7 @@ src(Dev) -> build -> release(Staging) -> production(Live)
 ```
 In your teams as a minimum you will need to:
 
-- Implement version control of your choice (Git, Bitbucket, SVN, etc) and setup Dev, Staging and Live branches. You can use the template repository <here>
+- Implement version control using a public Github repo and setup Dev(master), Staging and Live branches. You can use the template repository <here>
 - Setup Staging and Live environments aligned to Staging and Live branches as in the template above.
 - Write tests for the critical components in your code base (and treat your tests as production code). These tests should cover UAT (User Acceptance) and functional/unit tests. 
 - Get a suitable continuous integration and delivery service that will enable you to run those tests on every push to the repository and also deploy your builds where you need them. This might be as simple as adding a script into your Dockerfile.
