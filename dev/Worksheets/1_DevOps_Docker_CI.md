@@ -31,6 +31,19 @@ So, in your teams as a minimum to achieve this you will need to:
 - Get a suitable continuous integration and delivery service that will enable you to run those tests on every push to the repository and also deploy your builds where you need them. This might be as simple as adding a script into your Dockerfile or you might use something more complicated.
 
 There are tools such as Jenkins, Github workflow and Gitlab which can be used to automate the CI pipeline, however, this is not necessary and isn't covered in detail in this set of workshops. It's much better to have something simple (like having someone responsible for running a build script) that everyone understands rather than something fancy. You might want to explore these tools as a team but only if you have time. What's important is being able to prove you *know* code is production ready!
+
+## Standups
+
+The most productive and easy way to achieve iterative and continious integration is to hold regular 15 minute (Max) standup meetings with your whole team. This would ideally be daily when you are focusing on delivering key features; but flex to suit. Everyone must attend.
+>### Agenda
+>Start: time—Set a start time based best fit for everyone. Keep it the same.
+>Begin: Get in your huddle and select the first person. This can be the person who entered the (virtual) meeting room last.
+>Answer: the 3 questions—With a time limit of 60 seconds:
+>>What did you do yesterday?
+>>What will you do today?
+>>What blockers stand in your way?
+>End: Close out the meeting with a team clap, cheer, or reminder of progress you've made so far.
+
 * * *
 # Version control
 The best way to learn how to use Github is to start building an awesome project with your team! It's very straightforward once you get used to it. Good version control is critical for well managed software development which is why using Github properly is essential for passing this unit.
