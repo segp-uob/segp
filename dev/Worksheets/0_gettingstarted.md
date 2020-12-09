@@ -18,13 +18,17 @@ In this series we will be developing Angular applications using  AngularCLI. Ang
 
 Angular uses Typescript; which is basically JS with classes. TypeScript is designed for development of large applications and transcompiles to JavaScript. 
 
+# How these workshops work
+
+By following the workshops you will gradually learn each stage of building the 'full stack' in a simple and 'not-very-featured' way. We aim to give you a taste of the tools to build your own 'far-more-featured' product. 
+
 ## Tasting Paddle
 
 Follow each of the steps in these worksheets and you will sample the basics of Angular, Express, Node, Mongo and Docker - enough to get your own project out of the ground - but not enough to build your final product (that's the challenge!). You can focus as a team on the tools and frameworks most useful to your product: [Metaphor](https://www.etsy.com/uk/market/beer_tasting_paddle)
 
-# How these workshops work
+## Pace your learning
 
-By following the workshops you will gradually learn each stage of building the 'full stack' in a simple and 'not-very-featured' way. We aim to give you a taste of the tools to build your own 'far-more-featured' product. If you already have experience of a particular tool or language you might want to skip or just get started with your own project; but everyone on your team should skip on the basis of prior experience or complete the workshops. You can refer to the 'final' working version of the application we will build gradually through these workshops. This is a useful debugging resource if you are struggling to get things working at a particular stage. 
+If you already have experience of a particular tool or language you might want to skip or just get started with your own project; but everyone on your team should either skip on the basis of prior experience or complete the workshops. You can refer to the 'final' working version of the application we will build gradually through these workshops. This is a useful debugging resource if you are struggling to get things working at a particular stage. 
 
 # Install requirements
 
