@@ -7,6 +7,12 @@ Services are great because they are injectable and they can also have its own in
 
 Of course a service could go and get data from basically anywhere - a web service, filesystem, or a mock data source.
 
+> ### Milestone checklist
+> - Essential: Workshop walkthrough
+> - Essential: 
+> - Recommended: 
+***
+
 ## Create a service
 
 ```

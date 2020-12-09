@@ -1,6 +1,6 @@
 # Angular dashboard
 
-A common usecase for the Angular framework, and indeed web applications in general, is to display data. In this workshop we will be extending the 'boilerplate' Angular application to include our own charts and data. We will be using a few other node modules so we will cover installing those and integrating third party tools (which you almost certainly will do!). 
+A common usecase for the Angular framework, and indeed web applications in general, is to display data. Angular is brilliant for data driven applications. In this workshop we will be extending the 'boilerplate' Angular application to include our own charts and data. We will be using a few other node modules so we will cover installing those and integrating third party tools (which you almost certainly will do!). 
 
 > ### Milestone checklist
 > - Essential: Workshop walkthrough
@@ -10,7 +10,7 @@ A common usecase for the Angular framework, and indeed web applications in gener
 > - Essential: Create some charts!
 > - Essential: Setup routing
 > - Recommended: Test your new dashboard!
-
+***
 
 ## Create a template project
 We are going to start a new project called dashboard using Angularcli. This should serve as a demonstration of how to get up and running with a fully responsive application. We are going to make use of the Bootstrap styling framework: The Bootstrap grid system uses containers that hold rows and column. Rows and columns are percentage based. It is the container that changes responsively.

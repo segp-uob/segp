@@ -7,7 +7,11 @@ Continuous integration (CI) is the practice of merging all developers' working c
 > - Recommended: [Watch CI Explained (20 minutes)](https://www.youtube.com/watch?v=XusC2o-Y_fU)
 > - Essential: Clone the template repository & setup team
 > - Essential: Setup Docker
-To note: you're not expected to build *everything* in the introduction video, or in a way that is fully automated, however, it's important that your team has some coverage at all of the stages:
+***
+
+# Expectations
+
+You're not expected to build *everything* in the introduction video, or in a way that is fully automated, however, it's important that your team has some coverage at all of the stages:
 ```
 src(Dev) -> build -> release(Staging) -> production(Live)
 ```

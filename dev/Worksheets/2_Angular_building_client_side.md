@@ -10,6 +10,7 @@ You will use Angular locally to develop your site. When you are ready to deploy 
 > - Essential: Workshop walkthrough
 > - Essential: Create a new component
 > - Recommended: [Angular walkthrough](https://angular.io/start )
+***
 
 ## Angular structure and files
 

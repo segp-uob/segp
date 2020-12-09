@@ -1,8 +1,6 @@
 # Full stack Dashboard
 
 This set of worksheets (and accompanying videos) is based around building an example Dashboard application on the MEAN stack. We build the Dashboard from the 'ground up' and demonstrate how to integrate charts in the front end and call data (via a RESTful API) from a database. To improve portability and ease deployment we use Docker to manage the Node/Mongo environment and ensure that others can easily recreate our production system. Your final project must be submitted in a way which can be replicated easily; Docker is the suggested tool deploying as it makes setting up instances of Node and Mongo very easy. We will cover each element over the Unit.
-***
-# Getting started
 
 > ### Milestone checklist
 > - Essential: Workshop walkthrough
@@ -11,6 +9,8 @@ This set of worksheets (and accompanying videos) is based around building an exa
 > - Essential: Create an Angular site & run
 > - Recommended: Install MongoDB
 > - Recommended: Explore Angular tutorials linked in your new site
+***
+# Getting started
 
 This first worksheet is focused on making sure your system is setup exactly how you need. Time spent checking the basics will make sure you aren't stressing later on. Each member of the group should ensure they have the development tools setup following all essential steps. Of course each team should have only one git repository so you'll need to decide who will make the first push (then everyone else clones). Your repository should probably contain both the source and distribution files as well as any docker compose scripts and docker files (but not any environmental variables such as passwords!). 
 
