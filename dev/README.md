@@ -8,17 +8,17 @@ A SPA serves a single index.html which includes script imports which dynamically
 The client side is the web page which runs in the browser. On the client we will be using Angular to render the content in JS and complete client side operations. The client side runs on the server and we use Express, MongoDB and Node for the business logic & storage. We are using a Node backend, however, the Angular client could be served by any storage serving. Indeed we could use any frontend framework or pure JS. The logic (dynamic endpoints) are all managed on the server - it's obviously important that things like authentication can't be edited directly by the client!  We make AJAX requests and pass data in JSON format between the client and server. We make these requests over a RESTful API... as demonstrated in the example you will build. Node is... "an open-source, cross-platform, JavaScript runtime environment that executes JavaScript code outside a web browser.". Basically it's server side JS.
 
 # Worksheet overview
-These weekly worksheets set out the steps to build a fully functioning single page application (SPA) from scratch using the MEAN stack. We have highlighted *Essential* milestones which everyone should reach and *Recommended* milestones for those focusing on the particular part of the stack. By following these sessions you will have a fully functioning SPA:
+These weekly worksheets set out the steps to build a fully functioning single page application (SPA) from scratch using the MEAN stack. We have highlighted *Essential* milestones which everyone should reach and *Recommended* milestones for those focusing on the particular part of the stack. By following these sessions in order you will have a fully functioning SPA:
 
->[Continious Integration](Worksheets/1_DevOps_Docker_CI.md)
->[Angular intro](Worksheets/2_Angular_building_client_side.md)
->[Build a Dashboard](Worksheets/3_Angular_dashboard.md)
->[Express & services](Worksheets/4_Express_through_services.md)
->[Deploying via Docker](Worksheets/5_Deploying_with_Docker.md)
->[Write your API](Worksheets/6_Launch_your_API.md)
->[MongoDB](Worksheets/7_MongoDB_persistent_storage.md)
->[Tests](Worksheets/8_Testing_and_errors.md)
->[User Authentication](Worksheets/9_User_Authentication.md)
+>- [Continious Integration](Worksheets/1_DevOps_Docker_CI.md)
+>- [Angular intro](Worksheets/2_Angular_building_client_side.md)
+>- [Build a Dashboard](Worksheets/3_Angular_dashboard.md)
+>- [Express & services](Worksheets/4_Express_through_services.md)
+>- [Deploying via Docker](Worksheets/5_Deploying_with_Docker.md)
+>- [Write your API](Worksheets/6_Launch_your_API.md)
+>- [MongoDB](Worksheets/7_MongoDB_persistent_storage.md)
+>- [Tests](Worksheets/8_Testing_and_errors.md)
+>- [User Authentication](Worksheets/9_User_Authentication.md)
 
 
 
