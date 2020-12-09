@@ -12,15 +12,19 @@ This set of worksheets (and accompanying videos) is based around building an exa
 ***
 # Getting started
 
-This first worksheet is focused on making sure your system is setup exactly how you need. Time spent checking the basics will make sure you aren't stressing later on. Each member of the group should ensure they have the development tools setup following all essential steps. Of course each team should have only one git repository so you'll need to decide who will make the first push (then everyone else clones). Your repository should probably contain both the source and distribution files as well as any docker compose scripts and docker files (but not any environmental variables such as passwords!). 
+Lets start by getting your system is setup exactly how you need. Time spent checking the basics now will make sure you aren't stressing later on. Each member of the group should ensure they have the development tools setup following all essential steps outlined above. Of course, each team should have only one git repository, so you'll need to decide who will make the first push (then everyone else clones). Your repository should probably contain both the source and distribution files as well as any docker compose scripts and docker files (but not any environmental variables such as passwords!). 
 
-We will be developing Angular applications using  AngularCLI. AngularCLI is basically tool for quickly prototyping with bolierplate code then for managing and growing your project. It saves a great deal of manual work (but you could use Angular directly if you want!!). The AngularCLI example will be the basis for these worksheets and your own projects. 
+In this series we will be developing Angular applications using  AngularCLI. AngularCLI is a tool for quickly prototyping with bolierplate code then for managing and growing your project in a consistent way. You don't have to use it, however, it will add hours of development time if you don't. Angularcli saves a great deal of manual work. The AngularCLI example project will be the basis for these worksheets and it should be the basis for your own team project. 
 
-Angular is built in Typescript; which is basically JS with classes. TypeScript is designed for development of large applications and transcompiles to JavaScript. Follow each of the steps in these worksheets and you will learn the basics of Angular, Express, Node, Mongo and Docker - enough to get your own project out of the ground. 
+Angular uses Typescript; which is basically JS with classes. TypeScript is designed for development of large applications and transcompiles to JavaScript. 
+
+## Tasting Paddle
+
+Follow each of the steps in these worksheets and you will sample the basics of Angular, Express, Node, Mongo and Docker - enough to get your own project out of the ground - but not enough to build your final product (that's the challenge!). You can focus as a team on the tools and frameworks most useful to your product: [Metaphor](https://www.etsy.com/uk/market/beer_tasting_paddle)
 
 # How these workshops work
 
-By following the workshops you will gradually learn each stage of building the 'full stack' in a simple and not-very-featured way. We aim to give you the tools to build your own far-more-featured product. If you already have experience of a particular tool or language you might want to skip or just get started with your own project. You can refer to the 'final' working version of the application we will build gradually through these workshops and this is a useful debugging resource if you are struggling to get things working. 
+By following the workshops you will gradually learn each stage of building the 'full stack' in a simple and 'not-very-featured' way. We aim to give you a taste of the tools to build your own 'far-more-featured' product. If you already have experience of a particular tool or language you might want to skip or just get started with your own project; but everyone on your team should skip on the basis of prior experience or complete the workshops. You can refer to the 'final' working version of the application we will build gradually through these workshops. This is a useful debugging resource if you are struggling to get things working at a particular stage. 
 
 # Install requirements
 
