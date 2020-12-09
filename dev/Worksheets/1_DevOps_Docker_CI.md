@@ -36,13 +36,13 @@ There are tools such as Jenkins, Github workflow and Gitlab which can be used to
 
 The most productive and easy way to achieve iterative and continious integration is to hold regular 15 minute (Max) standup meetings with your whole team. This would ideally be daily when you are focusing on delivering key features; but flex to suit. Everyone must attend.
 >### Agenda
->Start: time—Set a start time based best fit for everyone. Keep it the same.
->Begin: Get in your huddle and select the first person. This can be the person who entered the (virtual) meeting room last.
->Answer: the 3 questions—With a time limit of 60 seconds:
->>What did you do yesterday?
->>What will you do today?
->>What blockers stand in your way?
->End: Close out the meeting with a team clap, cheer, or reminder of progress you've made so far.
+> - Start: time—Set a start time based best fit for everyone. Keep it the same.
+> - Begin: Get in your huddle and select the first person. This can be the person who entered the (virtual) meeting room last.
+> - Answer: the 3 questions—With a time limit of 60 seconds:
+>>1. What did you do yesterday?
+>>2. What will you do today?
+>>3. What blockers stand in your way?
+> - End: Close out the meeting with a team clap, cheer, or reminder of progress you've made so far.
 
 * * *
 # Version control
