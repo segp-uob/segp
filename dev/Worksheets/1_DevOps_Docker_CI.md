@@ -14,8 +14,8 @@ Continuous integration (CI) is the practice of merging all developers' working c
 
 You're not expected to build *everything* in the CI introduction video, or in a way that is fully automated, however, it's important that your team has some coverage and understanding of all of the stages. All professional software development teams will have their own CI process. It is basically impossible to develop complex software without integrating and testing code in a robust and systematic way. 
 
-> ### Remember 
-> -> everyone in your team will have some parts of the codebase that they are responsible for. Everyone will be working at the same time. CI is about making all the parts work together in a way that is testable, robust and clear. Assembling different modules just before submission is *not acceptable* and your team will be expected to show an iterative and clear commit log starting early in the project.
+> #### Watch out 
+> "Everyone in your team will have some parts of the codebase that they are responsible for. Everyone will be working at the same time. CI is about making all the parts work together in a way that is testable, robust and clear. Assembling different modules just before submission is *not acceptable* and your team will be expected to show an iterative and clear commit log starting early in the project."
 
 ## The workflow
 We define the central workflow (for this Unit) as:
