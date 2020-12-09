@@ -1,6 +1,6 @@
 # Full stack Dashboard
 
-This set of worksheets (and accompanying videos) is based around building an example Dashboard application on the MEAN stack. We build the Dashboard from the 'ground up' and demonstrate how to integrate charts in the front end and call data (via a RESTful API) from a database. To improve portability and ease deployment we use Docker to manage the Node/Mongo environment and ensure that others can easily recreate our production system. Your final project must be submitted in a way which can be replicated easily; Docker is the suggested tool deploying as it makes setting up instances of Node and Mongo very easy. We will cover each element over the Unit.
+This set of worksheets (and accompanying videos) is based around building an example Dashboard application on the MEAN stack. We build the Dashboard from the 'ground up' and demonstrate how to integrate charts in the front end and call data (via a RESTful API) from a database. To improve portability and ease deployment we use Docker to manage the Node/Mongo environment and ensure that others can easily recreate our production system. Your final project must be submitted in a way which can be replicated easily; Docker is the suggested tool deploying as it makes setting up instances of Node and Mongo very easy (and we give you the templates). We will cover each part of the stack and tooling over the Unit.
 
 > ### Milestone checklist
 > - Essential: Workshop walkthrough
