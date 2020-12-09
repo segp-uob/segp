@@ -12,17 +12,19 @@ Continuous integration (CI) is the practice of merging all developers' working c
 
 # Expectations
 
-You're not expected to build *everything* in the introduction video, or in a way that is fully automated, however, it's important that your team has some coverage at all of the stages:
+You're not expected to build *everything* in the introduction video, or in a way that is fully automated, however, it's important that your team has some coverage and understanding of all of the stages:
 ```
 src(Dev) -> build -> release(Staging) -> production(Live)
 ```
-In your teams as a minimum you will need to:
+The important point is that development is controlled and managed in a systematic way. Changes are small, testable, tested and clear. And perhaps most importantly - your production/live version is fully working!
 
-- Implement version control using a public Github repo and setup Dev(master), Staging and Live branches.
-- Write tests for the critical components in your code base (and treat your tests as production code). These tests should cover UAT (User Acceptance) and functional/unit tests. 
-- Get a suitable continuous integration and delivery service that will enable you to run those tests on every push to the repository and also deploy your builds where you need them. This might be as simple as adding a script into your Dockerfile.
+So, in your teams as a minimum to achieve this you will need to:
 
-There are tools such as Jenkins and Gitlab which can be used to automate the CI pipeline, however, this is not necessary and isn't covered in detail in this set of workshops. You might want to explore these tools as a team. The benefits of doing it this way are fast feedback, no surprises, detect issues early & improve testability. We will be covering 1,2 and some elements of 3, however, it's important that as a team you agree how best testing should work on your system. 
+- Implement version control using a public Github repo and setup Dev(master), Staging and Live branches. Perhaps assign one person who is responsible for moving code between these top level branches.
+- Write tests for the critical components in your code base (and treat your tests as production code). These tests should cover UAT (User Acceptance) and functional/unit tests. We will cover tests in more detail later.
+- Get a suitable continuous integration and delivery service that will enable you to run those tests on every push to the repository and also deploy your builds where you need them. This might be as simple as adding a script into your Dockerfile or you might use something more complicated.
+
+There are tools such as Jenkins, Github workflow and Gitlab which can be used to automate the CI pipeline, however, this is not necessary and isn't covered in detail in this set of workshops. It's much better to have something simple (like having someone responsible for running a build script) that everyone understands rather than something fancy. You might want to explore these tools as a team but only if you have time. What's important is being able to prove you *know* code is production ready!
 * * *
 # Version control
 The best way to learn how to use Github is to start building an awesome project with your team! It's very straightforward once you get used to it. Good version control is critical for well managed software development which is why using Github properly is essential for passing this unit.
