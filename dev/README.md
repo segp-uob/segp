@@ -1,4 +1,4 @@
-# MEAN Stack Single Page Application
+# Build a Single Page Application
 Here we have an example MEAN stack project that can form the basis of your project. MEAN stands for MongoDB, Express, Angular and Node.js. It's just a way to descibe a set of tools for building scalable web applications. The MEAN stack allows developers to quickly produce secure, fast and dynamic sites ready to ship - which is exactly what this unit is all about! These workshops are not about teaching the MEAN stack; rather they are about giving a clear structure by which as a team you can explore and test out frameworks and technologies. 
 
 # What is a Single Page Application?
