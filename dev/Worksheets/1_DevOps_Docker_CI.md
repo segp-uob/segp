@@ -34,7 +34,7 @@ There are tools such as Jenkins, Github workflow and Gitlab which can be used to
 ## Keep the pipeline moving: Hold Standups!
 
 The most productive and easy way to achieve iterative and continious integration is to hold regular 15 minute(max) standup meetings with your whole team. This would ideally be daily when you are focusing on delivering key features; but flex to suit. Standups keeps your team together and focused on progress. These meetings are not where work gets done they are for managing the process overall. Even if members aren't working on tasks that day - *everyone* must attend.
->### Agenda
+>### Example agenda
 > - Start: time—Set a start time based best fit for everyone. Keep it the same. Early is best.
 > - Begin: Get in your huddle and select the first person. This can be the person who entered the (virtual) meeting room last.
 > - Answer: the 3 questions with a strict time limit of 60 seconds:
