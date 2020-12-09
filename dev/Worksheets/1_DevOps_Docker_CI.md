@@ -72,14 +72,13 @@ Beacause this 'dev' branch should be updated by all your developers and will be 
 
 During development of a Typescript based site (such as those built with Angular) you typically use the ng serve command to build, watch, and serve the application from local memory (covered in these worksheets), using webpack-dev-server. When you are ready to deploy, however, you must use the ng build command to build the app and deploy the build artifacts elsewhere. By deafult this will locally create the static build files in your /dist folder...
 
-Both *ng build* and *ng serve* clear the output folder before they build the project, but only the *ng build* command writes the generated build artifacts to the output folder (/dist).
+Both *ng build* and *ng serve* clear the output folder before they build the project, but only the *ng build* command writes the generated build artifacts to the output folder (/dist). 
 
-When it comes to hosting these files remotely, everything required to render your application, is now contained within this /dist folder (after build). When you create a project using AngularCLI your folder will already be initialised as a git repo. However, this will only exist on your local machine. So the first step is to make sure our project is added to a remote git repository. Use git status to check whether there is an upstream repository already:
+When it comes to hosting these files remotely, everything required to render your application, is now contained within this /dist folder (after build). You could throw away your src files now (don't). When you create a project using AngularCLI your folder will already be initialised as a git repo. However, this will only exist on your local machine. So the first step is to make sure our project is added to a remote git repository. Use git status to check whether there is an upstream repository already:
 ```
 git status
 ```
  Make sure you are in the root of your project and add the remote: 
-
 ```
 git remote add origin https://github.com/<username>/<repositoryname>.git
 ```
