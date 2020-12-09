@@ -2,12 +2,12 @@
 
 In workshop 1 we setup Docker on your machines. Now we will integrate our site so far into a container so that it can be deployed and reproduced with ease. 
 
-In Docker we talk about Images and Containers. Now images can exist without containers, whereas a container needs to run an image to exist. In this workshop we build an image to run the application using a pre-built container. The image produces an unchangable run-time environment to run an application. 
+In Docker we talk about Images and Containers. Now, images can exist without containers, whereas a container needs to run an image to run (an empty container is like a hard drive with no OS). In this workshop we build an image (from a Dockerfile, which is a set of instructions) to run the application. The image gives us an unchangable run-time environment to run an application. Sound confusing? It's much simpler to demonstrate - that's what we are going to do in this workshop. 
 
 > ### Milestone checklist
-> - Essential: Workshop walkthrough
-> - Essential: 
-> - Recommended: [Images and containers (15 minutes)](https://stackify.com/docker-image-vs-container-everything-you-need-to-know/)
+> - []Essential: Workshop walkthrough
+> - []Essential: 
+> - []Recommended: [Images and containers (15 minutes)](https://stackify.com/docker-image-vs-container-everything-you-need-to-know/)
 ***
 
 ## Create and test a Docker File
