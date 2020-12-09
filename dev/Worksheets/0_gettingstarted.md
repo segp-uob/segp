@@ -4,7 +4,7 @@ This set of worksheets (and accompanying videos) is based around building an exa
 ***
 # Getting started
 
-> ### Key milestones
+> ### Milestone checklist
 > - Essential: Workshop walkthrough
 > - Recommended: [Watch Angular pros & cons (12 minutes)](https://www.youtube.com/watch?v=y14f_VFsZIA)
 > - Essential: Install all required packages
