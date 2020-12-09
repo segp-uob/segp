@@ -10,7 +10,7 @@ The client side is the web page which runs in the browser. On the client we will
 # Worksheet overview
 These worksheets set out the steps to build a fully functioning single page application (SPA) from scratch using the MEAN stack. The key to building a great app (from a developer persepctive) is to create reusable services to manage all the data calls to your API. The worksheets make use of the following essential tools:
 
-## [Getting started](/Worksheets/0_gettingstarted.md)
+## [Getting started](dev/Worksheets/0_gettingstarted.md)
 It's a MEAN stack so... we are building frontend with Angular and for backend we will be using MongoDB, NodeJS and ExpressJS.
 
 ## 1.DevOps & Continuous Integration (CI)
