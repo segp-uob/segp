@@ -5,8 +5,9 @@ Continuous integration (CI) is the practice of merging all developers' working c
 > ### Milestone checklist
 > - Essential: workshop walkthrough
 > - Recommended: [Watch CI Explained (20 minutes)](https://www.youtube.com/watch?v=XusC2o-Y_fU)
-> - Essential: Clone the template repository & setup team
+> - Essential: Clone the template repository
 > - Essential: Setup Docker
+> - Essential: Make sure your whole team has cloned & can commit!
 ***
 
 # Expectations
@@ -63,7 +64,7 @@ git remote add origin https://github.com/<username>/<repositoryname>.git
 ```
 Check git status again to make sure this is setup. 
 
-# Docker
+# Docker background
 
 We are using containers to ensure consistency in environments and to ease deployment. Because all project teams are required to use Docker images it makes sense for everyone to understand what they are, how they are used, and be able to deploy a containerised image on their own machine (minimum!!). 
 
