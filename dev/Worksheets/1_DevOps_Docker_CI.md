@@ -3,7 +3,7 @@
 Continuous integration (CI) is the practice of merging all developers' working copies to a shared branch regularly. Ideally building, testing and deployment is automated. We will be doing a lot of testing as we build our SPA right from simple complications and serving right through to automated unit testing. Your CI pipeline (or process) will need to be agreed and shared with your team so this workshop is focused more on describing the principles that we will be looking for and how to develop a pipeline.
 
 > ### Key milestones
-> - Watch CI Explained (20 minutes): [Watch](https://www.youtube.com/watch?v=XusC2o-Y_fU)
+> - [Watch CI Explained (20 minutes)](https://www.youtube.com/watch?v=XusC2o-Y_fU)
 > - Clone the template repository & setup team
 > - Setup Docker
 
