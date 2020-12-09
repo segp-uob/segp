@@ -1,6 +1,6 @@
 # Continious integration
 
-Continuous integration (CI) is the practice of merging all developers' working copies to a shared branch regularly. Ideally building, testing and deployment is automated. We will be doing a lot of testing as we build our SPA right from simple complications and serving right through to automated unit testing. Your CI pipeline (or process) will need to be agreed and shared with your team so this workshop is focused more on describing the principles that we will be looking for and how to develop a pipeline.
+Continuous integration (CI) is the practice of merging all developers' working copies to a shared branch regularly. Think of this workshop as focusing on *how* we work together effectivly to build complex software. Your CI pipeline (or process) will need to be agreed and shared with your team up front (but it can change) so this workshop is focused more on describing the principles that we will be looking for and how to develop *your* process. There isn't one right way of doing this stuff so better to have an agreed set of processes than a load of tools not everyone understands.
 
 > ### Milestone checklist
 > - Essential: Workshop walkthrough
@@ -12,9 +12,14 @@ Continuous integration (CI) is the practice of merging all developers' working c
 
 # Expectations
 
-You're not expected to build *everything* in the introduction video, or in a way that is fully automated, however, it's important that your team has some coverage and understanding of all of the stages:
+You're not expected to build *everything* in the CI introduction video, or in a way that is fully automated, however, it's important that your team has some coverage and understanding of all of the stages. All professional software development teams will have their own CI process. It is basically impossible to develop complex software without integrating and testing code in a robust and systematic way. 
+
+> ### Remember -> everyone in your team will have some parts of the codebase that they are responsible for. Everyone will be working at the same time. CI is about making all the parts work together in a way that is testable, robust and clear. Assembling different modules just before submission is *not acceptable* and your team will be expected to show an iterative and clear commit log starting early in the project.
+
+## The workflow
+We define the central workflow (for this Unit) as:
 ```
-src(Dev) -> build -> release(Staging) -> production(Live)
+Development -> build -> release -> production
 ```
 The important point is that development is controlled and managed in a systematic way. Changes are small, testable, tested and clear. And perhaps most importantly - your production/live version is fully working!
 
