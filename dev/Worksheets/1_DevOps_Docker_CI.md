@@ -19,13 +19,11 @@ You're not expected to build *everything* in the CI introduction video, or in a 
 > "Everyone in your team will have some parts of the codebase that they are responsible for. Everyone will be working at the same time. CI is about making all the parts work together in a way that is testable, robust and clear. Assembling different modules just before submission is *not acceptable* and your team will be expected to show an iterative and clear commit log starting early in the project. If you're reading this for the first time two weeks before submission - good luck."
 
 ## The workflow
-We define the central workflow (for this Unit) as:
+We define the central workflow (for this Unit) below. We expect to see code being merged progressively through this pipeline (ie from branch to branch):
 ```
 Development -> build -> release -> production
 ```
-The important point is that development is controlled and managed in a systematic way. Changes are small, testable, tested and clear. And perhaps most importantly - your production/live version is fully working!
-
-So, in your teams as a minimum to achieve this you will need to:
+The important point here is that development is controlled and managed in a systematic way. Commits should be small, testable, tested and clear. And perhaps most importantly - your production/live version is fully working! So, in your teams as a minimum to achieve this you will need to:
 
 - Implement version control using a public Github repo and setup Dev(master), Staging and Live branches. Perhaps assign one person who is responsible for moving code between these top level branches.
 - Write tests for the critical components in your code base (and treat your tests as production code). These tests should cover UAT (User Acceptance) and functional/unit tests. We will cover tests in more detail later.
@@ -33,7 +31,7 @@ So, in your teams as a minimum to achieve this you will need to:
 
 There are tools such as Jenkins, Github workflow and Gitlab which can be used to automate the CI pipeline, however, this is not necessary and isn't covered in detail in this set of workshops. It's much better to have something simple (like having someone responsible for running a build script) that everyone understands rather than something fancy. You might want to explore these tools as a team but only if you have time. What's important is being able to prove you *know* code is production ready!
 
-## Standups
+## Keep the pipeline moving: Hold Standups!
 
 The most productive and easy way to achieve iterative and continious integration is to hold regular 15 minute(max) standup meetings with your whole team. This would ideally be daily when you are focusing on delivering key features; but flex to suit. Standups keeps your team together and focused on progress. These meetings are not where work gets done they are for managing the process overall. Even if members aren't working on tasks that day - *everyone* must attend.
 >### Agenda
