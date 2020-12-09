@@ -42,6 +42,7 @@ The most productive and easy way to achieve iterative and continious integration
 >>2. What will you do today/this week?
 >>3. What blockers stand in your way?
 > - End: Close out the meeting with a team clap, cheer, or reminder of progress you've made so far.
+> - Do not exceed 15 minutes!
 
 * * *
 # Version control
