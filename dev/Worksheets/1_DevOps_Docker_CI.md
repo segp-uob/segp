@@ -3,7 +3,7 @@
 Continuous integration (CI) is the practice of merging all developers' working copies to a shared branch regularly. Ideally building, testing and deployment is automated. We will be doing a lot of testing as we build our SPA right from simple complications and serving right through to automated unit testing. Your CI pipeline (or process) will need to be agreed and shared with your team so this workshop is focused more on describing the principles that we will be looking for and how to develop a pipeline.
 
 > ### Key milestones
-> - Watch CI Explained (20 minutes): https://www.youtube.com/watch?v=XusC2o-Y_fU
+> - Watch CI Explained (20 minutes): [Watch](https://www.youtube.com/watch?v=XusC2o-Y_fU)
 > - Clone the template repository & setup team
 > - Setup Docker
 
@@ -21,6 +21,8 @@ There are tools such as Jenkins and Gitlab which can be used to automate the CI 
 
 # Version control
 The best way to learn how to use Github is to start building an awesome project with your team! It's very straightforward once you get used to it. Good version control is critical for well managed software development which is why using Github properly is essential for passing this unit.
+
+> - Introduction to Git (60 minutes) [Start](https://lab.github.com/githubtraining/introduction-to-github)
 
 ## Branches and stages
 
@@ -69,8 +71,8 @@ Containers are relevant for CI given we are looking to test our system in a repr
 
  You don't need to know everything about Docker to use the templates we've setup for you in this workshop (and your own projects). Everyone should probably read the overview below, however, if you're interested and want to go further in your use of containerisation watch the full introduction below. 
 
-Quick overview (10 minutes): https://docs.docker.com/get-started/overview/
-Full introduction (120 minutes): https://www.youtube.com/watch?v=fqMOX6JJhGo 
+> - [Quick overview](https://docs.docker.com/get-started/overview/)(10 minutes)
+> - [Full introduction](https://www.youtube.com/watch?v=fqMOX6JJhGo )(120 minutes)
 
 ## Dockerfile
 
@@ -86,14 +88,14 @@ To use Docker in your build process you need to make sure you have the following
 
 ### Required base Docker Containers
 
-If you follow our suggestion to use MEAN: We provide two standard Docker containers maintianed by the Docker team directly (secure). To find out more about the containers and how they are setup visit the following links:
+If you follow our suggestion to use the MEAN stack, we provide two standard Docker containers maintianed by the Docker team directly (secure). To find out more about the containers and how they are setup visit the following links:
 
-1. https://hub.docker.com/_/node
-2. https://hub.docker.com/_/mongo
+1. [Node](https://hub.docker.com/_/node)
+2. [MongoDB](https://hub.docker.com/_/mongo)
 
-We then use *Docker Compose* to coordinate the deployment and connection of the two containers on the system (front and back). Think of Docker-compose as a chef - Dockerfiles are the receipes.  We use *Docker Files* as the method by which we configure our exact instance. Follow the steps set out in this worksheet and you should have a working environment you can replicate and reuse. 
+We then use *Docker Compose* to coordinate the deployment and connection of the two containers on the system (front and back). Think of Docker-compose as a chef - Dockerfiles are the receipes.  We use *Docker Files* as the method by which we configure our exact image for deployment in a container. An image, once built, cannot be changed without rebuilding from a Dockerfile. Follow the steps set out in this worksheet and you should have a working environment you can replicate and reuse. 
 
 ## Understanding containers
 
-Docker practical tutorial (60 minutes): https://github.com/docker/labs/tree/master/beginner
-If you have a particular interest in Devops continue further in the Docker tutorials. 
+> - [Docker practical tutorial (60 minutes)](https://github.com/docker/labs/tree/master/beginner)
+> - If you have a particular interest in Devops continue further in the Docker tutorials. 
