@@ -29,7 +29,7 @@ These weekly worksheets set out the steps to build a fully functioning SPA from 
 Teams are free to choose the most appropriate tools and frameworks to meet the requirements of the marking criteria. The workshops follow the MEAN stack and below is a summary marked outputs:
 
 | Tool        | Marked output           | Example frameworks  |
-| ------------- |:-------------:| -----:|
+| ------------- |-------------| -----|
 | Front end framework| Single Page Application | Angular, Vue, React |
 | Back end framework| RESTful API |   Express, Koa, Fastify |
 | Back-end runtime environment | Server Side Application | Node |
