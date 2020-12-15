@@ -1,27 +1,49 @@
-# Continious integration
+# Continious Integration
 
-Continuous integration (CI) is the practice of merging all developers' working copies to a shared branch regularly. Ideally building, testing and deployment is automated. We will be doing a lot of testing as we build our SPA right from simple complications and serving right through to automated unit testing. Your CI pipeline (or process) will need to be agreed and shared with your team so this workshop is focused more on describing the principles that we will be looking for and how to develop a pipeline.
+Continuous integration (CI) is the practice of merging all developers' working copies to a shared branch regularly. Think of this workshop as focusing on *how* we work together effectivly to build complex software. Your CI pipeline (or process) will need to be agreed and shared with your team up front (but it can change) so this workshop is focused more on describing the principles that we will be looking for and how to develop *your* process. There isn't one right way of doing this stuff so better to have an agreed set of processes than a load of tools not everyone understands. A bit of time spent on your process early on will help as you progress.
 
 > ### Milestone checklist
-> - Essential: workshop walkthrough
+> - Essential: Workshop walkthrough
 > - Recommended: [Watch CI Explained (20 minutes)](https://www.youtube.com/watch?v=XusC2o-Y_fU)
-> - Essential: Clone the template repository & setup team
+> - Essential: Clone the template repository
 > - Essential: Setup Docker
+> - Essential: Make sure your whole team has cloned & can commit!
+> - Recommended: Schedule 15 minute team standups. [Guide to standups](https://www.range.co/blog/complete-guide-daily-standup-meeting-agenda)
 ***
 
 # Expectations
 
-You're not expected to build *everything* in the introduction video, or in a way that is fully automated, however, it's important that your team has some coverage at all of the stages:
-```
-src(Dev) -> build -> release(Staging) -> production(Live)
-```
-In your teams as a minimum you will need to:
+You're not expected to build *everything* in the CI introduction video, or in a way that is fully automated, however, it's important that your team has some coverage and understanding of all of the stages. All professional software development teams will have their own CI process. It is basically impossible to develop complex software without integrating and testing code in a robust and systematic way. 
 
-- Implement version control using a public Github repo and setup Dev(master), Staging and Live branches.
-- Write tests for the critical components in your code base (and treat your tests as production code). These tests should cover UAT (User Acceptance) and functional/unit tests. 
-- Get a suitable continuous integration and delivery service that will enable you to run those tests on every push to the repository and also deploy your builds where you need them. This might be as simple as adding a script into your Dockerfile.
+> #### ! Watch out !
+> "Everyone in your team will have some parts of the codebase that they are responsible for. Everyone will be working at the same time. CI is about making all the parts work together in a way that is testable, robust and clear. Assembling different modules just before submission is *not acceptable* and your team will be expected to show an iterative and clear commit log starting early in the project. If you're reading this for the first time two weeks before submission - good luck."
 
-There are tools such as Jenkins and Gitlab which can be used to automate the CI pipeline, however, this is not necessary and isn't covered in detail in this set of workshops. You might want to explore these tools as a team. The benefits of doing it this way are fast feedback, no surprises, detect issues early & improve testability. We will be covering 1,2 and some elements of 3, however, it's important that as a team you agree how best testing should work on your system. 
+## The workflow
+We define the central workflow (for this Unit) below. We expect to see code being merged progressively through this pipeline (ie from branch to branch):
+```
+Development -> build -> release -> production
+```
+The important point here is that development is controlled and managed in a systematic way. Commits should be small, testable, tested and clear. And perhaps most importantly - your production/live version is fully working! So, in your teams as a minimum to achieve this you will need to:
+
+- Implement version control using a public Github repo and setup Dev(master), Staging and Live branches. Perhaps assign one person who is responsible for moving code between these top level branches.
+- Write tests for the critical components in your code base (and treat your tests as production code). These tests should cover UAT (User Acceptance) and functional/unit tests. We will cover tests in more detail later.
+- Get a suitable continuous integration and delivery service that will enable you to run those tests on every push to the repository and also deploy your builds where you need them. This might be as simple as adding a script into your Dockerfile or you might use something more complicated.
+
+There are tools such as Jenkins, Github workflow and Gitlab which can be used to automate the CI pipeline, however, this is not necessary and isn't covered in detail in this set of workshops. It's much better to have something simple (like having someone responsible for running a build script) that everyone understands rather than something fancy. You might want to explore these tools as a team but only if you have time. What's important is being able to prove you *know* code is production ready!
+
+## Keep the pipeline moving: Hold Standups!
+
+The most productive and easy way to achieve iterative and continious integration is to hold regular 15 minute(max) standup meetings with your whole team. This would ideally be daily when you are focusing on delivering key features; but flex to suit. Standups keeps your team together and focused on progress. These meetings are not where work gets done they are for managing the process overall. Even if members aren't working on tasks that day - *everyone* must attend.
+>### Example agenda
+> - Start: time—Set a start time based best fit for everyone. Keep it the same. Early is best.
+> - Begin: Get in your huddle and select the first person. This can be the person who entered the (virtual) meeting room last.
+> - Answer: the 3 questions with a strict time limit of 60 seconds:
+>>1. What did you do yesterday/last week?
+>>2. What will you do today/this week?
+>>3. What blockers stand in your way?
+> - End: Close out the meeting with a team clap, cheer, or reminder of progress you've made so far.
+> - Do not exceed 15 minutes!
+
 * * *
 # Version control
 The best way to learn how to use Github is to start building an awesome project with your team! It's very straightforward once you get used to it. Good version control is critical for well managed software development which is why using Github properly is essential for passing this unit.
@@ -50,20 +72,19 @@ Beacause this 'dev' branch should be updated by all your developers and will be 
 
 During development of a Typescript based site (such as those built with Angular) you typically use the ng serve command to build, watch, and serve the application from local memory (covered in these worksheets), using webpack-dev-server. When you are ready to deploy, however, you must use the ng build command to build the app and deploy the build artifacts elsewhere. By deafult this will locally create the static build files in your /dist folder...
 
-Both *ng build* and *ng serve* clear the output folder before they build the project, but only the *ng build* command writes the generated build artifacts to the output folder (/dist).
+Both *ng build* and *ng serve* clear the output folder before they build the project, but only the *ng build* command writes the generated build artifacts to the output folder (/dist). 
 
-When it comes to hosting these files remotely, everything required to render your application, is now contained within this /dist folder (after build). When you create a project using AngularCLI your folder will already be initialised as a git repo. However, this will only exist on your local machine. So the first step is to make sure our project is added to a remote git repository. Use git status to check whether there is an upstream repository already:
+When it comes to hosting these files remotely, everything required to render your application, is now contained within this /dist folder (after build). You could throw away your src files now (don't). When you create a project using AngularCLI your folder will already be initialised as a git repo. However, this will only exist on your local machine. So the first step is to make sure our project is added to a remote git repository. Use git status to check whether there is an upstream repository already:
 ```
 git status
 ```
  Make sure you are in the root of your project and add the remote: 
-
 ```
 git remote add origin https://github.com/<username>/<repositoryname>.git
 ```
 Check git status again to make sure this is setup. 
 
-# Docker
+# Docker background
 
 We are using containers to ensure consistency in environments and to ease deployment. Because all project teams are required to use Docker images it makes sense for everyone to understand what they are, how they are used, and be able to deploy a containerised image on their own machine (minimum!!). 
 
