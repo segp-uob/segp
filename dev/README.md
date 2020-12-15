@@ -26,9 +26,10 @@ These weekly worksheets set out the steps to build a fully functioning SPA from 
 
 ## Marking
 
-| Theme        | Features           | Tools  |
+| Tool        | Output           | Example frameworks  |
 | ------------- |:-------------:| -----:|
-| Single Page Application | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+| Front end framework | SPA | Angular, Vue |
+| Back end framework     | API |   Express |
+| Back-end runtime environment | Delivery | Node |
+| Database | Storage | MongoDB, SQL |
 
