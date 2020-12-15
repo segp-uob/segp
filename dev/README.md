@@ -1,8 +1,10 @@
 # Build a Single Page Application
-Here we have an example MEAN stack project that can form the basis of your project. MEAN stands for MongoDB, Express, Angular and Node.js. It's just a way to descibe a set of tools for building scalable web applications. The MEAN stack allows developers to quickly produce secure, fast and dynamic sites ready to ship - which is exactly what this unit is all about! These workshops are not about teaching the complete MEAN stack (would take too long!); rather they are about giving a clear structure by which as a team you can explore and test out frameworks and technologies. Software engineering is about selecting, learning and integrating different tools and technologies to give your product or service the features it needs.  
+Your central task as a team is to build a fully functioning single page application. These workshops follow an example MEAN stack project that can form the basis of your project, inspiration or a guide for the stages you need to achieve. MEAN stands for MongoDB, Express, Angular and Node.js. It's just a way to descibe a set of tools for building scalable web applications. The MEAN stack allows developers to quickly produce secure, fast and dynamic sites ready to ship - which is exactly what this unit is all about! These workshops are not about teaching the complete MEAN stack (would take too long!); rather they are about giving a clear structure by which as a team you can explore and test out frameworks and technologies. Software engineering is about selecting, learning and integrating different tools and technologies to give your product or service the features it needs.  
 
 # So what is a Single Page Application (SPA)?
 A SPA serves a single index.html which includes script imports which dynamically re-renders what the user sees - without re-requesting a page. Angular is used to dynamically update (fetch/post) the DOM and makes this process very simple. The result is a highly interactive application following the M-V-C design paradim. By making API calls for information to a backend (node) we separate the front and back of the application. This has many benefits including scalability, statelessness and extendability of the code.
+
+> [Read more about the MEAN stack](https://www.ibm.com/uk-en/cloud/learn/mean-stack-explained)
 
 # How does it work?
 The client side is the web page which runs in the browser. On the client we will be using Angular to render the content in JS and complete client side operations. We use Express, MongoDB and Node for the serving of pages, the business logic & storage. We are using a Node backend, however, the Angular client could be served by any storage serving service. Indeed we could also use any frontend framework or pure JS to render our backend data; the 'MEAN stack' is a collection of useful tools and frameworks to achieve what we want rather than a list of requirements.
@@ -24,9 +26,9 @@ These weekly worksheets set out the steps to build a fully functioning SPA from 
 
 ## Marking
 
-| Theme        | Tools           | Weight  |
+| Theme        | Features           | Tools  |
 | ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
+| Single Page Application | right-aligned | $1600 |
 | col 2 is      | centered      |   $12 |
 | zebra stripes | are neat      |    $1 |
 
