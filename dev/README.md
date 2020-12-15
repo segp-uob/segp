@@ -22,5 +22,11 @@ These weekly worksheets set out the steps to build a fully functioning SPA from 
 >- [Tests](Worksheets/8_Testing_and_errors.md)
 >- [User Authentication](Worksheets/9_User_Authentication.md)
 
+## Marking
 
+| Theme        | Tools           | Weight  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
 
