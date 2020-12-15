@@ -1,5 +1,8 @@
 # Build a Single Page Application
-Your central task as a team is to build a fully functioning single page application. These workshops follow an example MEAN stack project that can form the basis of your project, inspiration or a guide for the stages you need to achieve. MEAN stands for MongoDB, Express, Angular and Node.js. It's just a way to descibe a set of tools for building scalable web applications.![SPA](https://www.whitesourcesoftware.com/wp-content/uploads/2017/07/Single-Page-Application.jpg "Single Page Applications")
+Your central task as a team is to build a fully functioning single page application. These workshops follow an example MEAN stack project that can form the basis of your project, inspiration or a guide for the stages you need to achieve. MEAN stands for MongoDB, Express, Angular and Node.js. It's just a way to descibe a set of tools for building scalable web applications.
+
+![SPA](https://www.whitesourcesoftware.com/wp-content/uploads/2017/07/Single-Page-Application.jpg "Single Page Applications")
+
 The MEAN stack allows developers to quickly produce secure, fast and dynamic sites ready to ship - which is exactly what this unit is all about! These workshops are not about teaching the complete MEAN stack (would take too long!); rather they are about giving a clear structure by which as a team you can explore and test out frameworks and technologies. Software engineering is about selecting, learning and integrating different tools and technologies to give your product or service the features it needs.  
 
 ## What is a Single Page Application (SPA)?
