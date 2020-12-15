@@ -7,9 +7,9 @@ Angular is a very powerful, but potentially complex, and does take some time to 
 You will use Angular locally to develop your site. When you are ready to deploy to production/live we build a set of static files which can then be served to your users. Usually you would build locally and deploy to a remote environment following sucessful completion of tests. Your Angular site will call data from an API which we will build later in the workshop sessions.
 
 > ### Milestone checklist
-> - Essential: Workshop walkthrough
-> - Essential: Create a new component
-> - Recommended: [Angular walkthrough](https://angular.io/start )
+> - [ ] Essential: Workshop walkthrough
+> - [ ] Essential: Create a new component
+> - [ ] Recommended: [Angular walkthrough](https://angular.io/start )
 ***
 
 ## Angular structure and files

@@ -3,12 +3,12 @@
 Continuous integration (CI) is the practice of merging all developers' working copies to a shared branch regularly. Think of this workshop as focusing on *how* we work together effectivly to build complex software. Your CI pipeline (or process) will need to be agreed and shared with your team up front (but it can change) so this workshop is focused more on describing the principles that we will be looking for and how to develop *your* process. There isn't one right way of doing this stuff so better to have an agreed set of processes than a load of tools not everyone understands. A bit of time spent on your process early on will help as you progress.
 
 > ### Milestone checklist
-> - Essential: Workshop walkthrough
-> - Recommended: [Watch CI Explained (20 minutes)](https://www.youtube.com/watch?v=XusC2o-Y_fU)
-> - Essential: Clone the template repository
-> - Essential: Setup Docker
-> - Essential: Make sure your whole team has cloned & can commit!
-> - Recommended: Schedule 15 minute team standups. [Guide to standups](https://www.range.co/blog/complete-guide-daily-standup-meeting-agenda)
+> - [ ] Essential: Workshop walkthrough
+> - [ ] Recommended: [Watch CI Explained (20 minutes)](https://www.youtube.com/watch?v=XusC2o-Y_fU)
+> - [ ] Essential: Clone the template repository
+> - [ ] Essential: Setup Docker
+> - [ ] Essential: Make sure your whole team has cloned & can commit!
+> - [ ] Recommended: Schedule 15 minute team standups. [Guide to standups](https://www.range.co/blog/complete-guide-daily-standup-meeting-agenda)
 ***
 
 # Expectations
@@ -32,6 +32,8 @@ The important point here is that development is controlled and managed in a syst
 There are tools such as Jenkins, Github workflow and Gitlab which can be used to automate the CI pipeline, however, this is not necessary and isn't covered in detail in this set of workshops. It's much better to have something simple (like having someone responsible for running a build script) that everyone understands rather than something fancy. You might want to explore these tools as a team but only if you have time. What's important is being able to prove you *know* code is production ready!
 
 ## Keep the pipeline moving: Hold Standups!
+
+(Holding standups (and keeping records!) is part of the marking scheme!)
 
 The most productive and easy way to achieve iterative and continious integration is to hold regular 15 minute(max) standup meetings with your whole team. This would ideally be daily when you are focusing on delivering key features; but flex to suit. Standups keeps your team together and focused on progress. These meetings are not where work gets done they are for managing the process overall. Even if members aren't working on tasks that day - *everyone* must attend.
 >### Example agenda

@@ -1,9 +1,9 @@
 # Testing and finding errors
 
 > ### Milestone checklist
-> - Essential: Workshop walkthrough
-> - Essential: 
-> - Recommended:
+> - [ ] Essential: Workshop walkthrough
+> - [ ] Essential: 
+> - [ ] Recommended:
 ***
 
 A major part of any project teams which have done very well in their software engineering project is testing. 
