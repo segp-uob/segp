@@ -84,6 +84,11 @@ ng new "name_of_site"
 cd
 ng serve
 ```
+When prompted:
+```
+? Would you like to add Angular routing? Yes
+? Which stylesheet format would you like to use? CSS
+```
 ***
 ## Launch your first Angular project
 

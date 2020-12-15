@@ -1,40 +1,41 @@
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
-<!-- * * * * * * * to get started with your project! * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<div id="app">
+  <nav class="navbar navbar-expand navbar-dark bg-dark">
+    <a href="#" class="navbar-brand">Dashboard</a>
+    <ul class="navbar-nav mr-auto" routerLinkActive="active">
+      <li class="nav-item">
+        <a href="/home" class="nav-link" routerLink="home">Home </a>
+      </li>
+      <li class="nav-item" *ngIf="showAdminBoard">
+        <a href="/admin" class="nav-link" routerLink="admin">Admin Board</a>
+      </li>
+      <li class="nav-item" *ngIf="showModeratorBoard">
+        <a href="/mod" class="nav-link" routerLink="mod">Moderator Board</a>
+      </li>
+      <li class="nav-item">
+        <a href="/user" class="nav-link" *ngIf="isLoggedIn" routerLink="user">User</a>
+      </li>
+    </ul>
 
-<div class="container">
-  <ul class="nav nav-tabs">
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/bar-chart">Bar Chart</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/doughnut-chart">Doughnut Chart</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/radar-chart">Radar Chart</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/pie-chart">Pie Chart</a>
-    </li>
-  </ul>
-  <div>
-      <router-outlet></router-outlet>
+    <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
+      <li class="nav-item">
+        <a href="/register" class="nav-link" routerLink="register">Sign Up</a>
+      </li>
+      <li class="nav-item">
+        <a href="/login" class="nav-link" routerLink="login">Login</a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+      <li class="nav-item">
+        <a href="/profile" class="nav-link" routerLink="profile">{{ username }}</a>
+      </li>
+      <li class="nav-item">
+        <a href class="nav-link" (click)="logout()">LogOut</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <router-outlet></router-outlet>
   </div>
 </div>
-
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-
-
-<router-outlet></router-outlet>
