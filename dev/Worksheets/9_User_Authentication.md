@@ -16,6 +16,9 @@ A fully implimented authenticaiton process in Angular would follow the below str
 ![User Authentication process](https://bezkoder.com/wp-content/uploads/2020/07/angular-10-jwt-authentication-overview.png "Authentication flow")
 
 ## Create component
+
+To deliver authentication for our site we need the components set out in the architecture above. Create these templates using Angularcli (commands below)
+
 ```
 ng g s _services/auth
 ng g s _services/token-storage
@@ -29,7 +32,6 @@ ng g c app-admin
 ng g c app-moderator
 ng g c app-user
 ```
-
 Open app.module.ts, then import FormsModule & authInterceptorProviders (which we will complete soon) and all the components you've just created. Your app.module.ts should look like this:
 ```
 import { BrowserModule } from '@angular/platform-browser';
@@ -85,9 +87,9 @@ export class AppModule { }
 
 
 ```
-
 ## Creating services
 
+As with our Data Service, we need some Authentication services for handling our 
 ### Authentication
 We update auth.service.ts:
 ```
