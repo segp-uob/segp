@@ -5,9 +5,10 @@ To personalise the experience your Application users have, and to ensure the sec
 There are a lot of third party services (Like Auth0 & Okta) that will handle user authentication for you. Using a third party authentication provider has many advantages but naturally you must pay to use these services. We will be implimenting a very basic form of authentication so you can use as 'proof of concept'; but there are good reasons why this area would need more work should you choose to launch your application publically. 
 
 > ### Milestone checklist
-> - Essential: Workshop walkthrough
-> - Essential: 
-> - Recommended: [Introduction to JSON web tokens](https://jwt.io/introduction/)
+> - [ ] Essential: Workshop walkthrough
+> - [ ] Essential: Impliment basic user authentication 
+> - [ ] Recommended: [Introduction to JSON web tokens](https://jwt.io/introduction/)
+> - [ ] Extension: [Ways to use HTTP Interceptors](https://medium.com/angular-in-depth/top-10-ways-to-use-interceptors-in-angular-db450f8a62d6)
 ***
 
 # Overview
@@ -15,6 +16,10 @@ There are a lot of third party services (Like Auth0 & Okta) that will handle use
 A fully implimented authenticaiton process in Angular would follow the below structure: 
 ![User Authentication process](https://bezkoder.com/wp-content/uploads/2020/07/angular-10-jwt-authentication-overview.png "Authentication flow")
 
+## About HTTP Interceptors
+When the intercept() method is called Angular passes a reference to the httpRequest object. With this request, we can inspect it and modify it as necessary. Once our logic is complete, we call next.handle and return the updated request onto the application.
+
+# Components
 ## Create component
 
 To deliver authentication for our site we need the components set out in the architecture above. Create these templates using Angularcli (commands below)
