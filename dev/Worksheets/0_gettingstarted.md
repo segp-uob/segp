@@ -59,6 +59,7 @@ I wouldn't recommend using Docker within a VM (such as Virtual Box) if you can a
 > - [Mac specific instructions](https://treehouse.github.io/installation-guides/mac/node-mac.html)
 > - [Windows specific instructions](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 > - [General npm issues](https://docs.npmjs.com/)
+
 So when you're ready to go, make sure you have both node and npm installed with the following commands: 
 ```
 node --version
