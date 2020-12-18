@@ -56,7 +56,9 @@ Because of the way Docker works it is just not possible to install Docker withou
 I wouldn't recommend using Docker within a VM (such as Virtual Box) if you can avoid it. Docker runs on the hypervisor layer of your machine and using a VM can get in the way of this. The very point of docker is to containerise the environment in a way that abstracts system specific features. Ie if you're on a Mac or a windows machine - an image/environment is always exactly the same. On this basis you should probably just install docker on your machine at root level and enjoy the benefits of being able to quickly deploy to a consistent environment. 
 
 ## Node & npm
-
+> - [Mac specific instructions](https://treehouse.github.io/installation-guides/mac/node-mac.html)
+> - [Windows specific instructions](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+> - [General npm issues](https://docs.npmjs.com/)
 So when you're ready to go, make sure you have both node and npm installed with the following commands: 
 ```
 node --version
