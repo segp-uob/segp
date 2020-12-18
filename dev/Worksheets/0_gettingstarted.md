@@ -99,7 +99,7 @@ If you've run the command ng serve (above): visit http://localhost:4200/ and see
 
 ## MongoDB 
 
-When in production we will host MongoDB remotely (or in a container on the same server) because the remote user won't be able to access the DB on your machine! It's really useful to have a local version for development and testing. In this step we will locally install Mongo and make sure it's working.
+When in production we will host MongoDB remotely (or in a container on the same server) because the remote user won't be able to access the DB on your machine! Depending on your project it can be useful to have a local version for development and testing (in addition to in a container, which we will cover later). In this step we will locally install Mongo and make sure it's working. This is not essential for everyone so only proceed if you need to!
 
 The first step is to add the MogoDB repo as a trusted source:
 ```
@@ -117,4 +117,4 @@ We can now make sure we have MongoDB correctly installed with 'mongod --version'
 
 ### Going further
 
-Launch the AngularCLI default site above and follow the links to more detailed and comprehensive tutorials on Angular.
+Finished? Launch the AngularCLI default site above and follow the links to more detailed and comprehensive tutorials on Angular.
