@@ -13,10 +13,11 @@ A SPA serves a single index.html which includes script imports which dynamically
 ## How does it work?
 The client side is the web page which runs in the browser. On the client we will be using Angular to render the content in JS and complete client side operations. We use Express, MongoDB and Node for the serving of pages, the business logic & storage. We are using a Node backend, however, the Angular client could be served by any storage serving service. Indeed we could also use any frontend framework or pure JS to render our backend data; the 'MEAN stack' is a collection of useful tools and frameworks to achieve what we want rather than a list of requirements.
 
+![Overview](https://www.guru99.com/images/1/101218_1400_WhatisMeanS2.png)
+
 Dynamic endpoints (our API) is managed on the server - it's obviously important that things like authentication can't be edited directly by the client!  We make AJAX requests and pass data in JSON format between the client and server. We make these requests over a RESTful API... as demonstrated in the example you will build. Node is... "an open-source, cross-platform, JavaScript runtime environment that executes JavaScript code outside a web browser.". Basically it's server side JS that makes all these things work together.
 
 # Your project
-
 Teams are free to choose the most appropriate tools and frameworks to meet the requirements of the marking criteria. What is used is less important that how and why you've chosen a particular framework or tool. The workshops follow the MEAN stack, which is a common professional standard, and below is a summary marked outputs:
 
 | Tool        | Marked output           | Example frameworks, tools & languages  |
