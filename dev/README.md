@@ -26,10 +26,6 @@ Teams are free to choose the most appropriate tools and frameworks to meet the r
 | Back-end runtime environment | Server Side Application | Node, Goloang |
 | Database| Storage | MongoDB, SQL, SQLite |
 
-<video width="320" height="240" controls>
-  <source src="videos/0_getting_started.mp4" type="video/mp4">
-</video>
-
 ## Workbook overview
 These weekly worksheets set out the steps to build a fully functioning SPA from scratch using the MEAN stack. The outcomes could become the basis for your own team project. We have highlighted *Essential* milestones which everyone should reach and *Recommended* milestones for those focusing on the particular part of the stack. By following these sessions in order you will have a fully functioning SPA:
 
