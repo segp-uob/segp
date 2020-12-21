@@ -3,7 +3,7 @@
 Continuous integration (CI) is the practice of merging all developers' working copies to a shared branch regularly. Think of this workshop as focusing on *how* we work together effectivly to build complex software. Your CI pipeline (or process) will need to be agreed and shared with your team up front (but it can change) so this workshop is focused more on describing the principles that we will be looking for and how to develop *your* process. There isn't one right way of doing this stuff so better to have an agreed set of processes than a load of tools not everyone understands. A bit of time spent on your process early on will help as you progress.
 
 > ### Milestone checklist
-> - [ ] Essential: Workshop walkthrough
+> - [ ] Essential: [Workshop walkthrough](Worksheets/videos/1.ogg)
 > - [ ] Recommended: [Watch CI Explained (20 minutes)](https://www.youtube.com/watch?v=XusC2o-Y_fU)
 > - [ ] Essential: Clone the template repository
 > - [ ] Essential: Setup Docker

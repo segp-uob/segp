@@ -3,7 +3,7 @@
 A common usecase for the Angular framework, and indeed web applications in general, is to display data. Angular is brilliant for data driven applications. In this workshop we will be extending the 'boilerplate' Angular application to include our own charts and data. We will be using a few other node modules so we will cover installing those and integrating third party tools (which you almost certainly will do!). 
 
 > ### Milestone checklist
-> - [ ] Essential: Workshop walkthrough
+> - [ ] Essential: [Workshop walkthrough](Worksheets/videos/3.ogg)
 > - [ ] Recommended: [Intro to Chart.js (3 minutes)](https://www.youtube.com/watch?v=2UVHI9UaONw)
 > - [ ] Essential: Add charts.js to your project
 > - [ ] Essential: Import bootstrap

@@ -1,7 +1,7 @@
 # Testing and finding errors
 
 > ### Milestone checklist
-> - [ ] Essential: Workshop walkthrough
+> - [ ] Essential: [Workshop walkthrough](Worksheets/videos/8.ogg)
 > - [ ] Essential: 
 > - [ ] Recommended:
 ***

@@ -3,7 +3,7 @@
 A RESTful API is an Application Programming Interface (API) that uses HTTP verbs like GET, PUT, POST, and DELETE to operate data. We will use the principles of a REST API to start building a backend for our site. RESTful is ideal for scaling because the state to handle the request is contained within the request itself, in other words, the client must include all information for the server to fulfill the request. We will be starting simple but the principles contained here are very powerful and can be scaled right up for whatever product you're building!
 
 > ### Milestone checklist
-> - [ ] Essential: Workshop walkthrough
+> - [ ] Essential: [Workshop walkthrough](Worksheets/videos/6.ogg)
 > - [ ] Essential: 
 > - [ ] Recommended:
 ***
