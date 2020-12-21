@@ -56,6 +56,9 @@ Because of the way Docker works it is just not possible to install Docker withou
 I wouldn't recommend using Docker within a VM (such as Virtual Box) if you can avoid it. Docker runs on the hypervisor layer of your machine and using a VM can get in the way of this. The very point of docker is to containerise the environment in a way that abstracts system specific features. Ie if you're on a Mac or a windows machine - an image/environment is always exactly the same. On this basis you should probably just install docker on your machine at root level and enjoy the benefits of being able to quickly deploy to a consistent environment. 
 
 ## Node & npm
+> - [Mac specific instructions](https://treehouse.github.io/installation-guides/mac/node-mac.html)
+> - [Windows specific instructions](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+> - [General npm issues](https://docs.npmjs.com/)
 
 So when you're ready to go, make sure you have both node and npm installed with the following commands: 
 ```
@@ -96,7 +99,7 @@ If you've run the command ng serve (above): visit http://localhost:4200/ and see
 
 ## MongoDB 
 
-When in production we will host MongoDB remotely (or in a container on the same server) because the remote user won't be able to access the DB on your machine! It's really useful to have a local version for development and testing. In this step we will locally install Mongo and make sure it's working.
+When in production we will host MongoDB remotely (or in a container on the same server) because the remote user won't be able to access the DB on your machine! Depending on your project it can be useful to have a local version for development and testing (in addition to in a container, which we will cover later). In this step we will locally install Mongo and make sure it's working. This is not essential for everyone so only proceed if you need to!
 
 The first step is to add the MogoDB repo as a trusted source:
 ```
@@ -114,4 +117,4 @@ We can now make sure we have MongoDB correctly installed with 'mongod --version'
 
 ### Going further
 
-Launch the AngularCLI default site above and follow the links to more detailed and comprehensive tutorials on Angular.
+Finished? Launch the AngularCLI default site above and follow the links to more detailed and comprehensive tutorials on Angular.
