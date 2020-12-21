@@ -54,9 +54,9 @@ The best way to learn how to use Github is to start building an awesome project 
 
 ## Branches and stages
 
-Your git repo will allow you to create branches. As a minimum your team will need a master branch which is setup by default. It's probably easiest if this master is used as your development branch and it should be the most current version of the code shared by all developers. You will also need to have Live and Staging branches to allow a CI process. Live and Staging should also have corresponding 'environments' which we are configuring using Docker. Environments (eg served files/running systems) allow the code produced to be tested. So 'branches' should match up with 'environments' as follows:
+Your git repo will allow you to create branches. As a minimum your team will need a main branch which is setup by default. It's probably easiest if this main branch is 'production' and it should be the most current 'shipped' version. You will need to create dev and staging branches to allow a CI process. These branches should also have corresponding 'environments' which we are configuring using Dockerfiles. Environments (eg served files/running systems) allow the code produced to be tested. So 'branches' should match up with 'environments' as follows:
 
-### Live (live branch)
+### Production (main branch)
 
 Your Live branch should be a version of your code which is production ready. The contents of your Express API, Angular dist and Mongo scripts should be fully tested and ready to serve 'customers' in this state. Your docker compose and dockerfiles should create instances which will serve exactly the features required to your customers. 
 
@@ -64,7 +64,7 @@ Your Live branch should be a version of your code which is production ready. The
 
 Your Staging or sometimes called 'release' version should be where you complete a significant set of user tests and unit tests. Staging is your first opportunity to make sure that there are no issues with the feature you're deploying from your dev branch - but before pushing code to Live! Once fully tested staging features are merged with Live by the RO or PO.
 
-### Dev (master branch)
+### Dev (dev branch)
 
 Your dev branch is where the work happens! Usually the 'environment' for this stage is on developer's local machines serving locally (or via a Docker container). As developers we spend most of our time in development. When in development, you create a feature branch (off of development), complete the feature, and then merge back into development. This can then be added to the final version by merging into Staging. Therefore in reality a developer might also have lots of 'local' sub branches of the main dev branch -> but they should only merge and commit code they are happy with and is finalised. 
 
@@ -83,8 +83,27 @@ git status
  Make sure you are in the root of your project and add the remote: 
 ```
 git remote add origin https://github.com/<username>/<repositoryname>.git
+git branch -M main
+git push -u origin main
 ```
 Check git status again to make sure this is setup. 
+
+## Creating a production branch
+Lets say we want to create a dev branch. We would checkout locally then push to the upstream: 
+```
+git checkout -b dev
+git add .
+git commit
+git push --set-upstream origin dev
+git show-branch -a
+```
+This means changes are now recorded. We can check the branches ```git show-branch -a```
+### Merge main to production
+From the main branch we merge code from sub-branches. So if we wanted to merge staging to production (main) we would issue the following: 
+```
+git checkout origin/main
+git merge origin/dev
+```
 
 # Docker background
 

@@ -14,11 +14,11 @@ import { AppModeratorComponent } from './app-moderator/app-moderator.component';
 import { AppAdminComponent } from './app-admin/app-admin.component';
 
 const routes: Routes = [
-  //{path: 'bar-chart', component: BarChartComponent},
-  //{path: 'doughnut-chart', component: DoughnutChartComponent},
-  //{path: 'radar-chart', component: RadarChartComponent},
-  //{path: 'pie-chart', component: PieChartComponent},
-  //{path: '**', component: PieChartComponent},
+  {path: 'bar-chart', component: BarChartComponent},
+  {path: 'doughnut-chart', component: DoughnutChartComponent},
+  {path: 'radar-chart', component: RadarChartComponent},
+  {path: 'pie-chart', component: PieChartComponent},
+  {path: '**', component: PieChartComponent},
   {path: 'home', component: HomeComponent },
   {path: 'login', component: LoginComponent },
   {path: 'register', component: RegisterComponent },
