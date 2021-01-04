@@ -10,6 +10,7 @@ You will use Angular locally to develop your site. When you are ready to deploy 
 > - [ ] Essential: [Workshop walkthrough](videos/2.ogg)
 > - [ ] Essential: Create a new component
 > - [ ] Recommended: [Angular walkthrough](https://angular.io/start )
+> - [ ] Recommended: [Angular architecture overview](https://angular.io/guide/architecture)
 ***
 
 ## Angular structure and files
@@ -17,7 +18,7 @@ You will use Angular locally to develop your site. When you are ready to deploy 
 Now you've built your first Angular project you will see several files which were created when you created. We are going to take a closer look at the [file stucture](https://angular.io/guide/file-structure).
 
 ### package.json
-A configuration file that contains the metadata for your application. When there is a package.json file in the root directory of the project. In the example we will be building, our hosting provider (Heroku) will use the Node.js buildpack to deploy your application. 
+A configuration file that contains the metadata for your application. When there is a package.json file in the root directory of the project. In the example we will be building, we will be updating this package file a few times, then running ng install to make sure all the dependancies are updated.
 
 ### app.json
 A manifest format for describing web apps. It declares environment variables, add-ons, and other information required to run an app on Heroku. It is required to create a “Deploy to Heroku” button.
