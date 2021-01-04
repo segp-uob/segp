@@ -6,6 +6,7 @@ Now we have built our API, and our frontend, it's time to think about how we mig
 > - [ ] Essential: [Workshop walkthrough](videos/7.ogg)
 > - [ ] Essential: Add Mongoose package and test integration
 > - [ ] Recommended: [SQL vs NoSQL](https://www.youtube.com/watch?v=XLveJr2Pst8)
+> - [ ] Recommended: [Mongo models & schemas](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose)
 > - [ ] Recommended: [Full tutorial on Mongo with Docker](https://www.digitalocean.com/community/tutorials/containerizing-a-node-js-application-for-development-with-docker-compose)
 ***
 # NoSQL vs SQL
@@ -21,9 +22,10 @@ And add nodemon to the devdependancies:
 ```
     "nodemon": "^1.18.10"
 ```
-You then need to install these dependancies with ```npm install```
+You then need to install these dependancies (from your updated package.json file) with ```npm install```. Test by running your updated server.js file.
+
 # Database credentials
-Your express service will need read and write access to your database. This is essentially root access so we need to be very careful with the username and passwords we create. You will remember that when setting up docker we created a .env file which contains our login information; this should already be in your project folder. Lets create a file which can import this information and use it! First, you need to create a db.js file in your root directory ```nano db.js``` then edit as below:
+Your express service will need read and write access to your database. This access is essentially root so we need to be very careful with the username and passwords we create. You will remember that when setting up docker we created a .env file which contains our login information; this should already be in your project folder. Lets create a file which can import this login information and use it! First, you need to create a db.js file in your root directory ```nano db.js``` then edit as below:
 ```
 const mongoose = require('mongoose');
 
@@ -51,7 +53,23 @@ mongoose.connect(url, options).then( function() {
   console.log(err);
 });
 ```
-To call our new database connection script add ```const db = require('./db')``` to the top of ```server.js```. To test the new database connection from within the container run the command ```docker-compose up``` and you should see ```MongoDB is connected``` from nodejs return. Congratulations the database is working!
+To call our new database connection script ```db.js``` add ```const db = require('./db')``` to the top of ```server.js``` file you already have. To test the new database connection from within the container run the command ```docker-compose up``` and you should see ```MongoDB is connected``` from nodejs return. Congratulations the database connection is working!
+
+# Models and schemas
+Once you have your MongoDB database working and connected it's time to create your model! Creating models using Mongoose is a lot easier than CREATE/DROP scripts in SQL. Models are defined using the Schema interface (see tutorial). The Schema allows you to define the fields stored in each document along with their validation requirements and default values. Once you have a model defined as a team follow [this guide](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose) to understand how to encode your model as a schema. An example below illustrates how you might do this: 
+```
+//Require Mongoose
+var mongoose = require('mongoose');
+
+//Define a schema
+var Schema = mongoose.Schema;
+
+var SomeModelSchema = new Schema({
+  a_string: String,
+  a_date: Date
+});
+
+```
 
 
 [More information about using Mongo with Node and Docker](https://www.digitalocean.com/community/tutorials/containerizing-a-node-js-application-for-development-with-docker-compose)
