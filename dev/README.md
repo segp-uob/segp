@@ -6,11 +6,21 @@ Your central task as a team is to build a fully functioning single page applicat
 The MEAN stack allows developers to quickly produce secure, fast and dynamic sites ready to ship - which is exactly what this unit is all about! These workshops are not about teaching the complete MEAN stack (would take too long!); rather they are about giving a clear structure by which as a team you can explore and test out frameworks and technologies. Software engineering is about selecting, learning and integrating different tools and technologies to give your product or service the features it needs.  
 
 ## What is a Single Page Application (SPA)?
-A SPA serves a single index.html which includes script imports which dynamically re-renders what the user sees - without re-requesting a page. Angular is used to dynamically update (fetch/post) the domain application model (DOM) and makes this process very simple. The result is a highly interactive application following the model view controller (M-V-C) design paradigm. By making API calls for information to a backend (node), we separate the front and back of the application. This has many benefits including scalability, statelessness and extendability of the code.
+A SPA serves a single index.html which includes script imports which dynamically re-renders what the user sees - without re-requesting a page. Angular is used to dynamically update (fetch/post) the domain application model (DOM) and makes this process very simple. The result is a highly interactive application which loads in an efficient way. By making API calls for information to a backend (node), we separate the front and back of the application. This has many benefits including scalability, statelessness and extendability of the code.
 
 > [Read more about the MEAN stack](https://www.ibm.com/uk-en/cloud/learn/mean-stack-explained)
 
-## How does it work?
+### Why Angular and Angular CLI?
+In these workshops we are using some basic features from the Angular 11 framework. We have chosen to use Angular but you don't have to! We selected Angular because it is stable, supported and developed by google, and simplifies many processes whilst being very powerful. We make using angular easier by making use of the bundled Angular CLI tool.
+```
+     _                      _                 ____ _     ___
+    / \   _ __   __ _ _   _| | __ _ _ __     / ___| |   |_ _|
+   / △ \ | '_ \ / _` | | | | |/ _` | '__|   | |   | |    | |
+  / ___ \| | | | (_| | |_| | | (_| | |      | |___| |___ | |
+ /_/   \_\_| |_|\__, |\__,_|_|\__,_|_|       \____|_____|___|
+                |___/
+```
+## How does a SPA work?
 The client side is the web page which runs in the browser. On the client we will be using Angular to render the content in JS and complete client side operations. We use Express, MongoDB and Node for the serving of pages, the business logic & storage. We are using a Node backend, however, the Angular client could be served by any storage serving service. Indeed we could also use any frontend framework or pure JS to render our backend data; the 'MEAN stack' is a collection of useful tools and frameworks to achieve what we want rather than a list of requirements.
 
 ![Overview](https://www.guru99.com/images/1/101218_1400_WhatisMeanS2.png)
