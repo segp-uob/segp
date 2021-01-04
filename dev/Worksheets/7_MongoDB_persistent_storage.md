@@ -70,6 +70,7 @@ var SomeModelSchema = new Schema({
 });
 
 ```
-
+## Saving and searching
+Once you have established your data model; you can start saving and searching in your Mongo database! For example, to create a record you define an instance of the model and then call ```save()```.
 
 [More information about using Mongo with Node and Docker](https://www.digitalocean.com/community/tutorials/containerizing-a-node-js-application-for-development-with-docker-compose)

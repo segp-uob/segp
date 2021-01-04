@@ -1,4 +1,4 @@
-# User Auth
+# User Authentication
 
 To personalise the experience your Application users have, and to ensure the security of their data, we must impliment some kind of user authentication. User auth is about holding session information which identifies your users. Once this is implimented an application can really take off as you can provide completely unique experiences and render content based on user determined data. 
 
@@ -13,7 +13,7 @@ There are a lot of third party services (Like Auth0 & Okta) that will handle use
 
 # Overview
 
-A fully implimented authenticaiton process in Angular would follow the below structure: 
+A fully implimented authenticaiton process in Angular would follow the below structure (credit: bezkoder: 
 ![User Authentication process](https://bezkoder.com/wp-content/uploads/2020/07/angular-10-jwt-authentication-overview.png "Authentication flow")
 
 ## About HTTP Interceptors
