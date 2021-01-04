@@ -18,7 +18,7 @@ const routes: Routes = [
   {path: 'doughnut-chart', component: DoughnutChartComponent},
   {path: 'radar-chart', component: RadarChartComponent},
   {path: 'pie-chart', component: PieChartComponent},
-  {path: '**', component: PieChartComponent},
+  //{path: '**', component: PieChartComponent},
   {path: 'home', component: HomeComponent },
   {path: 'login', component: LoginComponent },
   {path: 'register', component: RegisterComponent },
@@ -26,7 +26,7 @@ const routes: Routes = [
   {path: 'user', component: AppUserComponent },
   {path: 'mod', component: AppModeratorComponent },
   {path: 'admin', component: AppAdminComponent },
-  {path: '', redirectTo: 'home', pathMatch: 'full' }
+  {path: '**', redirectTo: 'home', pathMatch: 'full' }
 ];
 
 @NgModule({
