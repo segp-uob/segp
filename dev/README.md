@@ -23,7 +23,7 @@ In these workshops we are using some basic features from the Angular 11 framewor
 ## How does a SPA work?
 The client side is the web page which runs in the browser. On the client we will be using Angular to render the content in JS and complete client side operations. We use Express, MongoDB and Node for the serving of pages, the business logic & storage. We are using a Node backend, however, the Angular client could be served by any storage serving service. Indeed we could also use any frontend framework or pure JS to render our backend data; the 'MEAN stack' is a collection of useful tools and frameworks to achieve what we want rather than a list of requirements.
 
-![Overview](https://www.guru99.com/images/1/101218_1400_WhatisMeanS2.png)
+![Overview](https://www.google.com/imgres?imgurl=https%3A%2F%2Fangular.io%2Fgenerated%2Fimages%2Fguide%2Farchitecture%2Foverview2.png&imgrefurl=https%3A%2F%2Fangular.io%2Fguide%2Farchitecture&tbnid=m_QpUEAncjGBsM&vet=12ahUKEwjZqZrWs4LuAhXP_IUKHStEBh0QMygBegUIARCqAQ..i&docid=XLl5JgrDii6kcM&w=700&h=356&q=angular%20how%20it%20works&safe=off&client=ubuntu&ved=2ahUKEwjZqZrWs4LuAhXP_IUKHStEBh0QMygBegUIARCqAQ)
 
 Dynamic endpoints (our API) is managed on the server - it's obviously important that things like authentication can't be edited directly by the client! We make AJAX (Asynchronous JavaScript And XML) requests and pass data in JSON (JavaScript Object Notation) format between the client and server. We make these requests over a RESTful API... as demonstrated in the example you will build. Node is... "an open-source, cross-platform, JavaScript runtime environment that executes JavaScript code outside a web browser.". Basically it's server side JS that makes all these things work together.
 
