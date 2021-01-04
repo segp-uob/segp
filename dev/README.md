@@ -33,14 +33,15 @@ Teams are free to choose the most appropriate tools and frameworks to meet the r
 ## Workbook overview
 These weekly worksheets set out the steps to build a fully functioning SPA from scratch using the MEAN stack. The outcomes could become the basis for your own team project. We have highlighted *Essential* milestones which everyone should reach and *Recommended* milestones for those focusing on the particular part of the stack. By following these sessions in order you will have a fully functioning SPA:
 
+>- [Getting started!](Worksheets/0_gettingstarted.md)
 >- [Continious Integration](Worksheets/1_DevOps_Docker_CI.md)
 >- [Angular intro](Worksheets/2_Angular_building_client_side.md)
 >- [Build a Dashboard](Worksheets/3_Angular_dashboard.md)
->- [Express & services](Worksheets/4_Express_through_services.md)
+>- [Build your API](Worksheets/4_Launch_your_API.md)
 >- [Deploying via Docker](Worksheets/5_Deploying_with_Docker.md)
->- [Write your API](Worksheets/6_Launch_your_API.md)
->- [MongoDB](Worksheets/7_MongoDB_persistent_storage.md)
->- [Tests](Worksheets/8_Testing_and_errors.md)
+>- [Using Services](Worksheets/6_Express_through_services.md)
+>- [Setting up MongoDB](Worksheets/7_MongoDB_persistent_storage.md)
+>- [Writing tests](Worksheets/8_Testing_and_errors.md)
 >- [User Authentication](Worksheets/9_User_Authentication.md)
 
 
