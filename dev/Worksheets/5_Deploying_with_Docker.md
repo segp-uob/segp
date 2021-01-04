@@ -68,16 +68,16 @@ nano .env
 Add the following to the .env file and save:
 
 ```
-MONGO_USERNAME=sammy
+MONGO_USERNAME=your_username
 MONGO_PASSWORD=your_password
 MONGO_PORT=27017
-MONGO_DB=sharkinfo
+MONGO_DB=meantest
 ```
 Finally, you need to make sure the .env file is added to your gitignore:
 ```
 nano .gitignore
 ```
-Add .env to the .gitignore file. 
+Make sure to add .env to the .gitignore file otherwise you will be pushing your sensitive mongo login details to a public repo!
 
 ## Wait script
 

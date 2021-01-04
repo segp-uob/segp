@@ -94,7 +94,7 @@ export class AppModule { }
 ```
 ## Creating services
 
-As with our Data Service, we need some Authentication services for handling our 
+As with our Data Service, we need some Authentication services for handling our requests for auth. 
 ### Authentication
 We update auth.service.ts:
 ```
@@ -599,6 +599,7 @@ appModeratorComponent & appUserComponent are similar.
 app-admin/app-admin.component.ts
 
 ## Updating routes
+We need to update the app routing that we setup previously. As below, this involves adding the following routes to the new components you've just created, as well as commenting out the default (**) route to the pie chart we were previously using. This will ensure non-authenticated users are instead directed to our new 'home' path:
 ```
 // user related components
 import { RegisterComponent } from './register/register.component';
@@ -614,7 +615,7 @@ const routes: Routes = [
   {path: 'doughnut-chart', component: DoughnutChartComponent},
   {path: 'radar-chart', component: RadarChartComponent},
   {path: 'pie-chart', component: PieChartComponent},
-  {path: '**', component: PieChartComponent}
+  //{path: '**', component: PieChartComponent}
   {path: 'home', component: HomeComponent },
   {path: 'login', component: LoginComponent },
   {path: 'register', component: RegisterComponent },
