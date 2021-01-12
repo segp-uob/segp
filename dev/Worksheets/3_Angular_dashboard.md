@@ -5,12 +5,13 @@ A common usecase for the Angular framework, and indeed SPAs in general, is to di
 > ### Milestone checklist
 > - [ ] Essential: [Workshop walkthrough](videos/3.ogg)
 > - [ ] Recommended: [Intro to Chart.js (3 minutes)](https://www.youtube.com/watch?v=2UVHI9UaONw)
-> - [ ] Recommended: [Intro to Bootstrap] (60 minutes)(https://getbootstrap.com/docs/4.0/getting-started/introduction/)
+> - [ ] Recommended: [Intro to Bootstrap (60 minutes)](https://getbootstrap.com/docs/4.0/getting-started/introduction/)
 > - [ ] Essential: Add charts.js to your project
 > - [ ] Essential: Import bootstrap
 > - [ ] Essential: Create the demonstration charts
 > - [ ] Essential: Setup routing
 > - [ ] Recommended: Test your new dashboard with your own charts!
+> - [ ] Going further: [Angular Matieral Design](https://material.angular.io/components/categories)
 ***
 
 ## Create a template project
@@ -58,7 +59,7 @@ To enable us to navigate through our application lets start by creating a very s
 ```
 # Using Chart.js
 
-Now we have setup the required dependancies we can actually create some charts! We use Angular components as objects to contain both the HTML, styling and logic for our chart which is rendered. This means you can reuse and easily redevelop your application. 
+Now we have setup the required dependancies we can actually create some charts! We use Angular components to ammend the HTML, styling and logic for our chart which is rendered. A 'component' controls a patch of screen called a 'view'. We interact with this view via properties and methods contained within the component. This approach means you can reuse and easily redevelop your application... follow this example and you'll understand the basics of Angular components. 
 
 ## Create a Bar Chart
 First, lets create a simple bar chart. You could choose any chart from the Chart.js framework and the process will be very similar. To begin we need to ask Angularcli to create a new component called 'bar-chart'. We issue the following command: 
