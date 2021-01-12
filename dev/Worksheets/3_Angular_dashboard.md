@@ -11,6 +11,7 @@ A common usecase for the Angular framework, and indeed SPAs in general, is to di
 > - [ ] Essential: Create the demonstration charts
 > - [ ] Essential: Setup routing
 > - [ ] Recommended: Test your new dashboard with your own charts!
+> - [ ] Further: [Angular Matieral Design](https://material.angular.io/components/categories)
 ***
 
 ## Create a template project
