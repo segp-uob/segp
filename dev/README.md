@@ -25,6 +25,8 @@ The client side is the web page which runs in the browser. On the client we will
 
 Dynamic endpoints (our API) is managed on the server - it's obviously important that things like authentication can't be edited directly by the client! We make AJAX (Asynchronous JavaScript And XML) requests and pass data in JSON (JavaScript Object Notation) format between the client and server. We make these requests over a RESTful API... as demonstrated in the example you will build. Node is... "an open-source, cross-platform, JavaScript runtime environment that executes JavaScript code outside a web browser.". Basically it's server side JS that makes all these things work together.
 
+We are going to walk through building and integrating each of these stages as we progress through the workshops.
+
 # Your project
 Teams are free to choose the most appropriate tools and frameworks to meet the requirements of the marking criteria. What is used is less important than how and why you've chosen a particular framework or tool. The workshops follow the MEAN stack, which is a common professional standard, and below is a summary marked outputs:
 
