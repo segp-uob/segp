@@ -59,7 +59,7 @@ To enable us to navigate through our application lets start by creating a very s
 ```
 # Using Chart.js
 
-Now we have setup the required dependancies we can actually create some charts! We use Angular components as objects to contain both the HTML, styling and logic for our chart which is rendered. This means you can reuse and easily redevelop your application. 
+Now we have setup the required dependancies we can actually create some charts! We use Angular components to ammend the HTML, styling and logic for our chart which is rendered. A 'component' controls a patch of screen called a 'view'. We interact with this view via properties and methods contained within the component. This approach means you can reuse and easily redevelop your application... follow this example and you'll understand the basics of Angular components. 
 
 ## Create a Bar Chart
 First, lets create a simple bar chart. You could choose any chart from the Chart.js framework and the process will be very similar. To begin we need to ask Angularcli to create a new component called 'bar-chart'. We issue the following command: 
