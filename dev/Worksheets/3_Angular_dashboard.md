@@ -5,13 +5,13 @@ A common usecase for the Angular framework, and indeed SPAs in general, is to di
 > ### Milestone checklist
 > - [ ] Essential: [Workshop walkthrough](videos/3.ogg)
 > - [ ] Recommended: [Intro to Chart.js (3 minutes)](https://www.youtube.com/watch?v=2UVHI9UaONw)
-> - [ ] Recommended: [Intro to Bootstrap](https://getbootstrap.com/docs/4.0/getting-started/introduction/)
+> - [ ] Recommended: [Intro to Bootstrap (60 minutes)](https://getbootstrap.com/docs/4.0/getting-started/introduction/)
 > - [ ] Essential: Add charts.js to your project
 > - [ ] Essential: Import bootstrap
 > - [ ] Essential: Create the demonstration charts
 > - [ ] Essential: Setup routing
 > - [ ] Recommended: Test your new dashboard with your own charts!
-> - [ ] Further: [Angular Matieral Design](https://material.angular.io/components/categories)
+> - [ ] Going further: [Angular Matieral Design](https://material.angular.io/components/categories)
 ***
 
 ## Create a template project
