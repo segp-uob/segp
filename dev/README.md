@@ -47,7 +47,11 @@ We are looking for all teams to have *some* coverage of the following areas. You
 ## Is the source code marked?
 No! We do, however, expect all projects to build and teams with non-building projects should expect low marks. We mark the outputs and level of technical achievement by inspecting your built outputs and commit logs (rather than your source code) and we expect high scoring teams to **prove** that code is well written by the use of tests. 
 
-We don't need to mark the source code because, in the case of Angular, the [Angular compiler](https://www.npmjs.com/package/@angular/compiler) will ensure your code is technically correct. Teams will only, therfore, be able to build functioning products with well written code. We take this approach to reflect professional software development practices and highlight our focus on tests and outputs. 
+We don't need to mark the source code because, in the case of Angular, the [Angular compiler](https://www.npmjs.com/package/@angular/compiler) will ensure your code is technically correct. 
+
+> Teams will only, therfore, be able to build functioning products with well written code. 
+
+We take this approach to reflect professional software development practices and highlight our focus on tests and outputs. 
 
 # Workshops, workbooks and walkthroughs
 
