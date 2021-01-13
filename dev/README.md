@@ -44,6 +44,8 @@ We are looking for all teams to have *some* coverage of the following areas. You
 | Database| Storage | MongoDB, SQL, SQLite |
 | Automated testing| Tests | TSlint, Protractor |
 
+## Do we mark your code?
+No. We do, however, expect all projects to build and teams with non-building projects should expect low marks. We mark the outputs and level of technical achievement by inspecting your built outputs. We expect teams to prove to the markers that code is well written by use tests. In the case of Angular; the [Angular compiler](https://www.npmjs.com/package/@angular/compiler) will ensure your code is correct and teams will only be able to build functioning products with well written code.  
 
 # Workshops, workbooks and walkthroughs
 
