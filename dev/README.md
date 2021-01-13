@@ -49,9 +49,7 @@ No! We do, however, expect all projects to build and teams with non-building pro
 
 We don't need to mark the source code because, in the case of Angular, the [Angular compiler](https://www.npmjs.com/package/@angular/compiler) will ensure your code is technically correct. 
 
-> Teams will only, therfore, be able to build functioning products with well written code. 
-
-We take this approach to reflect professional software development practices and highlight our focus on tests and outputs. 
+> Teams will only be able to build functioning products with well written code. We are focused on marking tests and outputs. 
 
 # Workshops, workbooks and walkthroughs
 
