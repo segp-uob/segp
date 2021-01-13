@@ -13,10 +13,13 @@ You will use Angular locally to develop your site. When you are ready to deploy 
 > - [ ] Recommended: [Angular walkthrough](https://angular.io/start )
 > - [ ] Recommended: [Angular architecture overview](https://angular.io/guide/architecture)
 ***
+# Overview
+
+This workshop is focused on giving you a general overview of the Angular framework and introducing you to some of the key files and concepts. We will be navigating through the project you created in last week's workshop.
 
 ## Angular structure and files
 
-Now you've built your first Angular project you will see several files which were created when you created. We are going to take a closer look at the [file stucture](https://angular.io/guide/file-structure).
+Now you've built your first Angular project (in the last workshop) you will see several files which were created when you created. We are going to take a closer look at the [file stucture](https://angular.io/guide/file-structure).
 
 ### package.json
 A configuration file that contains the metadata for your application. When there is a package.json file in the root directory of the project. In the example we will be building, we will be updating this package file a few times, then running ng install to make sure all the dependancies are updated.
