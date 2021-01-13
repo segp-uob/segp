@@ -49,9 +49,11 @@ No. We do, however, expect all projects to build and teams with non-building pro
 
 # Workshops, workbooks and walkthroughs
 
-Each workshop has its own *workbook* page and most workshops include 1 week of content including a terminal guided walkthrough. We have highlighted *Essential* milestones which everyone should reach and *Recommended* milestones for those focusing on the particular part of the stack. The later workshops (10 - 12) are more advanced and include a greater number of *Recommended* milestones to reflect the additional complexity. As per the marked outputs above; we don't expect every team to impliment full user authentication (Weeks 11 & 12) and these are provided for additional stretch for teams looking to take their product to a fully functioning state. 
+Each workshop has its own *workbook* page and most workshops include 1 week of content including a terminal guided walkthrough. We have highlighted *Essential* milestones which everyone should reach and *Recommended* milestones for those focusing on the particular part of the stack. The later workshops (10 - 12) are more advanced and include a greater number of *Recommended* milestones to reflect the additional complexity. We also don't cover everything in these later sessions so there are many more technical gaps to fill. 
 
-By following these sessions in order you will have a fully functioning SPA:
+As per the marked outputs above; we don't expect every team to impliment full user authentication (Weeks 11 & 12) and these are provided for additional stretch for teams looking to take their product to a fully functioning state. 
+
+By following these sessions in order you will have a fully functioning SPA which would meet the basic requirements of the unit:
 
 ## Workbook overview
 These weekly worksheets set out the steps to build a fully functioning SPA from scratch using the MEAN stack. The outcomes could become the basis for your own team project. 
