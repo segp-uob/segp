@@ -1,6 +1,6 @@
 # Deploying with Docker
 
-In workshop 1 we setup Docker on your machines. Now we will integrate our site so far into a container so that it can be deployed and reproduced with ease. 
+Docker is a great way to create a consistent runtime environment for your application. It ensures that when you bundle up your project for others to compile and run you know the conditions present at runtime. You'll remember that in workshop 1 we setup Docker on your machines. Now we will integrate our site so far into a container so that it can be deployed and reproduced with ease. 
 
 In Docker we talk about Images and Containers. Now, images can exist without containers, whereas a container needs to run an image to run (an empty container is like a hard drive with no OS). In this workshop we build an image (from a Dockerfile, which is a set of instructions) to run the application. The image gives us an unchangable run-time environment to run an application. Sound confusing? It's much simpler to demonstrate - that's what we are going to do in this workshop. 
 
