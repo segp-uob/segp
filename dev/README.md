@@ -13,7 +13,7 @@ A SPA serves a single index.html which includes script imports which dynamically
 > [Read more about the MEAN stack](https://www.ibm.com/uk-en/cloud/learn/mean-stack-explained)
 
 ### Why Angular and Angular CLI?
-In these workshops we are using some basic features from the Angular 11 framework. We have chosen to use Angular but you don't have to! We selected Angular because it is stable, supported and developed by google, and simplifies many processes whilst being very powerful. We make using angular easier by making use of the bundled Angular CLI tool.
+In these workshops we are using some basic features from the Angular 11 framework. We have chosen to use Angular but you don't have to! We selected Angular because it is stable, supported and developed by google, and simplifies many processes whilst being very powerful. We make using angular easier by making use of the bundled Angular CLI tool. We will be showing you some basic features of Angular in the workshops.
 ```
      _                      _                 ____ _     ___
     / \   _ __   __ _ _   _| | __ _ _ __     / ___| |   |_ _|
