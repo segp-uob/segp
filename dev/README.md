@@ -45,7 +45,7 @@ We are looking for all teams to have *some* coverage of the following areas. You
 | Automated testing| Tests | TSlint, Protractor |
 
 ## Do we mark your code?
-No. We do, however, expect all projects to build and teams with non-building projects should expect low marks. We mark the outputs and level of technical achievement by inspecting your built outputs. We expect teams to prove to the markers that code is well written by use tests. In the case of Angular; the [Angular compiler](https://www.npmjs.com/package/@angular/compiler) will ensure your code is correct and teams will only be able to build functioning products with well written code.  
+No. We do, however, expect all projects to build and teams with non-building projects should expect low marks. We mark the outputs and level of technical achievement by inspecting your built outputs and commit logs (rather than your source code). We expect high scoring teams to **prove** that code is well written by the use of tests. In the case of Angular: the [Angular compiler](https://www.npmjs.com/package/@angular/compiler) will ensure your code is technically correct and teams will only, therfore, be able to build functioning products with well written code. We take this approach to reflect professional software development practices. 
 
 # Workshops, workbooks and walkthroughs
 
