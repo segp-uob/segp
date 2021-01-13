@@ -2,12 +2,13 @@
 
 We are going to be using Angular for our client side development. Angular is a fantastically flexible and scalable framework for building web applications. If you're leading on frontend development getting to grips with Angular is going to be a big focus for you.
 
-Angular is a very powerful, but potentially complex, and does take some time to learn. Learning Angular properly would take a lot longer than the time we have! Therefore, the focus for this workshop is giving you a structure for your learning and pointers towards what might be useful. It by no means will teach you all you need to know about Angular! How far your team chooses to go with the Angular framework is your choice. If you're interested take 5 minutes and look at some of the awesome sites built with Angular: https://www.madewithangular.com/
+Angular is a very powerful, but potentially complex, and does take some time to learn. Learning Angular properly would take a lot longer than the time we have! Therefore, the focus for this workshop is giving you a structure for your learning and pointers towards what might be useful. It by no means will teach you all you need to know about Angular! How far your team chooses to go with the Angular framework is your choice.
 
 You will use Angular locally to develop your site. When you are ready to deploy to production/live we build a set of static files which can then be served to your users. Usually you would build locally and deploy to a remote environment following sucessful completion of tests. Your Angular site will call data from an API which we will build later in the workshop sessions.
 
 > ### Milestone checklist
 > - [ ] Essential: [Workshop walkthrough](videos/2.ogg)
+> - [ ] Recommended: [Check out Made with Angular (5 minutes)](https://www.madewithangular.com/)
 > - [ ] Essential: Create a new component
 > - [ ] Recommended: [Angular walkthrough](https://angular.io/start )
 > - [ ] Recommended: [Angular architecture overview](https://angular.io/guide/architecture)
