@@ -30,7 +30,10 @@ Dynamic endpoints (our API) is managed on the server - it's obviously important 
 We are going to walk through building and integrating each of these stages as we progress through the workshops.
 
 # Your project
-Teams are free to choose the most appropriate tools and frameworks to meet the requirements of the marking criteria. What is used is less important than how and why you've chosen a particular framework or tool. The workshops follow the MEAN stack, which is a common professional standard, and below is a summary marked outputs:
+
+Teams are free to choose the most appropriate tools and frameworks to meet the requirements of the marking criteria. What is used is less important than how and why you've chosen a particular framework or tool. The workshops follow the MEAN stack, which is a common professional standard, and below is a summary marked outputs we expect to see in every final project:
+
+## Marked outputs
 
 | Tool        | Marked output           | Example frameworks, tools & languages  |
 | ------------- |-------------| -----|
@@ -38,23 +41,28 @@ Teams are free to choose the most appropriate tools and frameworks to meet the r
 | Back end framework| RESTful API |   Express, Koa, Fastify |
 | Back-end runtime environment | Server Side Application | Node, Goloang |
 | Database| Storage | MongoDB, SQL, SQLite |
+| Automated testing| Tests | TSlint, Protractor |
 
 
+# Workshops, workbooks and walkthroughs
 
+Each workshop has its own *workbook* page and most workshops include 1 week of content including a terminal guided walkthrough. We have highlighted *Essential* milestones which everyone should reach and *Recommended* milestones for those focusing on the particular part of the stack. The later workshops (10 - 12) are more advanced and include a greater number of *Recommended* milestones to reflect the additional complexity. As per the marked outputs above; we don't expect every team to impliment full user authentication (Weeks 11 & 12) and these are provided for additional stretch for teams looking to take their product to a fully functioning state. 
+
+By following these sessions in order you will have a fully functioning SPA:
 
 ## Workbook overview
-These weekly worksheets set out the steps to build a fully functioning SPA from scratch using the MEAN stack. The outcomes could become the basis for your own team project. We have highlighted *Essential* milestones which everyone should reach and *Recommended* milestones for those focusing on the particular part of the stack. By following these sessions in order you will have a fully functioning SPA:
+These weekly worksheets set out the steps to build a fully functioning SPA from scratch using the MEAN stack. The outcomes could become the basis for your own team project. 
 
->- [Getting started!](Worksheets/0_gettingstarted.md)
->- [Continious Integration](Worksheets/1_DevOps_Docker_CI.md)
->- [Angular intro](Worksheets/2_Angular_building_client_side.md)
->- [Build a Dashboard](Worksheets/3_Angular_dashboard.md)
->- [Build your API](Worksheets/4_Launch_your_API.md)
->- [Deploying via Docker](Worksheets/5_Deploying_with_Docker.md)
->- [Using Services](Worksheets/6_Express_through_services.md)
->- [Setting up MongoDB](Worksheets/7_MongoDB_persistent_storage.md)
->- [Writing tests](Worksheets/8_Testing_and_errors.md)
->- [User Authentication](Worksheets/9_User_Authentication.md)
+>- [Week 1: Getting started!](Worksheets/0_gettingstarted.md)
+>- [Week 2: Continious Integration](Worksheets/1_DevOps_Docker_CI.md)
+>- [Week 3: Angular intro](Worksheets/2_Angular_building_client_side.md)
+>- [Weeks 4 & 5: Build a Dashboard](Worksheets/3_Angular_dashboard.md)
+>- [Week 6: Build your API](Worksheets/4_Launch_your_API.md)
+>- [Week 7: Deploying via Docker](Worksheets/5_Deploying_with_Docker.md)
+>- [Week 8: Using Services](Worksheets/6_Express_through_services.md)
+>- [Week 9: Setting up MongoDB](Worksheets/7_MongoDB_persistent_storage.md)
+>- [Week 10: Writing tests: TSlint & Protractor](Worksheets/8_Testing_and_errors.md)
+>- [Weeks 11 & 12: User Authentication (Advanced)](Worksheets/9_User_Authentication.md)
 
 
 
