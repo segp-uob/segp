@@ -31,14 +31,15 @@ We are going to walk through building and integrating each of these stages as we
 
 # Your project
 
-Teams are free to choose the most appropriate tools and frameworks to meet the requirements of the marking criteria. What is used is less important than how and why you've chosen a particular framework or tool. The workshops follow the MEAN stack, which is a common professional standard, and below is a summary marked outputs we expect to see in every final project:
+**Teams are free to choose the most appropriate tools and frameworks to meet the requirements of the marking criteria.** What is used is less important than how and why you've chosen a particular framework or tool. The workshops follow the MEAN stack, which is a common professional standard, and we would suggest it could be used as a basis for most projects. Because it is well used the integration between various tools is well documented online.
 
 ## Marked outputs
+We are looking for all teams to have *some* coverage of the following areas. Your team need to make a decision around how best to approach each of these areas:
 
-| Tool        | Marked output           | Example frameworks, tools & languages  |
+| Area/topic        | Marked output           | Example frameworks, tools & languages  |
 | ------------- |-------------| -----|
-| Front end framework| Single Page Application | Angular, Vue, React |
-| Back end framework| RESTful API |   Express, Koa, Fastify |
+| Front end frameworks| Single Page Application | Angular, Vue, React |
+| Back end frameworks| RESTful API |   Express, Koa, Fastify |
 | Back-end runtime environment | Server Side Application | Node, Goloang |
 | Database| Storage | MongoDB, SQL, SQLite |
 | Automated testing| Tests | TSlint, Protractor |
