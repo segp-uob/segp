@@ -2,14 +2,11 @@
 
 Currently we are just using dummy data rendered from within the component (not recommended!). Of course we want to connect everything to our newly created API!
 
-Best practices recommend defining a provider or service to handle the http calls. Take a look at this introduction to services: https://angular.io/tutorial/toh-pt4
-Services are great because they are injectable and they can also have its own injected dependencies. This makes testing and reuse easier. 
-
-Of course a service could go and get data from basically anywhere - a web service, filesystem, or a mock data source.
+Best practices recommend defining a provider or service to handle the http calls. Services are great because they are injectable and they can also have its own injected dependencies. This makes testing and reuse easier. Of course a service could go and get data from basically anywhere - a web service, filesystem, or a mock data source. We are going to be developing a data service and hooking it up to our application components.
 
 > ### Milestone checklist
 > - [ ] Essential: [Workshop walkthrough](videos/4.ogg)
-> - [ ] Essential: 
+> - [ ] Essential: [Introduction to Services (10 minutes)](https://angular.io/tutorial/toh-pt4)
 > - [ ] Recommended: 
 ***
 
