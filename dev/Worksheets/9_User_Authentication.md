@@ -2,7 +2,11 @@
 
 To personalise the experience your Application users have, and to ensure the security of their data, we must impliment some kind of user authentication. User auth is about holding session information which identifies your users. Once this is implimented an application can really take off as you can provide completely unique experiences and render content based on user determined data. 
 
-There are a lot of third party services (Like Auth0 & Okta) that will handle user authentication for you. Using a third party authentication provider has many advantages but naturally you must pay to use these services. We will be implimenting a very basic form of authentication so you can use as 'proof of concept'; but there are good reasons why this area would need more work should you choose to launch your application publically. 
+There are a lot of third party services (Like Auth0 & Okta) that will handle user authentication for you. Using a third party authentication provider has many advantages but naturally you must pay to use these services. Startups will often pay for these services because implimenting them seems like a daunting task, howvever, with a high volume of users costs really mount up. We are therefore going to take a look at how a developer might impliment authentication manually and benefit from the service being free forever!
+
+We will be implimenting a very basic form of authentication so you can use as 'proof of concept'; but there are good reasons why this area would need more work should you choose to launch your application publically. You will see some of the reasons why many apps choose to pay an external company to host all these things; but it's just cooler to write it yourself!
+
+We don't recommend that all students complete this workbook as it goes well beyond what is expected technically.
 
 > ### Milestone checklist
 > - [ ] Recommended: [Workshop walkthrough](videos/9.ogg)
