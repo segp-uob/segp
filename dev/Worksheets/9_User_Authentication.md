@@ -1,6 +1,6 @@
 # User Authentication
 
-To personalise the experience your Application users have, and to ensure the security of their data, we must impliment some kind of user authentication. User auth is about holding session information which identifies your users. Once this is implimented an application can really take off as you can provide completely unique experiences and render content based on user determined data. 
+To personalise the experience your Application users have, and to ensure the security of their data, we must impliment some kind of user authentication. User auth is about holding session information which identifies your users. Once this is implimented an application can really take off as you can provide completely unique experiences and render content based on user determined data. For your project you could just 'fake' user authentication by rendering sample views and this would be acceptable. However, if you want to go further, you can.
 
 There are a lot of third party services (Like Auth0 & Okta) that will handle user authentication for you. Using a third party authentication provider has many advantages but naturally you must pay to use these services. Startups will often pay for these services because implimenting them seems like a daunting task, howvever, with a high volume of users costs really mount up. We are therefore going to take a look at how a developer might impliment authentication manually and benefit from the service being free forever!
 
