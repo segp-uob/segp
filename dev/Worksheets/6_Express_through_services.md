@@ -2,7 +2,9 @@
 
 Currently we are just using dummy data rendered from within the component (not recommended!). Of course we want to connect everything to our newly created API!
 
-Best practices recommend defining a provider or service to handle the http calls. Services are great because they are injectable and they can also have its own injected dependencies. This makes testing and reuse easier. Of course a service could go and get data from basically anywhere - a web service, filesystem, or a mock data source. We are going to be developing a data service and hooking it up to our application components.
+Best practices recommend defining a provider or service to handle the http calls. Services are great because they are injectable and they can also have its own injected dependencies. This makes testing and reuse easier. Of course a service could go and get data from basically anywhere - a web service, filesystem, or a mock data source. 
+
+Building on the example you've developed so far we are going to be developing a data service and hooking it up to our application components (a Radar chart). This will give you an example by which you can ammend your own components to connect directly via a service to your database API.
 
 > ### Milestone checklist
 > - [ ] Essential: [Workshop walkthrough](videos/4.ogg)
