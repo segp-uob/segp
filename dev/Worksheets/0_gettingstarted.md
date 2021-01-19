@@ -56,6 +56,42 @@ Because of the way Docker works it is just not possible to install Docker withou
 I wouldn't recommend using Docker within a VM (such as Virtual Box) if you can avoid it. Docker runs on the hypervisor layer of your machine and using a VM can get in the way of this. The very point of docker is to containerise the environment in a way that abstracts system specific features. Ie if you're on a Mac or a windows machine - an image/environment is always exactly the same. On this basis you should probably just install docker on your machine at root level and enjoy the benefits of being able to quickly deploy to a consistent environment. 
 
 ## Node & npm
+
+#### Alternative to using pure node/npm installation:
+An alternative to using just node / npm, is a little wrapper software that allows for easy installation and switching between different node versions. 
+This is particularly useful, as it takes care of updating the node to the latest version without the worry of corrupting the previous or existing installation.
+Additionally, it also works cross-platform, including **MacOS**.
+
+The software that can be used for this is known as [NVM, or Node Version Manager](https://github.com/nvm-sh/nvm).
+
+To install NVM, run the following command:
+```shell
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+```
+
+Once installed, NVM can be used to install any version of Node which comes bundled with npm:
+
+To list existing versions, simply run:
+```shell
+nvm ls-remote
+```
+
+To install the chosen version, run:
+
+```shell
+nvm install <version>
+# nvm install 14
+# nvm install 14.15 
+```
+
+For a full list of instructions, refer to the CLI documentation by running:
+```shell
+nvm
+```
+
+---
+
 > - [Mac specific instructions](https://treehouse.github.io/installation-guides/mac/node-mac.html)
 > - [Windows specific instructions](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 > - [General npm issues](https://docs.npmjs.com/)
