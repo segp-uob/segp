@@ -1,100 +1,175 @@
 # Deploying with Docker
 
-Docker is a great way to create a consistent runtime environment for your application. It ensures that when you bundle up your project for others to compile and run you know the conditions present at runtime. You'll remember that in workshop 1 we setup Docker on your machines. Now we will integrate our site so far into a container so that it can be deployed and reproduced with ease. 
+Docker is a great way to create a consistent runtime environment for your application. It ensures
+that when you bundle up your project for others to compile and run you know the conditions present
+at runtime. You'll remember that in workshop 1 we set up Docker on your machines. Now we will
+integrate our site so far into a container so that it can be deployed and reproduced with ease.
 
-In Docker we talk about Images and Containers. Now, images can exist without containers, whereas a container needs to run an image to run (an empty container is like a hard drive with no OS). In this workshop we build an image (from a Dockerfile, which is a set of instructions) to run the application. The image gives us an unchangable run-time environment to run an application. Sound confusing? It's much simpler to demonstrate - that's what we are going to do in this workshop. 
+In Docker, we talk about Images and Containers. Now, images can exist without containers, whereas a
+container needs to run an image to run (an empty container is like a hard drive with no OS). In this
+workshop we build an image (from a Dockerfile, which is a set of instructions) to run the
+application. The image gives us an unchangeable run-time environment to run an application. Sound
+confusing? It's much simpler to demonstrate - that's what we are going to do in this workshop.
 
 > ### Milestone checklist
 > - [ ] Essential: [Workshop walkthrough](videos/5.ogg)
-> - [ ] Essential: 
-> - [ ] Recommended: [Images and containers (15 minutes)](https://stackify.com/docker-image-vs-container-everything-you-need-to-know/)
+> - [ ] Recommended: [Images and containers](https://stackify.com/docker-image-vs-container-everything-you-need-to-know/) (15 minutes)
 ***
 
 ## Create and test a Docker File
 
-First we create a Dockerfile and first test the building of an individual image. Create the Dockerfile: ```nano Dockerfile``` and add the template below:
+First we create a Dockerfile and first test the building of an individual image. Create the
+Dockerfile: ```nano Dockerfile``` and add the template below:
 
-```
-FROM node:10-alpine
+```dockerfile
 # We use the official image as a parent image.
+FROM node:10-alpine
+
 RUN mkdir -p /home/node/app/node_modules && chown -R node:node /home/node/app
+
 # Set the working directory.
 WORKDIR /home/node/app
-# Copy the file from your host to your current location.
+
+# Copy the file(s) from your host to your current location.
 COPY package*.json ./
+
+# Change the user to node. This will apply to both the runtime user and the following commands.
 USER node
+
 # Run the command inside your image filesystem.
 RUN npm install
+
 COPY --chown=node:node . .
+
 # Add metadata to the image to describe which port the container is listening on at runtime.
 EXPOSE 3000
+
 # Run the specified command within the container.
 CMD [ "node", "server.js" ]
 ```
 
-To build from the Dockerfile, we must then issue the command ```docker build .```. This will use the Dockerfile in the directory to create and save an image (which can't be changed). The first time this is run it will take longer as the official base image will be downloaded (in our case alpine). If this is sucessful you will see ```Successfully built <imagename>```. Keep a note of the name of this image. 
+To build from the Dockerfile, we must then issue the command `docker build .`. This will use the
+Dockerfile in the directory to create and save an image (which can't be changed). The first time
+this is run it will take longer as the official base image will be downloaded (in our case alpine).
+If this is successful you will see `Successfully built <imagename>`. Keep a note of the name of
+this image.
 
-The name of the image will be unique and it must be rebuilt if you wish to change the image. This is one of the advantages of Docker as this image can now be shared or used by someone looking to run your app in a container (but we require dockerfiles & dockercompose files in your repo). 
+The name of the image will be unique, and it must be rebuilt if you wish to change the image. This is
+one of the advantages of Docker as this image can now be shared or used by someone looking to run
+your app in a container (but we require dockerfiles & dockercompose files in your repo).
 
-Once we have the container must expose port 3000 to the host for routing. This flag provides host->container access and must map our server.js config: 
+Once we have the container must expose port 3000 to the host for routing. This flag provides host->
+container access and must map our server.js config:
 
-```
+```shell
 docker run --publish 3000:3000 <nameofimage>
 ```
-Notice --publish asks Docker to forward traffic incoming on the host’s port 8000 to the container’s port 8080. Containers have their own private set of ports, so if you want to reach one from the network, you have to forward traffic to it in this way.
 
-Visit locahost:3000 and you should see your same Dashboard site, but this time served from the image. Now we have sucessfully implimented a node application within a Docker container! 
+Notice --publish asks Docker to forward traffic incoming on the host’s port 8000 to the container’s
+port 8080. Containers have their own private set of ports, so if you want to reach one from the
+network, you have to forward traffic to it in this way.
+
+Visit [http://locahost:3000](http://locahost:3000) and you should see your same Dashboard site, but this time served from the
+image. Now we have successfully implemented a node application within a Docker container!
 
 To stop the container from running issue:
-```$ docker ps -a```
-Then issue the command: 
+```shell
+docker ps -a
 ```
+Then issue the command:
+
+```shell
 docker stop <nameofcontainer>
 ```
 
+> Additionally, in order to carelessly run docker images without having to worry about having to clean
+> them up later, you can run append the following flag: `--rm` to your `docker run` command, which 
+> will automatically remove the image after it has run. For example:
+> 
+> ```shell
+> # Runs the docker image called ubuntu.
+> # -i      Keep STDIN open even if not attached
+> # -t      Allocate Pseudo-TTY
+> # --rm    Automatically remove the container when it exits
+> #
+> # <bash>  The name of the command to execute on the image, bash is the shell
+> #         that will allow for more general interaction with different 
+> #         programs, i.e. node if it's installed.
+> 
+> docker run -it --rm ubuntu bash
+> ```
+> 
+> **Be careful! This will not just stop the image, it will also delete all of its data.**
+
 # Multiple containers: Node & Mongo
 
-The previous example would work perfectly well for a simple site, however, we are obviously using MongoDB and ideally this would be hosted via a separate container on the same physical server. In Docker terms this will be two separate containers which will communicate over a similar port protocol. Because this requires some additional complexity we use Docker-compose to make the process of starting all the required components automatic. You are required to use a Docker Compose YML so that your system can be rebuilt easily. In the following steps we will create environmental variables for our database, add a wait script to ensure the DB is running before Node tries to connect and finally setup our existing Dockerfile and MongoDB containers to run automatically together using Docker-compose. If you complete this section you will understand how the process works and have a robust pipeline for shipping you application to practically any hosting provider. 
+The previous example would work perfectly well for a simple site, however, we are obviously using
+MongoDB and ideally this would be hosted via a separate container on the same physical server. In
+Docker terms this will be two separate containers which will communicate over a similar port
+protocol. Because this requires some additional complexity we use Docker-compose to make the process
+of starting all the required components automatic. You are required to use a Docker Compose YML so
+that your system can be rebuilt easily. In the following steps we will create environmental
+variables for our database, add a wait script to ensure the DB is running before Node tries to
+connect and finally set up our existing Dockerfile and MongoDB containers to run automatically
+together using Docker-compose. If you complete this section you will understand how the process
+works and have a robust pipeline for shipping you application to practically any hosting provider.
 
 ## Environmental variables
 
-When using a database we will, of course, be using sensitive information such as passwords to authenticate our client. It's important that sensitive information such as usernames and passwords are not stored in public git repos - this is a major security flaw. We therefore create a .env file locally and save our credentials there:
+When using a database we will, of course, be using sensitive information such as passwords to
+authenticate our client. It's important that sensitive information such as usernames and passwords
+are not stored in public git repos - this is a major security flaw. We therefore create a .env file
+locally and save our credentials there:
 
 Create a new file in the repo
-```
+
+```shell
 nano .env
 ```
 
 Add the following to the .env file and save:
 
-```
+```dotenv
 MONGO_USERNAME=your_username
 MONGO_PASSWORD=your_password
 MONGO_PORT=27017
 MONGO_DB=meantest
 ```
+
 Finally, you need to make sure the .env file is added to your gitignore:
-```
+
+```shell
 nano .gitignore
 ```
-Make sure to add .env to the .gitignore file otherwise you will be pushing your sensitive mongo login details to a public repo!
+
+Make sure to add .env to the .gitignore file otherwise you will be pushing your sensitive mongo
+login details to a public repo!
 
 ## Wait script
 
-To ensure that the MongoDB instance is running before we connect Node we need to add a wait script. `./wait-for` is a script designed to synchronize services like docker containers. (It is [sh](https://en.wikipedia.org/wiki/Bourne_shell) and [alpine](https://alpinelinux.org/) compatible. It was inspired by [vishnubob/wait-for-it](https://github.com/vishnubob/wait-for-it), but the core has been rewritten at [Eficode](http://eficode.com/) by [dsuni](https://github.com/dsuni) and [mrako](https://github.com/mrako).)
+To ensure that the MongoDB instance is running before we connect Node we need to add a wait
+script. `./wait-for` is a script designed to synchronize services like docker containers. (It
+is [sh](https://en.wikipedia.org/wiki/Bourne_shell) and [alpine](https://alpinelinux.org/)
+compatible. It was inspired by [vishnubob/wait-for-it](https://github.com/vishnubob/wait-for-it),
+but the core has been rewritten at [Eficode](http://eficode.com/)
+by [dsuni](https://github.com/dsuni) and [mrako](https://github.com/mrako).)
 
-So we need to create 'wait-for.sh' and make the script executable. Follow these steps: 
+So we need to create 'wait-for.sh' and make the script executable. Follow these steps:
 
-```
+```shell
 wget -O wait-for.sh https://raw.githubusercontent.com/eficode/wait-for/master/wait-for
 chmod +x wait-for.sh
 ```
 
 ## Create Docker Compose config to run
 
-We must then create a docker compose file: ```nano docker-compose.yml``` and a template is provided below. Here we cite the .env file we just created and the wait script as well as specifying the Mongodb instance we need. You'll notice that here we set the published ports/mapping and command to run our express server once the script has completed. We don't need a separate Mongodb Dockerfile because we are just using the vanilla mongo:4.1.8-xenial instance. 
+We must then create a docker compose file: `nano docker-compose.yml`, and a template is provided
+below. Here we cite the .env file we just created, and the wait script as well as specifying the
+Mongodb instance we need. You'll notice that here we set the published ports/mapping and command to
+run our express server once the script has completed. We don't need a separate Mongodb Dockerfile
+because we are just using the vanilla `mongo:4.1.8-xenial` instance.
 
-```
+```yaml
 version: '3'
 
 services:
@@ -142,28 +217,42 @@ volumes:
   dbdata:
   node_modules:
 ```
+
 # Using the Docker template
 
-Now we need to see how we can start and use the Docker file we created through the docker-compose script. We will be starting both Mongo and Node but clearly at the moment we are only using the Node instance: 
+Now we need to see how we can start and use the Docker file we created through the docker-compose
+script. We will be starting both Mongo and Node but clearly at the moment we are only using the Node
+instance:
 
 ## Starting the services
 
-We now have a 'production ready' environment automatically setup via docker-compose. Lets check its working!
-To start the service run: 
-```docker-compose up -d```
-Stop the containers: 
-```docker-compose down```
-List running containers: 
-```Docker ps```
+We now have a 'production ready' environment automatically setup via docker-compose. Let's check its
+working!
+To start the service run:
+```shell
+docker-compose up -d
+```
+Stop the containers:
+```shell
+docker-compose down
+```
+List running containers:
+```shell
+docker ps
+```
 
 ### Node
 
-Visit the local site at localhost:3000 and you should see exactly the same site rendered as when running on your own machine. 
+Visit the local site at [http://localhost:3000](http://localhost:3000) and you should see exactly 
+the same site rendered as when running on your own machine.
 
 ### MongoDB
 
-Testing your Mongo connection is a bit more difficult as we haven't made a connection yet. Therefore use the following for a (1) return on success:
-```
+Testing your Mongo connection is a bit more difficult as we haven't made a connection yet.
+Therefore, use the following for a (1) return on success:
+
+```shell
 echo 'db.stats().ok' | mongo localhost:27017 --quiet
 ```
+
 ## Going further

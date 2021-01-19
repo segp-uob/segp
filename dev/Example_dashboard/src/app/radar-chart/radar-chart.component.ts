@@ -35,7 +35,7 @@ export class RadarChartComponent implements OnInit {
     this.dataService.getAll().subscribe(
         data => {
           this.stats = data;
-          // now lets update the fields
+          // now let's update the fields
           this.radarChartLabels = this.stats.radarChartLabels;
           this.radarChartData = this.stats.radarChartData;
         },
