@@ -70,7 +70,7 @@ port 8080. Containers have their own private set of ports, so if you want to rea
 network, you have to forward traffic to it in this way.
 
 Visit [http://locahost:3000](http://locahost:3000) and you should see your same Dashboard site, but this time served from the
-image. Now we have successfully implimented a node application within a Docker container!
+image. Now we have successfully implemented a node application within a Docker container!
 
 To stop the container from running issue:
 ```shell

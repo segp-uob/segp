@@ -4,9 +4,9 @@ Now we have built our API, and our frontend, it's time to think about how we mig
 storage of data. NoSQL databases like MongoDB can be useful if your data requirements include
 scalability and flexibility because with Mongo it's really easy to initialise and use database
 structures. MongoDB also works asynchronously with JSON objects so the design of our API so far will
-fit well. There is no reason why you couldn't deploy SQL (or SQLlite) at this stage if you would
+fit well. There is no reason why you couldn't deploy SQL (or SQLite) at this stage if you would
 prefer; and this would also be a good way to practice your MariaDB knowledge. *However*, MongoDB
-will take less time to impliment, and will offer similar (if not better) performance for the kinds
+will take less time to implement, and will offer similar (if not better) performance for the kinds
 of tasks and operations we are doing.
 
 > ### Milestone checklist
@@ -33,20 +33,14 @@ package.json file, which includes the project’s dependencies. You need to add 
 the core dependencies:
 
 ```js
-    "ejs"
-:
-"^2.6.1",
-  "mongoose"
-:
-"^5.4.10"
+"ejs": "^2.6.1",
+"mongoose": "^5.4.10"
 ```
 
 And add nodemon to the devdependencies:
 
 ```js
-    "nodemon"
-:
-"^1.18.10"
+"nodemon": "^1.18.10"
 ```
 
 You then need to install these dependencies (from your updated package.json file)
@@ -55,7 +49,7 @@ with ```npm install```. Test by running your updated server.js file.
 # Database credentials
 
 Your express service will need read and write access to your database. This access is essentially
-root so we need to be very careful with the username and passwords we create. You will remember that
+root, so we need to be very careful with the username and passwords we create. You will remember that
 when setting up docker we created a .env file which contains our login information; this should
 already be in your project folder. Let's create a file which can import this login information and
 use it! First, you need to create a db.js file in your root directory ```nano db.js``` then edit as
