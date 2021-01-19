@@ -57,38 +57,38 @@ I wouldn't recommend using Docker within a VM (such as Virtual Box) if you can a
 
 ## Node & npm
 
-#### Alternative to using pure node/npm installation:
-An alternative to using just node / npm, is a little wrapper software that allows for easy installation and switching between different node versions. 
-This is particularly useful, as it takes care of updating the node to the latest version without the worry of corrupting the previous or existing installation.
-Additionally, it also works cross-platform, including **MacOS**.
-
-The software that can be used for this is known as [NVM, or Node Version Manager](https://github.com/nvm-sh/nvm).
-
-To install NVM, run the following command:
-```shell
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
-wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
-```
-
-Once installed, NVM can be used to install any version of Node which comes bundled with npm:
-
-To list existing versions, simply run:
-```shell
-nvm ls-remote
-```
-
-To install the chosen version, run:
-
-```shell
-nvm install <version>
-# nvm install 14
-# nvm install 14.15 
-```
-
-For a full list of instructions, refer to the CLI documentation by running:
-```shell
-nvm
-```
+> ### Alternative to using pure node/npm installation:
+> An alternative to using just node / npm, is a little wrapper software that allows for easy installation and switching between different node versions. 
+> This is particularly useful, as it takes care of updating the node to the latest version without the worry of corrupting the previous or existing installation.
+> Additionally, it also works cross-platform, including **MacOS**.
+> 
+> The software that can be used for this is known as [NVM, or Node Version Manager](https://github.com/nvm-sh/nvm).
+> 
+> To install NVM, run the following command:
+> ```shell
+> curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+> wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+> ```
+> 
+> Once installed, NVM can be used to install any version of Node which comes bundled with npm:
+> 
+> To list existing versions, simply run:
+> ```shell
+> nvm ls-remote
+> ```
+> 
+> To install the chosen version, run:
+>
+> ```shell
+> nvm install <version>
+> # nvm install 14
+> # nvm install 14.15 
+> ```
+>
+> For a full list of instructions, refer to the CLI documentation by running:
+> ```shell
+> nvm
+> ```
 
 ---
 
@@ -97,20 +97,20 @@ nvm
 > - [General npm issues](https://docs.npmjs.com/)
 
 So when you're ready to go, make sure you have both node and npm installed with the following commands: 
-```
+```shell
 node --version
 npm --version
 ```
 These commands should both return a version number. Please make sure npm version is >=5. 
 If you don't have them installed - you need to add node to your config and install through apt (on linux) - or use a package manager like Homebrew on Mac(not covered here): 
-```
+```shell
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 sudo apt install nodejs
 ```
 ## Angular CLI
 
 Once you have node and npm installed correctly via whatever process works on your system you can install AngularCLI with the following npm command: 
-```
+```shell
 npm install -g @angular/cli
 ```
 If this completes without errors you've got Angular, Node and npm working! You can now use npm and angularcli to manage just about everything app related. 
@@ -118,15 +118,15 @@ If this completes without errors you've got Angular, Node and npm working! You c
 ## Boilerplate site
 
 To create a new site using the AngularCLI (which is the basis for our project), then compile and serve this locally, we use the following command: 
-```
+```shell
 ng new "name_of_site"
 cd
 ng serve
 ```
 When prompted:
-```
-? Would you like to add Angular routing? Yes
-? Which stylesheet format would you like to use? CSS
+```shell
+? Would you like to add Angular routing?              Yes
+? Which stylesheet format would you like to use?      CSS
 ```
 ***
 ## Launch your first Angular project
@@ -135,18 +135,25 @@ If you've run the command ng serve (above): visit http://localhost:4200/ and see
 
 ## MongoDB 
 
+
+> ### MongoDB Compass
+> 
+> A useful tool for development based on MongoDB is the [MongoDB Compass](https://www.mongodb.com/products/compass). It provides an easy-to-use UI
+> for setting up installations of MongoDB locally and also comes as a CLI-only package. MongoDB Compass is a good choice for **MacOS installation**.
+
+
 When in production we will host MongoDB remotely (or in a container on the same server) because the remote user won't be able to access the DB on your machine! Depending on your project it can be useful to have a local version for development and testing (in addition to in a container, which we will cover later). In this step we will locally install Mongo and make sure it's working. This is not essential for everyone so only proceed if you need to!
 
 The first step is to add the MogoDB repo as a trusted source:
-```
+```shell
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
 ```
 Now that we trust the files served by the MongoDB maintainers we need to add a reference in our apt configuration:
-```
+```shell
 echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee /etc/apt/sources.list.d/mongodb.list
 ```
 Now if you run 'sudo apt-get update' the MongoDB repo is added to your apt configuration. This will allow us to pull the latest system versions. We now install the necessary packages:
-```
+```shell
 sudo apt-get install mongodb git build-essential openssl libssl-dev pkg-config
 ```
 We can now make sure we have MongoDB correctly installed with 'mongod --version'. If everything worked - this should return a version number. 

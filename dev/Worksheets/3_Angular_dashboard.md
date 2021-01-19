@@ -1,6 +1,6 @@
 # Angular dashboard
 
-A common usecase for the Angular framework, and indeed SPAs in general, is to display data. In the past complex and custom desktop software was required to create interactive 'data dashboards'. Now we can do everything in the modern web browser. Angular is brilliant for data driven applications but data viz tools are not included 'out of the box'. In this workshop we will therefore be extending the 'boilerplate' Angular application to include our own charts and data. We will be using a few other node modules so we will cover installing those and integrating third party tools (which you almost certainly will do!). Everyone should try to complete the walkthrough this week as it gives a solid foundation to understand how a MEAN stack site works...!
+A common usecase for the Angular framework, and indeed SPAs in general, is to display data. In the past complex and custom desktop software was required to create interactive 'data dashboards'. Now we can do everything in the modern web browser. Angular is brilliant for data driven applications but data viz tools are not included 'out of the box'. In this workshop we will therefore be extending the 'boilerplate' Angular application to include our own charts and data. We will be using a few other node modules, so we will cover installing those and integrating third party tools (which you almost certainly will do!). Everyone should try to complete the walkthrough this week as it gives a solid foundation to understand how a MEAN stack site works...!
 
 > ### Milestone checklist
 > - [ ] Essential: [Workshop walkthrough](videos/3.ogg)
@@ -12,8 +12,8 @@ A common usecase for the Angular framework, and indeed SPAs in general, is to di
 ***
 
 ## Create a template project
-We are going to start a new project called dashboard using Angularcli. This should serve as a demonstration of how to get up and running with a fully responsive application. We are going to make use of the Bootstrap styling framework: The Bootstrap grid system uses containers that hold rows and column. Rows and columns are percentage based. It is the container that changes responsively.
-```
+We are going to start a new project called dashboard using Angular CLI. This should serve as a demonstration of how to get up and running with a fully responsive application. We are going to make use of the Bootstrap styling framework: The Bootstrap grid system uses containers that hold rows and column. Rows and columns are percentage based. It is the container that changes responsively.
+```shell
 ng new dashboard --routing
 
 cd dashboard
@@ -22,18 +22,18 @@ npm install chart.js
 npm install bootstrap
 ```
 ## Add scripts
-To make use of the charting framework we need to add the following script to the 'build' in the ```angular.json``` file. This will ensure scripts are added where required to the HTML body. We are going to add the Chart.js framework globally so it will be available to every component in your application. You can see in ```build: { }``` object; you just need to add this script:
-```
+To make use of the charting framework we need to add the following script to the 'build' in the ```angular.json``` file. This will ensure scripts are added where required to the HTML body. We are going to add the Chart.js framework globally. so it will be available to every component in your application. You can see in ```build: { }``` object; you just need to add this script:
+```js
 "scripts": ["node_modules/chart.js/dist/Chart.js"]
 ```
 We are making use of Bootstrap for styling, so add the following line to ```styles.css```:
-```
+```js
 @import '~bootstrap/dist/css/bootstrap.min.css';
 ```
 If you've not used Bootstrap before it's not difficult to pick up. It's a great tool for styling and whoever in your team is responsible for the design of your application should probably use Bootstrap elements as a basis.  
 ## Create a menu
 To enable us to navigate through our application lets start by creating a very simple navigation which needs to be applied to all pages. We therefore add it to our app component which will be loaded as our root class. Edit the boilerplate HTML in ```app.component.html```:
-```
+```angular2html
 <div class="container">
   <ul class="nav nav-tabs">
     <li class="nav-item">
@@ -56,11 +56,11 @@ To enable us to navigate through our application lets start by creating a very s
 ```
 # Using Chart.js
 
-Now we have setup the required dependancies we can actually create some charts! We use Angular components to ammend the HTML, styling and logic for our chart which is rendered. A 'component' controls a patch of screen called a 'view'. We interact with this view via properties and methods contained within the component. This approach means you can reuse and easily redevelop your application... follow this example and you'll understand the basics of Angular components. 
+Now we have setup the required dependencies we can actually create some charts! We use Angular components to amend the HTML, styling and logic for our chart which is rendered. A 'component' controls a patch of screen called a 'view'. We interact with this view via properties and methods contained within the component. This approach means you can reuse and easily redevelop your application... follow this example and you'll understand the basics of Angular components. 
 
 ## Create a Bar Chart
-First, lets create a simple bar chart. You could choose any chart from the Chart.js framework and the process will be very similar. To begin we need to ask Angularcli to create a new component called 'bar-chart'. We issue the following command: 
-```
+First, lets create a simple bar chart. You could choose any chart from the Chart.js framework, and the process will be very similar. To begin we need to ask Angular CLI to create a new component called 'bar-chart'. We issue the following command: 
+```shell
 ng g c bar-chart
 ```
 This command calls a utility function which helpfully adds:
@@ -71,7 +71,7 @@ This command calls a utility function which helpfully adds:
 4. src/app/bar-chart/bar-chart.component.spec.ts
 
 Go and open bar-chart.component.html and replace the boilerplate <p>bar-chart works!</p>content with something to load our newly created bar chart. We use the baseChart directive :
-```
+```angular2html
 <div>
   <div style="display: block">
     <canvas baseChart
@@ -84,8 +84,8 @@ Go and open bar-chart.component.html and replace the boilerplate <p>bar-chart wo
   </div>
 </div>
 ```
-Here we’re using the baseChart directive which is added to a canvas element. Furthermore the attributes datasets, labels, options, legend and chartType are bound to class members which are added to the implementation of class BarChartComponent in bar-chart-component.ts:
-```
+Here we’re using the baseChart directive which is added to a canvas element. Furthermore, the attributes datasets, labels, options, legend and chartType are bound to class members which are added to the implementation of class BarChartComponent in bar-chart-component.ts:
+```js
 import { Component, OnInit } from '@angular/core';@Component({
   selector: 'app-bar-chart',
   templateUrl: './bar-chart.component.html',
@@ -103,11 +103,11 @@ export class BarChartComponent implements OnInit {  constructor() { }  public ba
   }}
 ```
 ## Create a Doghnut
-```
+```shell
 ng g c doughnut-chart
 ```
 Again update doughnut-chart.component.html:
-```
+```angular2html
 <div style="display: block">
   <canvas baseChart
               [data]="doughnutChartData"
@@ -116,7 +116,7 @@ Again update doughnut-chart.component.html:
 </div>
 ```
 And insert the following TS into doughnut-chart.component.ts
-```
+```js
 import { Component, OnInit } from '@angular/core';@Component({
   selector: 'app-doughnut-chart',
   templateUrl: './doughnut-chart.component.html',
@@ -130,11 +130,11 @@ export class DoughnutChartComponent implements OnInit {  public doughnutChartLab
 ## Create a Radar chart
 
 Again we’re starting by creating a new component:
-```
+```shell
 ng g c radar-chart
 ```
 Here is the HTML code which needs to be inserted in radar-chart.component.html:
-```
+```angular2html
 <div style="display: block">
   <canvas baseChart
           [datasets]="radarChartData"
@@ -143,7 +143,7 @@ Here is the HTML code which needs to be inserted in radar-chart.component.html:
 </div>
 ```
 And in radar-chart.component.ts:
-```
+```js
 import { Component, OnInit } from '@angular/core';@Component({
   selector: 'app-radar-chart',
   templateUrl: './radar-chart.component.html',
@@ -160,11 +160,11 @@ export class RadarChartComponent implements OnInit {  public radarChartLabels = 
 ## Pie Chart Example
 
 The final component is used to add a pie chart example to our application:
-```
+```shell
 ng g c pie-chart
 ```
 HTML code in pie-chart.component.html:
-```
+```angularjs
 <div style="display: block">
   <canvas baseChart
           [data]="pieChartData"
@@ -186,12 +186,12 @@ export class PieChartComponent implements OnInit {  public pieChartLabels = ['Sa
 ```
 # Router and Options Configuration
 
-Finally we need to make sure that the router configuration is in place. This ensures that when components are called our service knows where to render the data from. We will be coming back to the topic of routing a lot of the coming weeks - for now a basic example: 
+Finally, we need to make sure that the router configuration is in place. This ensures that when components are called our service knows where to render the data from. We will be coming back to the topic of routing a lot of the coming weeks - for now a basic example: 
 
 ## Update app.module
 First we need to make sure the main imports are present to reflect our additions: 
 
-```
+```js
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -225,7 +225,7 @@ export class AppModule { }
 ## Update app.routing-module.ts
 Next we make sure the routing is in place:
 
-```
+```js
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { BarChartComponent } from './bar-chart/bar-chart.component';
@@ -250,7 +250,7 @@ export class AppRoutingModule { }
 ## One last thing... 
 
 Before running you need to make sure ```angularCompilerOptions``` are removed from your ```tsconfig.json```. In various recent versions of AngularCLI strict injection checking sometimes gets enabled in the boilerplate code which would prevent the Chart.js canvas render from working. Edit this file and make sure your ```tsconfig.json``` looks like the below:
-```
+```json
 {
   "compileOnSave": false,
   "compilerOptions": {
@@ -278,7 +278,7 @@ Before running you need to make sure ```angularCompilerOptions``` are removed fr
 
 # Running the example! 
 You've done it! Now to see how it looks:
-```
+```shell
 ng serve
 ```
 As a result you should now be able to see the basic application. Crucially the data is served by the components themselves (TS) at the moment. Obviously the next step is to connect up to a fully functioning API via Express and Node. 
