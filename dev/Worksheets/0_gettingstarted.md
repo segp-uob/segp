@@ -133,18 +133,11 @@ When prompted:
 
 If you've run the command ng serve (above): visit http://localhost:4200/ and see the site rendering. This also provides some links to much more comprehensive AngularCLI tutorials. The 'ng serve' command is not suitable for production! We will be building an express based production server in the following workshops. However, the built in server is suitable for quick testing. In the next workshops we will be developing our own server & this should become your default for testing and production as your site becomes more complex. 
 
-## MongoDB 
-
-
-> ### MongoDB Compass
-> 
-> A useful tool for development based on MongoDB is the [MongoDB Compass](https://www.mongodb.com/products/compass). It provides an easy-to-use UI
-> for setting up installations of MongoDB locally and also comes as a CLI-only package. MongoDB Compass is a good choice for **MacOS installation**.
-
+## MongoDB
 
 When in production we will host MongoDB remotely (or in a container on the same server) because the remote user won't be able to access the DB on your machine! Depending on your project it can be useful to have a local version for development and testing (in addition to in a container, which we will cover later). In this step we will locally install Mongo and make sure it's working. This is not essential for everyone so only proceed if you need to!
 
-The first step is to add the MogoDB repo as a trusted source:
+The first step is to add the MongoDB repo as a trusted source:
 ```shell
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
 ```
