@@ -9,22 +9,22 @@ Due to the fact that this is a significant piece of work, you will need to work 
 
 Due to the scale of this challenge, you are not required to fully implement all aspects of this application - you must develop your idea to a level that would be presentable as a proof-of-concept prototype to potential investors. Each week we will be covering the technical development alongside the design development of your project.
 
-| week | uni week | theme                                  | theory                                                       | development | project |
-| ---- | -------- | -------------------------------------- | ------------------------------------------------------------ | ----------- | ------- |
-| 1    | 13       | Introduction + Overview                | 1a - Welcome & Introduction<br />1b - Team Intro<br />1c - Project Brief |             |         |
-| 2    | 14       | Agile Development + Team Collaboration | 2a - Waterfall & Agile<br />2b - Teams & Roles<br />2c - Reqs. User Stories |             |         |
-| 3    | 15       | Understanding the System Stack         | 3a - What is MEAN?<br />3b - OO Design<br />3c - Data Models (JSON) |             |         |
-| 4    | 16       | The Front End                          | 4a - Intro to Front End<br />4b - Git Report<br />4c - Pair Programming |             |         |
-| 5    | 17       | The Middle Tier                        | 5a - Middle Tier Concerns<br />5b - Advanced Git<br />5c - Unit Testing |             |         |
-| 6    | 18       | The Back End                           |                                                              |             |         |
-| 7    | 19       | Deployment + Beyond                    |                                                              |             |         |
-| 8    | 20       | Looking at Sprints                     |                                                              |             |         |
-|      | EV1      |                                        |                                                              |             |         |
-|      | EV2      |                                        |                                                              |             |         |
-|      | EV3      |                                        |                                                              |             |         |
-| 9    | 21       |                                        |                                                              |             |         |
-| 10   | 22       |                                        |                                                              |             |         |
-| 11   | 23       |                                        |                                                              |             |         |
-| 12   | 24       |                                        |                                                              |             |         |
+| week | uni week |                 theme                  | theory                                                       | development                | project                         |
+| :--: | :------: | :------------------------------------: | ------------------------------------------------------------ | -------------------------- | ------------------------------- |
+|  1   |    13    |        Introduction + Overview         | 1a - Welcome & Introduction<br />1b - Team Intro<br />1c - Project Brief | Getting Started            | Groups                          |
+|  2   |    14    | Agile Development + Team Collaboration | 2a - Waterfall & Agile<br />2b - Teams & Roles<br />2c - Reqs. User Stories | DevOps + Docker            | Design Thinking                 |
+|  3   |    15    |     Understanding the System Stack     | 3a - What is MEAN?<br />3b - OO Design<br />3c - Data Models (JSON) | Angular, Client Side       | Data Model                      |
+|  4   |    16    |             The Front End              | 4a - Intro to Front End<br />4b - Git Report<br />4c - Pair Programming | Angular Dashboard          | Documenting your Project        |
+|  5   |    17    |            The Middle Tier             | 5a - Middle Tier Concerns<br />5b - Advanced Git<br />5c - Unit Testing | Launch your API            | User Testing                    |
+|  6   |    18    |              The Back End              | 6a - Welcome to the Back End<br />6b - Separation of Concerns<br />6c - Integration Testing | Deploying with Docker      | Engineerning Ethos              |
+|  7   |    19    |          Deployment + Beyond           | 7a - Continuous Deployment<br />7b - Social & Ethical Implications<br />7c - Evaluation | Express through Services   |                                 |
+|  8   |    20    |           Looking at Sprints           | 8a - Project Review<br />8b - Honing your Sprints<br />8c - Serious Play Revisited | MongoDB Persistent Storage |                                 |
+|      |   EV1    |                                        |                                                              |                            |                                 |
+|      |   EV2    |                                        |                                                              |                            |                                 |
+|      |   EV3    |                                        |                                                              |                            |                                 |
+|  9   |    21    |              team sprints              |                                                              | Testing and Errors         | Team Feedback Session           |
+|  10  |    22    |              team sprints              |                                                              | User Authentification      | Team Feedback Session           |
+|  11  |    23    |    team sprints<br />+ finishing up    |                                                              |                            | Project submission end of week. |
+|  12  |    24    |                  n/a                   | n/a                                                          | n/a                        | n/a                             |
 
 
