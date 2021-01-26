@@ -16,7 +16,7 @@ Due to the scale of this challenge, you are not required to fully implement all 
 |  3   |    15    |     Understanding the System Stack     | 3a - What is MEAN?<br />3b - OO Design<br />3c - Data Models (JSON) | Angular, Client Side       | Data Model                      |
 |  4   |    16    |             The Front End              | 4a - Intro to Front End<br />4b - Git Report<br />4c - Pair Programming | Angular Dashboard          | Documenting your Project        |
 |  5   |    17    |            The Middle Tier             | 5a - Middle Tier Concerns<br />5b - Advanced Git<br />5c - Unit Testing | Launch your API            | User Testing                    |
-|  6   |    18    |              The Back End              | 6a - Welcome to the Back End<br />6b - Separation of Concerns<br />6c - Integration Testing | Deploying with Docker      | Engineerning Ethos              |
+|  6   |    18    |              The Back End              | 6a - Welcome to the Back End<br />6b - Separation of Concerns<br />6c - Integration Testing | Deploying with Docker      | Engineering Ethos              |
 |  7   |    19    |          Deployment + Beyond           | 7a - Continuous Deployment<br />7b - Social & Ethical Implications<br />7c - Evaluation | Express through Services   |                                 |
 |  8   |    20    |           Looking at Sprints           | 8a - Project Review<br />8b - Honing your Sprints<br />8c - Serious Play Revisited | MongoDB Persistent Storage |                                 |
 |      |   EV1    |                                        |                                                              |                            |                                 |
@@ -26,5 +26,3 @@ Due to the scale of this challenge, you are not required to fully implement all 
 |  10  |    22    |              team sprints              |                                                              | User Authentification      | Team Feedback Session           |
 |  11  |    23    |    team sprints<br />+ finishing up    |                                                              |                            | Project submission end of week. |
 |  12  |    24    |                  n/a                   | n/a                                                          | n/a                        | n/a                             |
-
-
