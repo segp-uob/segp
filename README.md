@@ -6,7 +6,9 @@ This repository will be your one stop shop for all the technical tutorials you n
 
 You are able to clone this repository to your own machine or visit in your web browser. Inside the /dev/Worksheets/ folder, you will find all of the tutorial resources that will be used during each technical workshop for the entire unit. You can see how the tutorial resources relate to the weeks of the course in the schedule table further down this page. For instance, to prepare for the  first week, please review the 0_gettingstarted.md tutorial document. There are also supporing videos inside the /dev/Worksheets/videos/ folder, that will support the markdown (.md) tutorial documents, so please review these materials.
 
-![SPA](https://static.wixstatic.com/media/de4390_04962d127c0b41bd977230143f8aa54b.png/v1/fill/w_1024,h_917,al_c,q_90,usm_0.66_1.00_0.01/de4390_04962d127c0b41bd977230143f8aa54b.webp "Single Page Apps")
+<p align="center">
+<img src="https://static.wixstatic.com/media/de4390_04962d127c0b41bd977230143f8aa54b.png/v1/fill/w_1024,h_917,al_c,q_90,usm_0.66_1.00_0.01/de4390_04962d127c0b41bd977230143f8aa54b.webp" alt="WebApp" width="450" height="400" />
+</p>
 
 
 ## The Unit Schedule
@@ -28,6 +30,8 @@ You are able to clone this repository to your own machine or visit in your web b
 |  10  |    22    |              team sprints              |                                                              | User Authentification      | Team Feedback Session           |
 |  11  |    23    |    team sprints<br />+ finishing up    |                                                              |                            | Project submission end of week. |
 |  12  |    24    |                  n/a                   | n/a                                                          | n/a                        | n/a                             |
+
+
 
 
 ## Introducing the Design Brief: A Web App for “Serious Play”
