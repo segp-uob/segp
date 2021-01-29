@@ -30,7 +30,9 @@ Due to the scale of this challenge, you are not required to fully implement all 
 
 
 ## Introducing the Technical Team
-The members of the team supporting the technical workshops and preparing technical learning materials are Tom Bale and Marceli Wac.
+The members of the team supporting the technical workshops and learning materials, and technical queries are Tom Bale and Marceli Wac. Tom is a former graduate of the MSc Conversion Course at the University of Bristol, now studying a Human Computer Interaction and Vision PhD which considers AR for Nuclear Plant Maintenance. During this unit Tom will be focused on MEAN Stack & Technical workshop development/delivery. Meanwhile Marceli PhD candidate in Digital Health and Care at University of Bristol. During this unit, Marceli will be undertaking technical support related to software architecture, development and DevOps.
+
+
 
 
 ## The Unit Schedule
