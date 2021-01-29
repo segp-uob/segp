@@ -1,14 +1,14 @@
 # Software Engineering Group Project
 
+<p align="center">
+<img src="https://static.wixstatic.com/media/de4390_04962d127c0b41bd977230143f8aa54b.png/v1/fill/w_1024,h_917,al_c,q_90,usm_0.66_1.00_0.01/de4390_04962d127c0b41bd977230143f8aa54b.webp" alt="WebApp" width="450" height="400" />
+</p>
+
 ## Hello and Welcome to the Technical Materials Repository
 
 This repository will be your one stop shop for all the technical tutorials you need to get your MEAN stack web application up and running. The purpose of this repository is for us to give you practical tutorials that support you to learn the MEAN stack basics, however, we expect you to try to build upon this knowledge base in order to create your own novel application.
 
 You are able to clone this repository to your own machine or visit in your web browser. Inside the /dev/Worksheets/ folder, you will find all of the tutorial resources that will be used during each technical workshop for the entire unit. You can see how the tutorial resources relate to the weeks of the course in the schedule table further down this page. For instance, to prepare for the  first week, please review the 0_gettingstarted.md tutorial document. There are also supporing videos inside the /dev/Worksheets/videos/ folder, that will support the markdown (.md) tutorial documents, so please review these materials.
-
-<p align="center">
-<img src="https://static.wixstatic.com/media/de4390_04962d127c0b41bd977230143f8aa54b.png/v1/fill/w_1024,h_917,al_c,q_90,usm_0.66_1.00_0.01/de4390_04962d127c0b41bd977230143f8aa54b.webp" alt="WebApp" width="450" height="400" />
-</p>
 
 
 ## The Unit Schedule
