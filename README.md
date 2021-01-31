@@ -19,6 +19,9 @@ Our aim is to turn you into “Full Stack Developers” - developers with experi
 - Angular Javascript web frontend
 - Node.js application server
 
+Single page applications can be large and complex to develop and we don’t expect you to become experts in everything. But, we wish to give you a “taster” of everything so you can at least be able to say that you have tried them.
+
+
 ## Introducing the Design Brief: A Web App for “Serious Play”
 
 The assignment for this unit is to design and build a web app that is based around the concept of “serious play”. By serious we mean something that addresses a real-world problem or raises the profile of a serious issue but using playful techniques to engage. This isn’t a free license to just make a game! Your system has to incorporate serious real world applications and it’s primary purpose is not entertainment. However, in contrast your application has to have elements of fun and play in it which capture and sustain user attention.
@@ -27,6 +30,27 @@ For example can create a web app that encourages children to brush their teeth w
 Due to the fact that this is a significant piece of work, you will need to work in small teams in order to complete the assignment. This brief is designed to balance ambition with the challenge of technical implementation. The markers will expect to see a blend of low-fidelity / high concept design, coupled with the solid and significant implementation of certain key elements. The extent to which your team successfully achieves this balance will be reflected in the marks awarded for this assignment. Although you are not required to create a fully working system, each element that you do build and its relation to the other components of the system must be clearly explained and justified.
 
 Due to the scale of this challenge, you are not required to fully implement all aspects of this application - you must develop your idea to a level that would be presentable as a proof-of-concept prototype to potential investors. Each week we will be covering the technical development alongside the design development of your project.
+
+## Some Examples of Seriously Playful Single Page Web Apps
+### Mee Too Rising
+<p align="center">
+<img src="https://img.buzzfeed.com/buzzfeed-static/static/2017-10/17/17/campaign_images/buzzfeed-prod-fastlane-03/what-it-means-when-women-say-me-too-2-18053-1508277359-1_dblbig.jpg" alt="WebApp" width="600" height="300" />
+</p>
+'Me Too Rising' is a web app that uses an interactive globe interface to map Google Trend data - search volumes and media articles - regarding the Me Too movement. While this is a little less playful that what we would might expect from your projects, it is a great example of using interactive interfaces in order to explore or conceptualise a serious issues from a novel perspective, and possibly capture the attention of a wider audience. Note, this single page application would be considered incredibly advanced for this unit and we would not expect you to reach this level of fidelity:https://metoorising.withgoogle.com
+<br>
+
+### Dress By Weather
+<p align="center">
+<img src="https://i.pinimg.com/originals/a1/d5/33/a1d5335a3c6231414a7d603b9ad695a8.gif" alt="WebApp" width="600" height="300" />
+</p>
+'Dress By Weather' is a web app that solves a serious issue for any aspiring Derek Zoolander - how to decide on the best clothing options for the weather. Again, this app is a little less playful than we might expect from your own projects, certainly in terms of interactivity, but it certainly has great utility and solves a genuine problem that most people face on a daily basis: https://www.dressbyweather.com
+<br>
+
+### Keep Portland Weird
+<p align="center">
+<img src="https://i.imgur.com/cySj8xZ.gif" alt="WebApp" width="600" height="300" />
+</p>
+'Keep Portland Weird' is a web app that is not short on fun, even if the serious issue that it addresses exists only in the aftermath of a speculated future event. Nevertheless, it is designed to highlight the quirks of the Portland community and is a way for residents of the area to derive feelings of relatedness and connection to their fellow Portlanders: https://keepearthquakesweird.com
 
 
 ## Introducing the Technical Team
