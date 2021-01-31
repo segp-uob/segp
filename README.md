@@ -50,7 +50,7 @@ Due to the scale of this challenge, you are not required to fully implement all 
 <p align="center">
 <img src="https://i.imgur.com/cySj8xZ.gif" alt="WebApp" width="600" height="300" />
 </p>
-'Keep Portland Weird' is a web app that is not short on fun, even if the serious issue that it addresses exists only in the aftermath of a speculated future event. Nevertheless, it is designed to highlight the quirks of the Portland community and is a way for residents of the area to derive feelings of relatedness and connection to their fellow Portlanders: https://keepearthquakesweird.com
+'Keep Portland Weird' is a web app that is not short on fun, even if the serious issue that it addresses exists only in the aftermath of a speculated future natural disaster. Nevertheless, it is designed to highlight the quirks of the Portland community and is a way for residents of the area to derive feelings of relatedness and connection to their fellow Portlanders: https://keepearthquakesweird.com
 
 
 ## Introducing the Technical Team
