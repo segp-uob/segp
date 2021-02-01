@@ -33,7 +33,7 @@ We are going to walk through building and integrating each of these stages as we
 
 **Teams are free to choose the most appropriate tools and frameworks to meet the requirements of the marking criteria.** What is used is less important than how and why you've chosen a particular framework or tool. The workshops follow the MEAN stack, which is a common professional standard, and we would suggest it could be used as a basis for most projects. Because it is well used the integration between various tools is well documented online.
 
-## Marked outputs
+## Implimentation: Marked outputs
 We are looking for all teams to have *some* coverage of the following areas. Your team need to make a decision around how best to approach each of these areas:
 
 | Area/topic        | Marked output           | Example frameworks, tools & languages  |
