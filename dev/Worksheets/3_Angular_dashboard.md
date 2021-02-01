@@ -1,5 +1,5 @@
 # Angular dashboard
-## Weeks 3 & 4: 23/02 - 02/03/2021
+## Weeks 4 & 5: 23/02 - 02/03/2021
 
 A common usecase for the Angular framework, and indeed SPAs in general, is to display data. In the
 past complex and custom desktop software was required to create interactive 'data dashboards'. Now
