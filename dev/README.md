@@ -63,7 +63,7 @@ By following these sessions in order you will have a fully functioning SPA which
 These weekly worksheets set out the steps to build a fully functioning SPA from scratch using the MEAN stack. The outcomes could become the basis for your own team project. 
 
 >- [Week 1: Getting started!](Worksheets/0_gettingstarted.md)
->- [Week 2: Continious Integration](Worksheets/1_DevOps_Docker_CI.md)
+>- [Week 2: Docker & Continious Integration](Worksheets/1_DevOps_Docker_CI.md)
 >- [Week 3: Angular intro](Worksheets/2_Angular_building_client_side.md)
 >- [Weeks 4 & 5: Build a Dashboard](Worksheets/3_Angular_dashboard.md)
 >- [Week 6: Build your API](Worksheets/4_Launch_your_API.md)
