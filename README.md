@@ -131,7 +131,7 @@ Also on your Github repository, you must write a front-page document (readme.md)
 
 | week | uni week |                 theme                  | theory                                                       | development                | project                         |
 | :--: | :------: | :------------------------------------: | ------------------------------------------------------------ | -------------------------- | ------------------------------- |
-|  1   |    13    |        Introduction + Overview         | 1a - Welcome & Introduction<br />1b - Team Intro<br />1c - Project Brief | Getting Started            | Groups                          |
+|  1   |    13    |        Introduction + Overview         | 1a - Welcome & Introduction<br />1b - Team Intro<br />1c - Project Brief | [Overview](dev/) [Getting Started](dev/Worksheets/0_gettingstarted.md)            | Groups                          |
 |  2   |    14    | Agile Development + Team Collaboration | 2a - Waterfall & Agile<br />2b - Teams & Roles<br />2c - Reqs. User Stories | DevOps + Docker            | Design Thinking                 |
 |  3   |    15    |     Understanding the System Stack     | 3a - What is MEAN?<br />3b - OO Design<br />3c - Data Models (JSON) | Angular, Client Side       | Data Model                      |
 |  4   |    16    |             The Front End              | 4a - Intro to Front End<br />4b - Git Report<br />4c - Pair Programming | Angular Dashboard          | Documenting your Project        |
