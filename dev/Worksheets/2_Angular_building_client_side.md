@@ -1,4 +1,5 @@
 ## Welcome to Angular!
+## Week 3: 16/2/2021
 
 We are going to be using Angular for our client side development. Angular is a fantastically
 flexible and scalable framework for building web applications. If you're leading on frontend
