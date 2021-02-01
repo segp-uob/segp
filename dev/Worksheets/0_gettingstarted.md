@@ -42,7 +42,7 @@ of large applications and transcompiles to JavaScript.
 
 By following the workshops you will gradually learn each stage of building the 'full stack' in a
 simple and 'not-very-featured' way. We aim to give you a taste of the tools to build your own 
-'far-more-featured' product.
+'far-more-featured' product. Expect to gradually deviate from the examples as you start to build out your own product.
 
 ## Tasting Paddle
 
