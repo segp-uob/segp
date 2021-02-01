@@ -13,7 +13,7 @@ the stack and tooling over the Unit.
 > ### Milestone checklist
 > - [ ] Essential: [Workshop walkthrough](videos/0.ogg)
 > - [ ] Recommended: [Watch Angular pros & cons (12 minutes)](https://www.youtube.com/watch?v=y14f_VFsZIA)
-> - [ ] Essential: Install all required packages
+> - [ ] Essential: Install all required packages by any method that works on your system
 > - [ ] Essential: Create an Angular site & run
 > - [ ] Recommended: Install MongoDB
 > - [ ] Recommended: Explore Angular tutorials linked in your new site
