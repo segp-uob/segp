@@ -20,7 +20,7 @@ the stack and tooling over the Unit.
 
 # Getting started
 
-Let';'s start by getting your system is setup exactly how you need. Time spent checking the basics now
+We must start by getting your system is setup exactly how you need. Time spent checking the basics now
 will make sure you aren't stressing later on. Each member of the group should ensure they have the
 development tools setup following all essential steps outlined above. Of course, each team should
 have only one git repository, so you'll need to decide who will make the first push (then everyone
@@ -61,8 +61,8 @@ you are struggling to get things working at a particular stage.
 # Install requirements
 
 Get your system ready to start working with the MEAN stack... All instructions are based on Ubuntu
-OS, however, many will work exactly the same on MacOS. You might need to do some searching to find
-different commands under other operating systems, however, the principles and packages are always
+OS, however, many will work exactly the same on MacOS and there are additional tips and links below. You might need to do some searching and error finding to establish
+different commands under other operating systems. However, the principles and packages are always
 the same.
 
 ## npm and Docker
@@ -99,6 +99,8 @@ of being able to quickly deploy to a consistent environment.
 
 ## Node & npm
 
+You can install node and npm directly on your system or follow the alternative below:
+
 > ### Alternative to using pure node/npm installation:
 > An alternative to using just node / npm, is a little wrapper software that allows for easy 
 > installation and switching between different node versions.
@@ -133,7 +135,6 @@ of being able to quickly deploy to a consistent environment.
 > ```shell
 > nvm
 > ```
-
 ---
 There are additional resources available to guide you through the installation process.
 
@@ -141,7 +142,7 @@ There are additional resources available to guide you through the installation p
 > - [Windows specific instructions](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 > - [General npm issues](https://docs.npmjs.com/)
 
-So when you're ready to go, make sure you have both node and npm installed with the following
+So when you've installed via whatever method works best on your system, make sure you have both *node and npm* installed with the following
 commands:
 
 ```shell
