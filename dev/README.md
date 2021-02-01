@@ -60,7 +60,7 @@ As per the marked outputs above; we don't expect every team to implement full us
 By following these sessions in order you will have a fully functioning SPA which would meet the basic requirements of the unit:
 
 ## Workbook overview
-These weekly worksheets set out the steps to build a fully functioning SPA from scratch using the MEAN stack. The outcomes could become the basis for your own team project. 
+These weekly worksheets set out the steps to build a fully functioning SPA from scratch using the MEAN stack. The outcomes could become the basis for your own team project. Ideally you would try to complete the workbook during the teaching week to benefit from ongoing support. As the term progresses you will likely transition from the worked example to your own product.
 
 >- [Week 1: Getting started!](Worksheets/0_gettingstarted.md)
 >- [Week 2: Docker & Continious Integration](Worksheets/1_DevOps_Docker_CI.md)
