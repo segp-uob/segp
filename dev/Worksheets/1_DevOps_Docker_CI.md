@@ -1,4 +1,5 @@
 # Continuous Integration
+## Week 2: 8/2/2021
 
 Continuous integration (CI) is the practice of merging all developers' working copies to a shared
 branch regularly. Think of this workshop as focusing on *how* we work together effectively to build
@@ -23,7 +24,7 @@ You're not expected to build *everything* in the CI introduction video, or in a 
 automated, however, it's important that your team has some coverage and understanding of all of the
 stages. All professional software development teams will have their own CI process. It is basically
 impossible to develop complex software without integrating and testing code in a robust and
-systematic way.
+systematic way. Your task as a team is to define yours!
 
 > ### ! Watch out !
 > "Everyone in your team will have some parts of the codebase that they are responsible for. 
@@ -35,15 +36,15 @@ systematic way.
 
 ## The workflow
 
-We define the central workflow (for this Unit) below. We expect to see code being merged
-progressively through this pipeline (ie from branch to branch):
+We define the central workflow (for this Unit) below but feel free to adapt as you see fit. We expect to see code being merged
+progressively through a pipeline (ie from branch to branch):
 
 ```
 [Development] -> [Build] -> [Release] -> [Production]
 ```
 
 The important point here is that development is controlled and managed in a systematic way. Commits
-should be small, testable, tested and clear. And perhaps most importantly - your production/live
+should be small, testable, tested and clear. And perhaps most importantly your production/live
 version is fully working! So, in your teams as a minimum to achieve this you will need to:
 
 - Implement version control using a public Github repo and setup Dev(master), Staging and Live
