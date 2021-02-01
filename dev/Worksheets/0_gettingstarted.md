@@ -75,24 +75,24 @@ this session are to:
 - Ensure you have a current install of npm
 - Ensure you have a current install of NodeJS
 - Ensure you have a current install of Angular CLI
-- Setup the new site as an upstream Git repo
+- Check everything is working as expected by creating a template site
 
 In the next workshops we are going to be using Docker and Docker-compose for running production
-containers. So now is also a good time to make sure you have these installed:
+container and Git for version control. So it is also a good time to make sure you have these installed:
 
 - Docker
 - Docker-compose
+- Git
 
-Because of the way Docker works it is just not possible to install Docker without Sudo rights. This
+Because of the way Docker works you will find it is just not possible to install Docker without Sudo rights. This
 is no issue on your own machines, but if you're using a lab machine, this will need to be completed
 inside a Vagrant VM so you can sudo. For non-linux builds you might also need some specific native
-packages depending on your operating system (like build-essential on Ubuntu). Try installing these
-packages first but bear in mind you might need to fault find until it works!
+packages depending on your operating system (like build-essential on Ubuntu) and there are some desktop versions of Docker with a GUI you might like to try.Bear in mind you might need to fault find until it works!
 
 ## Using VM?
 
 I wouldn't recommend using Docker within a VM (such as Virtual Box) if you can avoid it. Docker runs
-on the hypervisor layer of your machine and using a VM can get in the way of this. The very point of
+on the hypervisor layer of your machine and using a VM can get in the way of this but it will probably work. The very point of
 docker is to containerise the environment in a way that abstracts system specific features. Ie if
 you're on a Mac or a windows machine - an image/environment is always exactly the same. On this
 basis you should probably just install docker on your machine at root level and enjoy the benefits
@@ -100,7 +100,7 @@ of being able to quickly deploy to a consistent environment.
 
 ## Node & npm
 
-You can install node and npm directly on your system or follow the alternative below:
+You can install node and npm directly on your system or follow the alternative method below:
 
 > ### Alternative to using pure node/npm installation:
 > An alternative to using just node / npm, is a little wrapper software that allows for easy 
@@ -143,7 +143,7 @@ There are additional resources available to guide you through the installation p
 > - [Windows specific instructions](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 > - [General npm issues](https://docs.npmjs.com/)
 
-So when you've installed via whatever method works best on your system, make sure you have both *node and npm* installed with the following
+So when you've installed via **whatever method works best on your system**, make sure you have both *node and npm* installed with the following
 commands:
 
 ```shell
