@@ -66,7 +66,7 @@ These weekly worksheets set out the steps to build a fully functioning SPA from 
 >- [Week 2: Docker & Continious Integration](Worksheets/1_DevOps_Docker_CI.md)
 >- [Week 3: Angular intro](Worksheets/2_Angular_building_client_side.md)
 >- [Weeks 4 & 5: Build a Dashboard](Worksheets/3_Angular_dashboard.md)
->- [Week 6: Build your API](Worksheets/4_Launch_your_API.md)
+>- [Weeks 5 & 6: Build your API](Worksheets/4_Launch_your_API.md)
 >- [Week 7: Deploying via Docker](Worksheets/5_Deploying_with_Docker.md)
 >- [Week 8: Using Services](Worksheets/6_Express_through_services.md)
 >- [Week 9: Setting up MongoDB](Worksheets/7_MongoDB_persistent_storage.md)
