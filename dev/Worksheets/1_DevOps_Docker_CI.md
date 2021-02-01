@@ -1,5 +1,5 @@
 # Continuous Integration
-## Week 2: 8/2/2021
+## Week 2: 9/2/2021
 
 Continuous integration (CI) is the practice of merging all developers' working copies to a shared
 branch regularly. Think of this workshop as focusing on *how* we work together effectively to build
