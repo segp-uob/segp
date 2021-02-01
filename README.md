@@ -36,7 +36,7 @@ Due to the scale of this challenge, you are not required to fully implement all 
 <p align="left">
 <img src="https://img.buzzfeed.com/buzzfeed-static/static/2017-10/17/17/campaign_images/buzzfeed-prod-fastlane-03/what-it-means-when-women-say-me-too-2-18053-1508277359-1_dblbig.jpg" alt="WebApp" width="600" height="300" />
 </p>
-'Me Too Rising' is a web app that uses an interactive globe interface to map Google Trend data - search volumes and media articles - regarding the Me Too movement. While this is a little less playful that what we would might expect from your projects, it is a great example of using interactive interfaces in order to explore or conceptualise a serious issues from a novel perspective, and possibly capture the attention of a wider audience. Note, this single page application would be considered incredibly advanced for this unit and we would not expect you to reach this level of fidelity:https://metoorising.withgoogle.com
+'Me Too Rising' is a web app that uses an interactive globe interface to map Google Trend data - search volumes and media articles - regarding the Me Too movement. While this is a little less playful that what we would might expect from your projects, it is a great example of using interactive interfaces in order to explore or conceptualise serious issues from a novel perspective, and possibly capture the attention of a wider audience. Note, this single page application would be considered incredibly advanced for this unit and we would not expect you to reach this level of fidelity:https://metoorising.withgoogle.com
 <br>
 
 ### Dress By Weather
