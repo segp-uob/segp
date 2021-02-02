@@ -1,7 +1,7 @@
 # Build a Single Page Application
 Your central task as a team is to build a fully functioning single page application (SPA). These workshops guide you through a series of steps towards making a simple SPA. They are intended to give you a rough structure and set your group off in the right technical direction. As you gain confidence and understanding you'll want to explore topics and functionality not covered in these sessions.
 
-MEAN stands for MongoDB, Express, Angular and Node.js. It's just a way to descibe a set of tools which work well together to build scalable web applications.
+MEAN stands for MongoDB, Express, Angular and Node.js. It's just a way to descibe a set of tools which work well together to build scalable web applications. There are lots and lots of different ways and tools to build a SPA - but the principles remain fairly constant. Here are some popular frameworks/tools:
 
 ![SPA](https://www.whitesourcesoftware.com/wp-content/uploads/2017/07/Single-Page-Application.jpg "Single Page Applications")
 
