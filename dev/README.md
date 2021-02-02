@@ -11,7 +11,8 @@ The MEAN stack allows developers to quickly produce secure, fast and dynamic sit
 A SPA serves a single index.html which includes script imports which dynamically re-renders what the user sees - without re-requesting a page. Angular is used to dynamically update (fetch/post) the domain application model (DOM) and makes this process very simple. The result is a highly interactive application which loads in an efficient way. By making API calls for information to a backend (node), we separate the front and back of the application. This has many benefits including scalability, statelessness and extendability of the code.
 
 > ### Milestone checklist
-> - [ ] Essential: [Introduction to the MEAN stack (10 minutes)](https://www.ibm.com/uk-en/cloud/learn/mean-stack-explained)
+> - [ ] Essential: [Read introduction to the MEAN stack (10 minutes)](https://www.ibm.com/uk-en/cloud/learn/mean-stack-explained)
+> - [ ] Recommended: [Post any questions on the Teams chat](https://teams.microsoft.com/l/channel/19%3a6c1876238fb84cd890a43b1273e0aebf%40thread.tacv2/Tuesday?groupId=a9a647c8-66d1-4f10-bd04-9a5ed3f67e7b&tenantId=b2e47f30-cd7d-4a4e-a5da-b18cf1a4151b)
 ***
 
 ### Why Angular and Angular CLI?
