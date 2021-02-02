@@ -10,7 +10,9 @@ The MEAN stack allows developers to quickly produce secure, fast and dynamic sit
 ## What is a Single Page Application (SPA)?
 A SPA serves a single index.html which includes script imports which dynamically re-renders what the user sees - without re-requesting a page. Angular is used to dynamically update (fetch/post) the domain application model (DOM) and makes this process very simple. The result is a highly interactive application which loads in an efficient way. By making API calls for information to a backend (node), we separate the front and back of the application. This has many benefits including scalability, statelessness and extendability of the code.
 
-> [Read more about the MEAN stack](https://www.ibm.com/uk-en/cloud/learn/mean-stack-explained)
+> ### Milestone checklist
+> - [ ] Essential: [Introduction to the MEAN stack (10 minutes)](https://www.ibm.com/uk-en/cloud/learn/mean-stack-explained)
+***
 
 ### Why Angular and Angular CLI?
 In these workshops we are using some basic features from the Angular 11 framework. We have chosen to use Angular but you don't have to! We selected Angular because it is stable, supported and developed by google, and simplifies many processes whilst being very powerful. We make using angular easier by making use of the bundled Angular CLI tool. We will be showing you some basic features of Angular in the workshops.
