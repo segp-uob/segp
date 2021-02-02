@@ -31,3 +31,5 @@ reviewed Pull request against develop branch created. Deployed to staging Browse
 Story accepted by PO before the Sprint review.
 
 ## Automated testing
+
+We are going to be exploring the topic of automated testing further. Students with an interest should check out [Karma](https://karma-runner.github.io/6.0/intro/how-it-works.html) in advance.
