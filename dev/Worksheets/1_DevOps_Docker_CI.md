@@ -12,6 +12,7 @@ time spent on your process early on will help as you progress.
 > ### Milestone checklist
 > - [ ] Essential: [Workshop walkthrough](videos/1.ogg)
 > - [ ] Recommended: [Watch CI Explained](https://www.youtube.com/watch?v=XusC2o-Y_fU) (20 minutes)
+> - [ ] Essential: [Bookmark this overview of how to write documentation](https://www.altexsoft.com/blog/business/technical-documentation-in-software-development-types-best-practices-and-tools/)
 > - [ ] Essential: Clone the template repository
 > - [ ] Essential: Setup Docker
 > - [ ] Essential: Make sure your whole team has cloned & can commit!
