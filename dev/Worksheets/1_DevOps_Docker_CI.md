@@ -68,6 +68,7 @@ production ready!
 ## Keep the pipeline moving: Hold Standups!
 
 (Holding standups (and keeping records!) is part of the marking scheme!)
+[](https://content.altexsoft.com/media/2017/12/agile-development-cycle.png)
 
 The most productive and easy way to achieve iterative and continuous integration is to hold regular
 15 minute(max) standup meetings with your whole team. This would ideally be daily when you are
