@@ -1,30 +1,54 @@
 # User Authentication
 
-To personalise the experience your Application users have, and to ensure the security of their data, we must impliment some kind of user authentication. User auth is about holding session information which identifies your users. Once this is implimented an application can really take off as you can provide completely unique experiences and render content based on user determined data. 
+To personalise the experience your Application users have, and to ensure the security of their data,
+we must implement some kind of user authentication. User auth is about holding session information
+which identifies your users. Once this is implemented an application can really take off as you can
+provide completely unique experiences and render content based on user determined data. For your
+project you could just 'fake' user authentication by rendering sample views and this would be
+acceptable. However, if you want to go further, you can.
 
-There are a lot of third party services (Like Auth0 & Okta) that will handle user authentication for you. Using a third party authentication provider has many advantages but naturally you must pay to use these services. We will be implimenting a very basic form of authentication so you can use as 'proof of concept'; but there are good reasons why this area would need more work should you choose to launch your application publically. 
+There are a lot of third party services (Like Auth0 & Okta) that will handle user authentication for
+you. Using a third party authentication provider has many advantages but naturally you must pay to
+use these services. Startups will often pay for these services because implementing them seems like
+a daunting task, howvever, with a high volume of users costs really mount up. We are therefore going
+to take a look at how a developer might implement authentication manually and benefit from the
+service being free forever!
+
+We will be implementing a very basic form of authentication, so you can use as 'proof of concept';
+but there are good reasons why this area would need more work should you choose to launch your
+application publicly. You will see some of the reasons why many apps choose to pay an external
+company to host all these things; but it's just cooler to write it yourself!
+
+We don't recommend that all students complete this workbook as it goes well beyond what is expected
+technically.
 
 > ### Milestone checklist
 > - [ ] Recommended: [Workshop walkthrough](videos/9.ogg)
-> - [ ] Recommended: Impliment basic user authentication 
+> - [ ] Recommended: Implement basic user authentication
 > - [ ] Recommended: [Introduction to JSON web tokens](https://jwt.io/introduction/)
 > - [ ] Extension: [Ways to use HTTP Interceptors](https://medium.com/angular-in-depth/top-10-ways-to-use-interceptors-in-angular-db450f8a62d6)
 ***
 
 # Overview
 
-A fully implimented authenticaiton process in Angular would follow the below structure (credit: bezkoder: 
+A fully implemented authentication process in Angular would follow the below structure (credit:
+bezkoder):
 ![User Authentication process](https://bezkoder.com/wp-content/uploads/2020/07/angular-10-jwt-authentication-overview.png "Authentication flow")
 
 ## About HTTP Interceptors
-When the intercept() method is called Angular passes a reference to the httpRequest object. With this request, we can inspect it and modify it as necessary. Once our logic is complete, we call next.handle and return the updated request onto the application.
+
+When the intercept() method is called Angular passes a reference to the httpRequest object. With
+this request, we can inspect it and modify it as necessary. Once our logic is complete, we call
+next.handle and return the updated request onto the application.
 
 # Components
+
 ## Create component
 
-To deliver authentication for our site we need the components set out in the architecture above. Create these templates using Angularcli (commands below)
+To deliver authentication for our site we need the components set out in the architecture above.
+Create these templates using Angular CLI (commands below)
 
-```
+```shell
 ng g s _services/auth
 ng g s _services/token-storage
 ng g s _services/user
@@ -37,8 +61,9 @@ ng g c app-admin
 ng g c app-moderator
 ng g c app-user
 ```
+
 Open app.module.ts, then import FormsModule & authInterceptorProviders (which we will complete soon) and all the components you've just created. Your app.module.ts should look like this:
-```
+```ts
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -89,15 +114,16 @@ import { authInterceptorProviders } from './_helpers/auth.interceptor';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-
-
 ```
+
 ## Creating services
 
 As with our Data Service, we need some Authentication services for handling our requests for auth. 
 ### Authentication
+
 We update auth.service.ts:
-```
+
+```ts
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -131,8 +157,10 @@ export class AuthService {
   }
 }
 ```
-We update token-storage.service.ts
-```
+
+We update token-storage.service.ts:
+
+```ts
 import { Injectable } from '@angular/core';
 
 const TOKEN_KEY = 'auth-token';
@@ -168,8 +196,10 @@ export class TokenStorageService {
   }
 }
 ```
-And finally user.service.ts
-```
+
+And finally user.service.ts:
+
+```ts
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -200,10 +230,11 @@ export class UserService {
   }
 }
 ```
+
 ### HTTP Interceptor
 
 Now we return to the auth.interceptor.ts file and update:
-```
+```ts
 import { HTTP_INTERCEPTORS, HttpEvent } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { HttpInterceptor, HttpHandler, HttpRequest } from '@angular/common/http';
@@ -234,8 +265,11 @@ export const authInterceptorProviders = [
 ## Creating components
 
 ### Register
-Within register.component.ts we must binds form data (username, email, password) from template to AuthService.register() method that returns an Observable object.
-```
+
+Within register.component.ts we must binds form data (username, email, password) from template to
+AuthService.register() method that returns an Observable object.
+
+```ts
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../_services/auth.service';
 
@@ -272,8 +306,9 @@ export class RegisterComponent implements OnInit {
 
 }
 ```
-Now lets create a template to test the component
-```
+
+Now, let's create a template to test the component
+```html
 <div class="col-md-12">
   <div class="card card-container">
     <img
@@ -362,8 +397,8 @@ Now lets create a template to test the component
 </div>
 ```
 ### Login
-Now lets update login.component.ts:
-```
+Now let's update login.component.ts:
+```ts
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../_services/auth.service';
 import { TokenStorageService } from '../_services/token-storage.service';
@@ -414,8 +449,9 @@ export class LoginComponent implements OnInit {
 
 }
 ```
+
 And update the HTML with validation
-```
+```html
 <div class="col-md-12">
   <div class="card card-container">
     <img
@@ -495,7 +531,7 @@ And update the HTML with validation
 
 ### Profile page
 Update profile.component.ts:
-```
+```ts
 import { Component, OnInit } from '@angular/core';
 import { TokenStorageService } from '../_services/token-storage.service';
 
@@ -517,7 +553,7 @@ export class ProfileComponent implements OnInit {
 }
 ```
 And render a template:
-```
+```html
 <div class="container" *ngIf="currentUser; else loggedOut">
   <header class="jumbotron">
     <h3>
@@ -549,7 +585,7 @@ And render a template:
 
 ## Calling user service
 We use home.component.ts to call for content based on user authentication: 
-```
+```ts
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../_services/user.service';
 
@@ -578,7 +614,7 @@ export class HomeComponent implements OnInit {
 }
 ```
 With html:
-```
+```html
 <div class="container">
   <header class="jumbotron">
     <p>{{ content }}</p>
@@ -599,8 +635,12 @@ appModeratorComponent & appUserComponent are similar.
 app-admin/app-admin.component.ts
 
 ## Updating routes
-We need to update the app routing that we setup previously. As below, this involves adding the following routes to the new components you've just created, as well as commenting out the default (**) route to the pie chart we were previously using. This will ensure non-authenticated users are instead directed to our new 'home' path:
-```
+
+We need to update the app routing that we set up previously. As below, this involves adding the
+following routes to the new components you've just created, as well as commenting out the
+default (**) route to the pie chart we were previously using. This will ensure non-authenticated
+users are instead directed to our new 'home' path:
+```ts
 // user related components
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
@@ -629,7 +669,7 @@ const routes: Routes = [
 
 # Further reading
 
-To impliment a full authentication process use the [following example](https://jasonwatmore.com/post/2020/07/18/angular-10-user-registration-and-login-example-tutorial) from Jason Watmore.
+To implement a full authentication process use the [following example](https://jasonwatmore.com/post/2020/07/18/angular-10-user-registration-and-login-example-tutorial) from Jason Watmore.
 
 # License Notice
 
