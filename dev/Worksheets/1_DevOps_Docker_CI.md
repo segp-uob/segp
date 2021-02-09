@@ -13,7 +13,7 @@ time spent on your process early on will help as you progress.
 > - [ ] Essential: [Workshop walkthrough](videos/1.ogg)
 > - [ ] Recommended: [Watch CI Explained](https://www.youtube.com/watch?v=XusC2o-Y_fU) (20 minutes)
 > - [ ] Essential: [Bookmark this overview of how to write documentation](https://www.altexsoft.com/blog/business/technical-documentation-in-software-development-types-best-practices-and-tools/)
-> - [ ] Essential: Clone the template repository
+> - [ ] Essential: Clone the template repository & add as a tab to your Desk (in Teams)
 > - [ ] Essential: Setup Docker
 > - [ ] Essential: Make sure your whole team has cloned & can commit!
 > - [ ] Recommended: Schedule 15 minute team standups. [Guide to standups](https://www.range.co/blog/complete-guide-daily-standup-meeting-agenda)
