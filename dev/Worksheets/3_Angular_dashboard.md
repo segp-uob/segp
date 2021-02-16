@@ -46,7 +46,7 @@ application. You can see in `build: { }` object; you just need to add this scrip
 "scripts": ["node_modules/chart.js/dist/Chart.js"]
 ```
 
-We are making use of Bootstrap for styling, so add the following line to `styles.css`:
+We are making use of Bootstrap for styling, so add the following line to `styles.css` within src/styles.css:
 
 ```js
 @import '~bootstrap/dist/css/bootstrap.min.css';
