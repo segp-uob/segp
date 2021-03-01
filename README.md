@@ -102,19 +102,19 @@ Also on your Github repository, you must write a front-page document (readme.md)
 #### Team 
 - Team (product) name
 - Name / photo / role for each team member.
- 
+
 
 #### Introduction [10 marks]
 - Abstract. Motivation for the project, framing of the problem and a high-level overview of the system.
 - Project Objectives. The high level goals of the project and the contribution towards solving the problem. A checklist against which the team can evaluate their success.
 - Video. Short (1-2min) demo video to explain your system (think Kickstarter)
- 
+
 
 #### Background and Motivation [10 marks]
 - Background literature. Academic research review.
 - State of the art survey. Current industry review.
 - Clear definition of the problem. How does your project relate to the above? We will be marking the ability of your team to identify a worthwhile and important problem and clearly articulate the scope and challenge of the problem.
- 
+
 
 #### System Implementation [20 marks]:
 - Stack architecture and system design (e.g. class diagrams, sequence diagrams). 
@@ -123,7 +123,7 @@ Also on your Github repository, you must write a front-page document (readme.md)
 - Front End - Angular. Details of implementation.
 - Additional elements and components e.g. authentification. Tell us about any other aspects not covered above!
 - Deployment details (including Docker), include how you have been achieving continuous integration and deployment.
- 
+
 
 #### UX Design [15 marks]
 - Design Process and Early prototyping and ideation (including mood boards and paper prototyping)
@@ -131,7 +131,7 @@ Also on your Github repository, you must write a front-page document (readme.md)
 - UX approach – design heuristics/approach, design methods (design fiction / heuristics)
 - Understanding of user group (questionnaires / user stories / interviews) 
 - Wireframes and interaction flow diagrams for final key subsystems.
- 
+
 
 #### Sprints & Project Management [15 marks]
 - Group working methods used (for instance did your team choose a particular style of agile? what communication channels did you use?)
@@ -144,7 +144,7 @@ Also on your Github repository, you must write a front-page document (readme.md)
 - Details of how you evaluated your designs (techniques used & awareness of their limitations). Description of  techniques suitable for your particular design. A timeline of evaluation of your design. 
 - Unit testing / Functional testing.
 - User acceptance testing. Evaluation of your design with users – methods undertaken, findings, implications.
- 
+
 
 #### Conclusion [10 marks]:
 - Reflect on the working practices of your group, how well they did or did not work, e.g, management of issues, communication, Agile (etc).  
@@ -152,7 +152,7 @@ Also on your Github repository, you must write a front-page document (readme.md)
 - This is a chance to reflect on how coronavirus has affected your project (remote working practices etc)
 - Discussion of Social and Ethical implications of your work.
 - Discussion of future work (in terms of design, development and evaluation)
- 
+
 
 #### Presentation [5 marks]
 - There is a 5% mark for presentation, including formatting. We are looking for consistency, readability, conciseness, good use of figures and with the ultimate aim of this being a readable and useful public repo!
@@ -162,18 +162,18 @@ Also on your Github repository, you must write a front-page document (readme.md)
 
 | week | uni week |                 theme                  | theory                                                       | development                | project                         |
 | :--: | :------: | :------------------------------------: | ------------------------------------------------------------ | -------------------------- | ------------------------------- |
-|  1   |    13    |        Introduction + Overview         | 1a - Welcome & Introduction<br />1b - Team Intro<br />1c - Project Brief | [Overview](dev/) [Getting Started](dev/Worksheets/0_gettingstarted.md)            | Groups                          |
+|  1   |    13    |        Introduction + Overview         | 1a - Welcome & Introduction<br />1b - Team Intro<br />1c - Project Brief | [Overview](dev/) [Getting Started](dev/Worksheets/0_gettingstarted.md)            | Forming Groups                  |
 |  2   |    14    | Agile Development + Team Collaboration | 2a - Waterfall & Agile<br />2b - Teams & Roles<br />2c - Reqs. User Stories | [CI, DevOps + Docker](dev/Worksheets/1_DevOps_Docker_CI.md)           | Design Thinking                 |
-|  3   |    15    |     Understanding the System Stack     | 3a - What is MEAN?<br />3b - OO Design<br />3c - Data Models (JSON) | [Angular, Client Side](dev/Worksheets/2_Angular_building_client_side.md)       | Data Model                      |
-|  4   |    16    |             The Front End              | 4a - Intro to Front End<br />4b - Git Report<br />4c - Pair Programming | [Angular Dashboard](dev/Worksheets/3_Angular_dashboard.md)          | Documenting your Project        |
-|  5   |    17    |            The Middle Tier             | 5a - Middle Tier Concerns<br />5b - Advanced Git<br />5c - Unit Testing | [Angular Dashboard](dev/Worksheets/3_Angular_dashboard.md) [Launch your API](dev/Worksheets/4_Launch_your_API.md)            | User Testing                    |
-|  6   |    18    |              The Back End              | 6a - Welcome to the Back End<br />6b - Separation of Concerns<br />6c - Integration Testing | [Deploying with Docker](dev/Worksheets/5_Deploying_with_Docker.md)      | Engineering Ethos              |
-|  7   |    19    |          Deployment + Beyond           | 7a - Continuous Deployment<br />7b - Social & Ethical Implications<br />7c - Evaluation | [Express through Services](dev/Worksheets/6_Express_through_services.md)   |                                 |
-|  8   |    20    |           Looking at Sprints           | 8a - Project Review<br />8b - Honing your Sprints<br />8c - Serious Play Revisited | [MongoDB Persistent Storage](dev/Worksheets/7_MongoDB_persistent_storage.md)|                                 |
-|      |   EV1    |                                        |                                                              |                            |                                 |
-|      |   EV2    |                                        |                                                              |                            |                                 |
-|      |   EV3    |                                        |                                                              |                            |                                 |
-|  9   |    21    |              team sprints              |                                                              | Testing and Errors         | Team Feedback Session           |
-|  10  |    22    |              team sprints              |                                                              | User Authentification      | Team Feedback Session           |
-|  11  |    23    |    team sprints<br />+ finishing up    |                                                              |                            | Project submission end of week. |
+|  3   |    15    |     Understanding the System Stack     | 3a - What is MEAN?<br />3b - OO Design<br />3c - Data Models (JSON) | [Angular, Client Side](dev/Worksheets/2_Angular_building_client_side.md)       | Project Proposal      |
+|  4   |    16    |             The Front End              | 4a - Intro to Front End<br />4b - Git Report<br />4c - Pair Programming | [Angular Dashboard](dev/Worksheets/3_Angular_dashboard.md)          | Paper Prototyping |
+|  5   |    17    |              READING WEEK              |                                                              |                                                              |                                                         |
+|  6   |    18    |            The Middle Tier             | 5a - Middle Tier Concerns<br />5b - Advanced Git<br />5c - Unit Testing | [Angular Dashboard](dev/Worksheets/3_Angular_dashboard.md) [Launch your API](dev/Worksheets/4_Launch_your_API.md) | Data Model                                              |
+|  7   |    19    |              The Back End              | 6a - Welcome to the Back End<br />6b - Separation of Concerns<br />6c - Integration Testing | [Deploying with Docker](dev/Worksheets/5_Deploying_with_Docker.md) | tbc                                                     |
+|  8   |    20    |          Deployment + Beyond           | 7a - Continuous Deployment<br />7b - Social & Ethical Implications<br />7c - Evaluation | [Express through Services](dev/Worksheets/6_Express_through_services.md) | tbc |
+|      |   EV1    | EASTER |                                                              |                            |                                 |
+|      |   EV2    | EASTER |                                                              |                            |                                 |
+|      |   EV3    | EASTER |                                                              |                            |                                 |
+|  9   |    21    |            Focus on Sprints            | 8a - Project Review<br />8b - Honing your Sprints<br />8c - Serious Play Revisited | [MongoDB Persistent Storage](dev/Worksheets/7_MongoDB_persistent_storage.md) | tbc |
+|  10  |    22    |              team sprints              |                                                              | Testing and Errors | Team Feedback Session |
+|  11  |    23    |    team sprints<br />+ finishing up    |                                                              | User Authentification | Team Feedback Session + Project submission end of week. |
 |  12  |    24    |                  n/a                   | n/a                                                          | n/a                        | n/a                             |

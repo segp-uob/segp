@@ -11,7 +11,7 @@ you almost certainly will do!). Everyone should try to complete the walkthrough 
 gives a solid foundation to understand how a MEAN stack site works...!
 
 > ### Milestone checklist
-> - [ ] Essential: [Workshop walkthrough](videos/3.ogg)
+> - [ ] Essential: [Workshop walkthrough](https://web.microsoftstream.com/video/f648f751-02ce-4195-bcf5-9e938453dead)
 > - [ ] Recommended: [Intro to Chart.js](https://www.youtube.com/watch?v=2UVHI9UaONw) (3 minutes)
 > - [ ] Recommended: [Intro to Bootstrap](https://getbootstrap.com/docs/4.0/getting-started/introduction/) (60 minutes)
 > - [ ] Essential: Add **charts.js** to your project and follow the worksheet task
@@ -46,7 +46,7 @@ application. You can see in `build: { }` object; you just need to add this scrip
 "scripts": ["node_modules/chart.js/dist/Chart.js"]
 ```
 
-We are making use of Bootstrap for styling, so add the following line to `styles.css`:
+We are making use of Bootstrap for styling, so add the following line to `styles.css` within src/styles.css:
 
 ```js
 @import '~bootstrap/dist/css/bootstrap.min.css';
