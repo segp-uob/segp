@@ -1,5 +1,37 @@
 # Software Engineering Group Project
 
+## Repositories
+>- [Team 1: Repo](https://github.com/joshuatrobertson/Group1Project/)
+>- [Team 2: Missing!]()
+>- [Team 3: Repo](https://github.com/liyao0123/SoftwareEngineering2021Desk3)
+>- [Team 4: Missing!]()
+>- [Team 5: Repo](https://github.com/jamesrw94/UoB_group_proj_app)
+>- [Team 6: Repo](https://github.com/Davospike/segpSPA)
+>- [Team 7: Repo](https://github.com/gabrielchuv/SE7)
+>- [Team 8: Repo](https://github.com/CodingKaNi/group-project)
+>- [Team 9: Repo](https://github.com/Xinyuan-L/Softwaregroupwork.git)
+>- [Team 10: Repo](https://github.com/JaiRanchod/Software-Engineering-Group-Project)
+>- [Team 11: Repo](https://github.com/yujenyu/group11.git)
+>- [Team 12: Repo](https://github.com/LIAM-LIN/COMSM1401-DESK12)
+>- [Team 13: Repo](https://github.com/WenqingXie20581/Desk13.git)
+>- [Team 14: Missing!]()
+>- [Team 15: Repo](https://github.com/edysfy/Group_website)
+>- [Team 16: Repo](https://github.com/aaronsharma/SEGP)
+>- [Team 17: Repo](https://github.com/bristolcs828/Project-Account)
+>- [Team 18: Repo](https://github.com/ponponde/UoB-Group-Project-Desk18)
+>- [Team 19: Repo](https://github.com/Lexie-yw/Software-Engineering-Work)
+>- [Team 20: Repo](https://github.com/sf17177/Desk20)
+>- [Team 21: Repo](https://github.com/TramellLi/Software-Engineering-Group-21)
+>- [Team 22: Repo](https://github.com/HKLENG/Desk22-Group)
+>- [Team 23: Missing!]()
+>- [Team 24: Repo](https://github.com/xiangzhennan/group24.git)
+>- [Team 25: Repo](https://github.com/A-Madeline-Bates/Group-Web-Project)
+>- [Team 26: Repo](https://github.com/kesteckb/COMSM-SEGP)
+>- [Team 27: Repo](https://github.com/ChrisEssery/group-project)
+>- [Team 28: Repo](https://github.com/uobginnyqian/Group28.git)
+>- [Team 29: Missing!]()
+>- [Team 30: Missing!]()
+
 <p align="center">
 <img src="https://static.wixstatic.com/media/de4390_04962d127c0b41bd977230143f8aa54b.png/v1/fill/w_1024,h_917,al_c,q_90,usm_0.66_1.00_0.01/de4390_04962d127c0b41bd977230143f8aa54b.webp" alt="WebApp" width="450" height="400" />
 </p>
@@ -20,7 +52,6 @@ Our aim is to turn you into “Full Stack Developers” - developers with experi
 - Node.js application server
 
 Single page applications can be large and complex to develop and we don’t expect you to become experts in everything. But, we wish to give you a “taster” of everything so you can at least be able to say that you have tried them.
-
 
 ## Introducing the Design Brief: A Web App for “Serious Play”
 
