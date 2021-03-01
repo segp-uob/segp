@@ -9,7 +9,9 @@ server to fulfill the request. We will be starting simple, but the principles co
 powerful and can be scaled right up for whatever product you're building!
 
 > ### Milestone checklist
-> - [ ] Essential: [Workshop walkthrough](videos/6.ogg)
+> - [ ] Essential: [Workshop walkthrough](https://web.microsoftstream.com/video/e56e8487-e3b3-416f-9f9a-18498aa7bdf9)
+> - [ ] Essential: [Setup and test server.js]
+> - [ ] Essential: [Setup and test api.js]
 ***
 
 # Express
