@@ -12,7 +12,7 @@ application. The image gives us an unchangeable run-time environment to run an a
 confusing? It's much simpler to demonstrate - that's what we are going to do in this workshop.
 
 > ### Milestone checklist
-> - [ ] Essential: [Workshop walkthrough](videos/5.ogg)
+> - [ ] Essential: [Workshop walkthrough](https://web.microsoftstream.com/video/0b9aa4be-9072-4490-81c3-efceb2f62140)
 > - [ ] Recommended: [Images and containers](https://stackify.com/docker-image-vs-container-everything-you-need-to-know/) (15 minutes)
 ***
 
@@ -256,3 +256,4 @@ echo 'db.stats().ok' | mongo localhost:27017 --quiet
 ```
 
 ## Going further
+[Full Docker overview](https://www.youtube.com/watch?v=fqMOX6JJhGo)
