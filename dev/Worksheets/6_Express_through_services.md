@@ -104,39 +104,39 @@ export class DataService {
 
 ## Import the new service
 
-We return to our app-Component and make sure to import the new servce:
+We return to our app-Module and make sure to import the new servce:
 
 ```ts
-import { Component, OnInit } from '@angular/core'; // need to make sure we import oninit
-import { DataService } from './data.service';
+import {BrowserModule} from '@angular/platform-browser';
+import {HttpClientModule} from '@angular/common/http';
+import {NgModule} from '@angular/core';
+import {DataService} from './data.service';
 
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+import {ChartsModule} from 'ng2-charts';
+
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {BarChartComponent} from './bar-chart/bar-chart.component';
+import {RadarChartComponent} from './radar-chart/radar-chart.component';
+
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    BarChartComponent,
+    RadarChartComponent,
+
+  ],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    AppRoutingModule,
+    ChartsModule
+  ],
+  providers: [DataService],
+  bootstrap: [AppComponent]
 })
-export class AppComponent {
-  title = 'dashboard';
-}
-
-// need to ensure we include a dectorator and export calss as abstract
-
-@Component({
-  template: ''
-})
-
-export abstract class DataComponent implements OnInit {
-  // instantiate data to an empty array
-  data: any = [];
-
-  constructor(private dataService: DataService) { }
-
-  ngOnInit() {
-    // Retrieve posts from the API
-    this.dataService.getAll().subscribe(data => {
-      this.data = data;
-    });
-  }
+export class AppModule {
 }
 ```
 
@@ -155,7 +155,7 @@ import { DataService } from '../data.service';
   templateUrl: './radar-chart.component.html',
   styleUrls: ['./radar-chart.component.css']
 })
-export class RadarChartComponent implements OnInit {  
+export class RadarChartComponent implements OnInit {
 // This is what gets initialised by default
   public radarChartLabels = ['Q1', 'Q2', 'Q3', 'Q4'];
   public radarChartData = [
@@ -191,6 +191,7 @@ export class RadarChartComponent implements OnInit {
 
 }
 
+
 ```
 
 ## Displaying the API data in the HTML
@@ -200,10 +201,10 @@ existing variable names we set before so there is little we need to do here now:
 
 ```html
 <div style="display: block">
-  <canvas baseChart
-          [datasets]="radarChartData"
-          [labels]="radarChartLabels"
-          [chartType]="radarChartType"></canvas>
+    <canvas baseChart
+            [datasets]="radarChartData"
+            [labels]="radarChartLabels"
+            [chartType]="radarChartType"></canvas>
 </div>
 ```
 
