@@ -14,7 +14,7 @@ hooking it up to our application components (a Radar chart). This will give you 
 you can amend your own components to connect directly via a service to your database API.
 
 > ### Milestone checklist
-> - [ ] Essential: [Workshop walkthrough](videos/4.ogg)
+> - [ ] Essential: [Workshop walkthrough](https://web.microsoftstream.com/video/72b0757a-e2d1-4525-82be-7576469cccd1)
 > - [ ] Essential: [Introduction to Services](https://angular.io/tutorial/toh-pt4) (10 minutes)
 > - [ ] Essential: Connect your dashboard to your API via a service
 > - [ ] Recommended: [Read about httpClient module](https://angular.io/guide/http)
