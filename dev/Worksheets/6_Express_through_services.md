@@ -17,6 +17,29 @@ you can amend your own components to connect directly via a service to your data
 > - [ ] Essential: [Introduction to Services](https://angular.io/tutorial/toh-pt4) (10 minutes)
 > - [ ] Essential: Connect your dashboard to your API via a service
 ***
+## Update your API
+When you created your API (a few weeks ago) using Express you'll remember we just returned 'api works' when the API was called. We now need to update the API so that it returns something we can use in our charts (Data!). Initially we are going to serve the data from a static JSON file on the server. This is a placeholder for our Database. First create a file ```data.json``` in the same folder as your ```api.js``` file. Add the following data to the file:
+```
+{
+	"radarChartLabels":["Q4","Q3","Q2","Q1"],
+	"radarChartData":[{"data": [120, 130, 180, 70], "label": "1917"}, {"data": [90, 150, 200, 45], "label": "1918"}]
+}
+```
+We can think of this file as a single return value from our API: it's a set of labels and data. Now you need to make sure this file is required in your api.js file (which will throw an error if not present) then parse and return this data if present when called. Update ```api.js```:
+```
+const express = require('express');
+const router = express.Router();
+const data = require('./data.json')
+
+/* GET api listing. */
+router.get('/', function (req, res) {
+  res.header("Content-Type",'application/json');
+  res.send(JSON.stringify(data));
+})
+
+module.exports = router;
+```
+Now try calling your api using the curl request demonstrated previously. Check the data is returned correctly. 
 
 ## Create a service
 
