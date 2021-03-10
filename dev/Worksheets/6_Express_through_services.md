@@ -49,7 +49,7 @@ ng generate service data
 ```
 
 This creates a data.service.ts in the src/app directory. We then need to add it in the providers
-section of our module declaration.
+section of our module declaration ```app.module.ts```.
 
 ```ts
 // Imports commented out 
@@ -78,7 +78,7 @@ export class AppModule { }
 
 ## Update the data service
 
-We now need to make sure the service makes the right call: edit src/app/data.service.ts
+We now need to make sure the service makes the right call: ```src/app/data.service.ts```
 
 ```ts
 import { Injectable, OnInit } from '@angular/core';
