@@ -1,5 +1,5 @@
 # Deploying with Docker
-
+## Week 6: 16/03/2021 (updated following reading week)
 Docker is a great way to create a consistent runtime environment for your application. It ensures
 that when you bundle up your project for others to compile and run you know the conditions present
 at runtime. You'll remember that in workshop 1 we set up Docker on your machines. Now we will
