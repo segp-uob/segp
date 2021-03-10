@@ -163,7 +163,7 @@ These are example reports from last year. Before looking at them, note that the 
 - [Team 2: Missing!]()
 - [Team 3: Repo](https://github.com/liyao0123/SoftwareEngineering2021Desk3)
 - [Team 4: Missing!]()
-- [Team 5: Repo](https://github.com/jamesrw94/UoB_group_proj_app)
+- [Team 5: Repo](https://github.com/jamesrw94/UoB_group_project)
 - [Team 6: Repo](https://github.com/Davospike/segpSPA)
 - [Team 7: Repo](https://github.com/gabrielchuv/SE7)
 - [Team 8: Repo](https://github.com/CodingKaNi/group-project)
