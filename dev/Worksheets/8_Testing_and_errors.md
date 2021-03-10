@@ -30,6 +30,6 @@ tests written and pass Automated tests are run against the code and pass. Code i
 reviewed Pull request against develop branch created. Deployed to staging Browser test plan pass.
 Story accepted by PO before the Sprint review.
 
-## Automated testing
+## Mocha
 
-We are going to be exploring the topic of automated testing further. Students with an interest should check out [Karma](https://karma-runner.github.io/6.0/intro/how-it-works.html) in advance.
+We are going to be exploring the topic of testing further. Students with an interest should check out [Mocha](https://mochajs.org/) in advance.
