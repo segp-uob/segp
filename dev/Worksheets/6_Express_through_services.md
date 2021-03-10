@@ -133,7 +133,7 @@ export abstract class DataComponent implements OnInit {
 
   ngOnInit() {
     // Retrieve posts from the API
-    this.dataService.getAllData().subscribe(data => {
+    this.dataService.getAll().subscribe(data => {
       this.data = data;
     });
   }
