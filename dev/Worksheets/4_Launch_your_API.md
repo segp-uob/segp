@@ -101,7 +101,9 @@ module.exports = router;
 
 ## see how it works...
 
-Now is a good point to test that your API works. Run
+Now is a good point to test that your API works. First, you need to make sure that you've run ```ng build```, which is a command to Angular CLI to ensure that the build folder (dist) is created and populated. When you previously ran ```ng serve``` this actually initiated a build and server process - which clearly won't happen now that you're serving your files using Express. Once you have a sucessful build...
+
+Run
 
 ```shell
 # to start express and take a look:
