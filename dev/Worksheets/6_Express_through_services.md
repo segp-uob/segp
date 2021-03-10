@@ -15,6 +15,7 @@ you can amend your own components to connect directly via a service to your data
 > ### Milestone checklist
 > - [ ] Essential: [Workshop walkthrough](videos/4.ogg)
 > - [ ] Essential: [Introduction to Services](https://angular.io/tutorial/toh-pt4) (10 minutes)
+> - [ ] Essential: Connect your dashboard to your API via a service
 ***
 
 ## Create a service
