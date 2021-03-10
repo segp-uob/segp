@@ -1,5 +1,5 @@
 # Connecting Component to Express API
-## Week 7: 23/03/2021 (updated following reading week)
+## Week 7: 23/03/2021
 
 Currently, we are just using dummy data rendered from within the component (not recommended!). Of
 course, we want to connect everything to our newly created API!
