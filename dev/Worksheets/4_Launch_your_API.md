@@ -1,5 +1,5 @@
 # RESTful API
-## Week 5: 02/03/2021
+## Week 5: 09/03/2021 (updated following reading week)
 
 A RESTful API is an Application Programming Interface (API) that uses HTTP verbs like GET, PUT,
 POST, and DELETE to operate data. We will use the principles of a REST API to start building a
