@@ -11,7 +11,7 @@ will take less time to implement, and will offer similar (if not better) perform
 of tasks and operations we are doing.
 
 > ### Milestone checklist
-> - [ ] Essential: [Workshop walkthrough](videos/7.ogg)
+> - [ ] Essential: [Workshop walkthrough](https://web.microsoftstream.com/video/0eac086d-9757-4630-9922-00ff4b057373)
 > - [ ] Essential: Add Mongoose package and test integration
 > - [ ] Recommended: [SQL vs NoSQL](https://www.youtube.com/watch?v=XLveJr2Pst8)
 > - [ ] Recommended: [Mongo models & schemas](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose)
