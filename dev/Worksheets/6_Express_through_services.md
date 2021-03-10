@@ -17,6 +17,7 @@ you can amend your own components to connect directly via a service to your data
 > - [ ] Essential: [Workshop walkthrough](videos/4.ogg)
 > - [ ] Essential: [Introduction to Services](https://angular.io/tutorial/toh-pt4) (10 minutes)
 > - [ ] Essential: Connect your dashboard to your API via a service
+> - [ ] Recommended: [Read about httpClient module](https://angular.io/guide/http)
 ***
 ## Update your API
 When you created your API (a few weeks ago) using Express you'll remember we just returned 'api works' when the API was called. We now need to update the API so that it returns something we can use in our charts (Data!). Initially we are going to serve the data from a static JSON file on the server. This is a placeholder for our Database. First create a file ```data.json``` in the same folder as your ```api.js``` file. Add the following data to the file:
@@ -48,37 +49,11 @@ Now try calling your api using the curl request demonstrated previously. Check t
 ng generate service data
 ```
 
-This creates a data.service.ts in the src/app directory. We then need to add it in the providers
-section of our module declaration ```app.module.ts```.
-
-```ts
-// Imports commented out 
-import { DataService } from './data.service'; // Add the data service here
-
-// Routes
-@NgModule({
-  declarations: [
-    AppComponent,
-    BarChartComponent,
-    DoughnutChartComponent,
-    RadarChartComponent,
-    PieChartComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    ChartsModule
-  ],
-  providers: [DataService], // Add the data service here
-  bootstrap: [AppComponent]
-})
-
-export class AppModule { }
-```
+This creates a data.service.ts in the src/app directory.
 
 ## Update the data service
 
-We now need to make sure the service makes the right call: ```src/app/data.service.ts```
+We now need to make sure the service makes the right call to our API: ```src/app/data.service.ts```. We also need to make use of the HttpClient module to handle requests. 
 
 ```ts
 import { Injectable, OnInit } from '@angular/core';
