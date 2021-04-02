@@ -17,9 +17,6 @@ services:
       - MONGO_DB=$MONGO_DB
     ports:
       - "3000:3000"
-    volumes:
-      - .:/home/node/app
-      - node_modules:/home/node/app/node_modules
     networks:
       - app-network
     command: ./wait-for.sh db:27017 -- /home/node/app/node_modules/.bin/nodemon server.js
@@ -43,4 +40,3 @@ networks:
 
 volumes:
   dbdata:
-  node_modules:
