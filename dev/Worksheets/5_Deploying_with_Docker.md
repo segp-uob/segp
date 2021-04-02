@@ -248,12 +248,57 @@ the same site rendered as when running on your own machine.
 
 ### MongoDB
 
-Testing your Mongo connection is a bit more difficult as we haven't made a connection yet.
-Therefore, use the following for a (1) return on success:
+Testing your Mongo connection is a bit more difficult as we haven't made a connection yet. We can however test the connection, by asking the database to print out the stats with the following command:
 
 ```shell
-echo 'db.stats().ok' | mongo localhost:27017 --quiet
+echo 'db.stats()' | mongo localhost:27017
 ```
+
+In this case, the mongo program will attempt to connect to mongo shell on the localhost (i.e. our machine) on port 27017, calling `db.stats()` once successful. This means that:  
+  
+a) We need to have the mongo shell installed on the local machine,  
+b) The mongo database needs to be accessible on the localhost on port 27017.  
+
+Because that is not exactly what we need to do, the query has to be modified to connect to our container running as part of the `docker-compose up` command. Furthermore, we need to make sure that the our **db** service is exposing the 27017 port. If our localhost already has this port taken, it would be advisable to expose it to a different port to easily differentiate between the mongodb running on our local machine and the one running in a container. The changes that will be needed in the docker-compose.yml will therefore be as follows:
+
+```yml
+...
+
+  db:
+    image: mongo:4.1.8-xenial
+    container_name: db
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=$MONGO_USERNAME
+      - MONGO_INITDB_ROOT_PASSWORD=$MONGO_PASSWORD
+    ports:             # <==
+      - "27018:27017"  # <==  THIS IS THE ONLY CHANGE
+    volumes:
+      - dbdata:/data/db
+    networks:
+      - app-network
+
+...
+```
+
+Once those changes take effect, we can simply query the database running in our container for the stats in a similar fashion, **making sure we use appropriate credentials!** If we were to try connecting to the database without these credentials, we would likely see invalid stats and an error message:
+
+![image](https://user-images.githubusercontent.com/17514757/113408215-dad24680-93a6-11eb-91de-85e695102820.png)
+
+If the credentials you use for the database service use $MONGO_USERNAME as the username and $MONGO_PASSWORD as the password, and these are pulled from the `.env` file, you will need to pass them to the connection string manually by looking up the values and substituting appropriate parts of the following command (without the triangular brackets):
+
+```shell
+echo "db.stats()" | mongo <mongo_username>:<mongo_password>@localhost:27018 
+
+# For username=myUser and password=myPass, this would look like so:
+# echo "db.stats()" | mongo myUser:myPass@localhost:27018 
+```
+
+Finally, the `ok` part of the output will let us know how many clients are successfully connected to our database:
+
+![image](https://user-images.githubusercontent.com/17514757/113408068-8e870680-93a6-11eb-9a5b-24f29857a078.png)
+
 
 ## Going further
 [Full Docker overview](https://www.youtube.com/watch?v=fqMOX6JJhGo)
