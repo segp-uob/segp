@@ -12,10 +12,12 @@ export class AppComponent implements OnInit {
   showAdminBoard = false;
   showModeratorBoard = false;
   username: string;
+  title: string;
 
   constructor(private tokenStorageService: TokenStorageService) { }
 
   ngOnInit(): void {
+    this.title = 'dashboard';
     this.isLoggedIn = !!this.tokenStorageService.getToken();
 
     if (this.isLoggedIn) {

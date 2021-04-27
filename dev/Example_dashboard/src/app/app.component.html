@@ -30,12 +30,15 @@
         <a href="/profile" class="nav-link" routerLink="profile">{{ username }}</a>
       </li>
       <li class="nav-item">
-        <a href class="nav-link" (click)="logout()">LogOut</a>
+        <a href class="nav-link" id="logout-link" (click)="logout()">LogOut</a>
       </li>
     </ul>
   </nav>
 
   <div class="container">
+    <div class="content">
+      <span>dashboard app is running!</span>
+    </div>
     <router-outlet></router-outlet>
   </div>
 </div>
