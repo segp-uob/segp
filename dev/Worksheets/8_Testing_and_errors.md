@@ -76,6 +76,9 @@ tests written and pass Automated tests are run against the code and pass. Code i
 reviewed Pull request against develop branch created. Deployed to staging Browser test plan pass.
 Story accepted by PO before the Sprint review.
 
-## Mocha
+# Angular automated testing
+Testing your Angular application helps you check that your app is working as you expect. In the walkthrough (code in the Example Dashboard repo) you will be taken through how to use the built in Angular testing tools.
 
-We are going to be exploring the topic of testing further. Students with an interest should check out [Mocha](https://mochajs.org/) in advance.
+## Mocha. Jasmine and Karma
+
+We are going to be exploring the topic of testing further. Students with an interest should check out [Mocha](https://mochajs.org/) and [Introduction to Angular Testing](https://angular.io/guide/testing)in advance. In the walkthrough we use Jasmine instead of Mocha, however, you can switch over to Mocha if you prefer. You will find the syntax very similar.
