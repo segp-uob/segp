@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { TokenStorageService } from './_services/token-storage.service';
-import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-root',
