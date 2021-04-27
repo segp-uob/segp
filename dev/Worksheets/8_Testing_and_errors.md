@@ -1,7 +1,7 @@
 # Testing and finding errors
 
 > ### Milestone checklist
-> - [ ] Essential: [Workshop walkthrough](videos/8.ogg)
+> - [ ] Essential: [Workshop walkthrough](https://web.microsoftstream.com/video/ee64795d-94d3-4eb1-8b24-7f7ca34f2cb9)
 ***
 
 A major part of any project teams which have done very well in their software engineering project is
@@ -16,6 +16,52 @@ corresponding test should be created.
 
 1. Setup and teardown
 2. Test pass conditions
+
+Tests don't need to be automated! What's important is the practice of ensuring reliability rather than creating complex solutions. 
+
+# Example Test Plan
+```
+Test Plan - Content page frontend (#101000000)
+
+As an editor I want to have a way to build basic pages in the CMS so that I can add content to it without being limited to particular template.
+
+1 Outline/prerequisites
+
+1. Ensure you have a copy of the browser definition document
+2. Ensure you know which environment you are testing against
+
+2 Setup and Teardown
+
+Setup
+
+1. Ensure you have user credentials (if not create a user)
+2. Login to the system
+
+Teardown
+1. Delete all content created
+2. Logout
+​
+3 Tests
+
+A. Test a user can add articles
+
+1. Click on add content
+2. Select `Add article`
+3. Fill in all required fields
+4. Click save
+5. Ensure you can see all content you inputted
+6. Ensure the design looks correct in all supported browsers
+
+B. Test a user can edit articles
+// setup
+// steps
+// teardown
+
+C. Test a user can delete articles
+// steps
+```
+
+
 
 ## Staging
 
