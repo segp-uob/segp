@@ -4,7 +4,7 @@
 > - [ ] Essential: [Workshop walkthrough](https://web.microsoftstream.com/video/ee64795d-94d3-4eb1-8b24-7f7ca34f2cb9)
 ***
 
-A major part of any project teams which have done very well in their software engineering project is
+In previous years project teams which have done very well in their software engineering project is
 testing.
 
 # Writing tests
