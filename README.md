@@ -166,7 +166,7 @@ These are example reports from last year. Before looking at them, note that the 
 - [Team 5: Repo](https://github.com/jamesrw94/UoB_group_project)
 - [Team 6: Repo](https://github.com/Davospike/segpSPA)
 - [Team 7: Repo](https://github.com/gabrielchuv/SE7)
-- [Team 8: Repo](https://github.com/CodingKaNi/group-project)
+- [Team 8: Repo](https://github.com/fc16895/SoftwareEngineeringProject)
 - [Team 9: Repo](https://github.com/Xinyuan-L/Softwaregroupwork.git)
 - [Team 10: Repo](https://github.com/JaiRanchod/Software-Engineering-Group-Project)
 - [Team 11: Repo](https://github.com/yujenyu/group11.git)
